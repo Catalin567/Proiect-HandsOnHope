@@ -1,0 +1,31 @@
+.motivational-quote {
+  background-color: #28a745;
+  color: white;
+  padding: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 10px 40px;
+}
+
+.motivational-quote p {
+  font-size: 34px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.motivational-quote span {
+  display: block;
+  font-size: 14px;
+  color: #f1f1f1;
+}
+
+.motivational-quote a {
+  color: #f1f1f1;
+  text-decoration: underline;
+}
+
+.motivational-quote a:hover {
+  color: #d1e7dd;
+}

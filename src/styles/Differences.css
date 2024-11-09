@@ -1,0 +1,132 @@
+.differences {
+  text-align: center;
+  background: transparent;
+  position: relative;
+  margin: 0px 10px;
+}
+
+.differences h2 {
+  font-weight: 700;
+  margin: 20px 0px;
+}
+
+.differences p {
+  font-size: 18px;
+}
+
+.differences-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0px;
+}
+
+.stat {
+  position: relative;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.stat:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.percentage1, .percentage2, .percentage3, .percentage4 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.percentage1 {
+  color: #D2B48C;
+}
+
+.percentage2 {
+  color: #ADD8E6;
+}
+
+.percentage3 {
+  color: #FFB347;
+}
+
+.percentage4 {
+  color: #40E0D0;
+}
+
+.differences-stats p {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .differences h2 {
+    font-size: 28px;
+  }
+
+  .differences p {
+    font-size: 16px;
+  }
+
+  .differences-stats {
+    gap: 15px;
+  }
+
+  .stat {
+    width: 180px;
+    padding: 25px;
+  }
+
+  .percentage1, .percentage2, .percentage3, .percentage4 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .differences h2 {
+    font-size: 24px;
+  }
+
+  .differences p {
+    font-size: 14px;
+  }
+
+  .differences-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .percentage1, .percentage2, .percentage3, .percentage4 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 320px) {
+  .differences h2 {
+    font-size: 22px;
+  }
+
+  .differences p {
+    font-size: 12px;
+  }
+
+  .differences-stats {
+    gap: 15px;
+  }
+
+  .stat {
+    padding: 15px;
+  }
+
+  .percentage1, .percentage2, .percentage3, .percentage4 {
+    font-size: 28px;
+  }
+}
