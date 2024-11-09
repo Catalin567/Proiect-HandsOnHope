@@ -1,12 +1,19 @@
+.divider {
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  border-radius: 50px;
+}
+
 .footer-subscribe {
   margin-top: 20px;
+}
+
+.container-fluid {
+  margin-bottom: 40px !important;
 }
 
 .footer-subscribe input {
   padding: 5px;
   margin-right: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
 }
 
 .error-message {
@@ -21,8 +28,9 @@
 
 .footer-logo {
   color: green;
-  font-weight: bold;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 38px;
+  font-style: italic;
 }
 
 .social-icons {
@@ -49,6 +57,22 @@
 }
 
 .nav-title {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.btn-outline-success {
+  font-weight: 700 !important;
+  padding: 5px 20px !important;
+  border: 2px solid green !important;
+  border-radius: 30px !important;
+  transition: background-color 0.3s !important;
+}
+
+.search-input {
+  border-radius: 0 !important ;
+  border: none !important;
+  border-bottom: 2px solid green !important;
+  margin: 0px 5px !important;
+  width: 220px;
 }

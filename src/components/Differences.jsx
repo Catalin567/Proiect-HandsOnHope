@@ -44,10 +44,9 @@ function Differences() {
     <div className="differences container">
       <h2>Ce diferențe au făcut donațiile tale?</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-        praesentium, ut vel laudantium doloremque architecto harum repudiandae
-        placeat animi asperiores ea quidem, inventore, numquam ducimus hic
-        recusandae sapiente sint voluptatum.
+        Donațiile tuturor au contribuit semnificativ la sprijinirea
+        comunităților afectate de dezastre naturale. Iată cum au fost utilizate
+        fondurile:
       </p>
       <div className="differences-stats">
         <div className="stat mx-lg-2">
@@ -67,7 +66,11 @@ function Differences() {
           <p>asistență psihologică pentru victime</p>
         </div>
       </div>
-      <div></div>
+      <p>
+        Fiecare procent contează! Prin donațiile voastre, Hands on Hope a putut
+        să răspundă prompt și eficient nevoilor urgente din teren, oferind nu
+        doar ajutor material, ci și sprijin emoțional comunităților afectate.
+      </p>
     </div>
   );
 }

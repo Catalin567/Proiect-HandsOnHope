@@ -24,31 +24,33 @@ function Footer() {
 
   return (
     <>
-      <footer className="container-fluid">
-        <div className="row mx-3">
+      <footer className="container-fluid mt-5">
+        <hr className="divider"></hr>
+        <div className="row mx-3 pt-5">
           <div className="col-12 col-lg-5">
             <div className="footer-addr">
               <h1 className="footer-logo">
-                Restoring Hope. <br /> One Hand at a Time
+                Restoring HOPE. <br /> One Hand at a Time
               </h1>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
-                error totam repudiandae obcaecati. Eveniet nostrum aperiam qui
-                possimus ea enim earum cum magnam modi eius, quae, suscipit
-                facere! Quae, consequuntur.
+                Rămâi informat:
+                <br />
+                Abonează-te la newsletter-ul nostru pentru a primi ultimele
+                știri despre campaniile noastre și modalitățile prin care poți
+                ajuta.
               </p>
               <div className="footer-subscribe">
-                <form onSubmit={handleSubmit} className="form">
+                <form onSubmit={handleSubmit}>
                   <input
-                    className=""
+                    className="search-input"
                     type="email"
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
+                    placeholder="Introduceți adresa de email"
                   />
-                  <button className="btn btn-success" type="submit">
-                    Subscribe
+                  <button className="btn btn-outline-success" type="submit">
+                    Abonare
                   </button>
                   {error && <p className="error-message">{error}</p>}
                   {successMessage && (
@@ -65,10 +67,15 @@ function Footer() {
             <h2 className="nav-title">Contact</h2>
             <ul>
               <li className="p-0 m-0">
-                Email:<a href="mailto:a@yahoo.com">aaa</a>
+                Email:
+                <a href="mailto:voluntari@handsonhope.org">
+                  {" "}
+                  info@handsonhope.org,
+                  <br /> voluntari@handsonhope.org
+                </a>
               </li>
               <li className="p-0 m-0">
-                Telefon:<a href="tel:0748473843">123</a>
+                Telefon:<a href="tel:0748473843"> +40 XXX XXX XXX</a>
               </li>
             </ul>
             <h2 className="nav-title">Termeni</h2>
@@ -81,9 +88,15 @@ function Footer() {
             <br />
             <a href="#">Donează</a>
             <h2 className="nav-title">Cont IBAN</h2>
-            <p className="p-0 m-0 me">Cont 1</p>
-            <p className="p-0 m-0">Cont 2</p>
-            <p className="p-0 m-0">Cont 3</p>
+            <p className="p-0 m-0 me">
+              RO12 BANK 0000 1111 2222 3333 (pentru donații în RON)
+            </p>
+            <p className="p-0 m-0">
+              RO34 BANK 0000 4444 5555 6666 (pentru donații în EUR)
+            </p>
+            <p className="p-0 m-0">
+              RO56 BANK 0000 7777 8888 9999 (pentru donații în USD)
+            </p>
 
             <div className="social-icons">
               <a href="https://www.facebook.com">
