@@ -28,6 +28,7 @@
   padding: 30px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   width: 220px;
+  min-height: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
@@ -37,25 +38,28 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.percentage1, .percentage2, .percentage3, .percentage4 {
+.percentage1,
+.percentage2,
+.percentage3,
+.percentage4 {
   font-size: 50px;
   font-weight: 700;
 }
 
 .percentage1 {
-  color: #D2B48C;
+  color: #d2b48c;
 }
 
 .percentage2 {
-  color: #ADD8E6;
+  color: #add8e6;
 }
 
 .percentage3 {
-  color: #FFB347;
+  color: #ffb347;
 }
 
 .percentage4 {
-  color: #40E0D0;
+  color: #40e0d0;
 }
 
 .differences-stats p {
@@ -80,7 +84,10 @@
     padding: 25px;
   }
 
-  .percentage1, .percentage2, .percentage3, .percentage4 {
+  .percentage1,
+  .percentage2,
+  .percentage3,
+  .percentage4 {
     font-size: 40px;
   }
 }
@@ -104,7 +111,10 @@
     padding: 20px;
   }
 
-  .percentage1, .percentage2, .percentage3, .percentage4 {
+  .percentage1,
+  .percentage2,
+  .percentage3,
+  .percentage4 {
     font-size: 36px;
   }
 }
@@ -126,7 +136,10 @@
     padding: 15px;
   }
 
-  .percentage1, .percentage2, .percentage3, .percentage4 {
+  .percentage1,
+  .percentage2,
+  .percentage3,
+  .percentage4 {
     font-size: 28px;
   }
 }

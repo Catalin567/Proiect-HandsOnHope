@@ -1,16 +1,20 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
 .header {
   position: fixed;
   top: 0;
   width: 98%;
-  background-color: rgba(253, 255, 253, 0.9);
+  background-color: rgba(241, 241, 241, 0.822);
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;
-  margin-top: 10px;
-  margin-left: 10px;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .logo img {
@@ -131,7 +135,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .hamburger {
     display: block;
   }
@@ -141,13 +145,12 @@
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 10px;
     background-color: rgba(255, 253, 253, 0.9);
-    width: 80%;
+    width: 97%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     z-index: 999;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 
   .nav-links.active {
@@ -164,32 +167,5 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .search-bar {
-    width: 120px;
-  }
-
-  .search-bar.active {
-    width: 120px;
-  }
-
-  .search-icon {
-    padding: 8px;
-  }
-  
-  .nav-links {
-    width: 100%;
-    gap: 10px;
-  }
-
-  .nav-links a {
-    font-size: 14px;
-  }
-
-  .bx.bxs-user {
-    font-size: 20px;
   }
 }

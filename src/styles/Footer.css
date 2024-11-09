@@ -9,20 +9,6 @@
   border: 1px solid #ddd;
 }
 
-.footer-subscribe button {
-  padding: 5px 10px;
-  border: none;
-  background-color: #126312;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.footer-subscribe button:hover {
-  background-color: #0f5a10;
-}
-
 .error-message {
   color: red;
   font-size: 14px;
@@ -33,62 +19,36 @@
   font-size: 14px;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 30px;
-  background-color: #fff;
-  border-top: 1px solid #e5e5e5;
-}
-
 .footer-logo {
+  color: green;
   font-weight: bold;
   font-size: 1.5rem;
 }
 
+.social-icons {
+  font-size: 40px;
+}
+
+.bxl-facebook-circle {
+  color: #0866ff;
+}
+
+.bxl-twitter {
+  color: #3f89ff;
+}
+
+.insta-container {
+  background: #833ab4;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+
+.bxl-instagram {
+  background: linear-gradient(to right, #443ace, #fd1d1d, #fcb045);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .nav-title {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.footer-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 36px;
-  max-width: max-content;
-  background-color: rgb(33, 33, 33, 0.07);
-  border-radius: 100px;
-  color: #2f2f2f;
-  line-height: 0;
-  margin: 0.6em 0;
-  font-size: 1rem;
-  padding: 0 1.3em;
-}
-
-.footer ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.footer li {
-  line-height: 2em;
-}
-
-.footer a {
-  text-decoration: none;
-}
-
-.footer-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-ul a {
-  color: #999;
-}
-
-.nav-ul{
-  column-count: 2;
-  column-gap: 1.25em;
+  font-size: 24px;
+  font-weight: 700;
 }

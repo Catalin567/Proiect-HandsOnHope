@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import '../styles/Differences.css';
+import { useEffect, useState } from "react";
+import "../styles/Differences.css";
 
 function Differences() {
   const [percentage1, setPercentage1] = useState(0);
@@ -10,25 +10,25 @@ function Differences() {
   useEffect(() => {
     const interval1 = setInterval(() => {
       if (percentage1 < 65) {
-        setPercentage1(prev => prev + 1);
+        setPercentage1((prev) => prev + 1);
       }
     }, 30);
 
     const interval2 = setInterval(() => {
       if (percentage2 < 20) {
-        setPercentage2(prev => prev + 1);
+        setPercentage2((prev) => prev + 1);
       }
     }, 30);
 
     const interval3 = setInterval(() => {
       if (percentage3 < 10) {
-        setPercentage3(prev => prev + 1);
+        setPercentage3((prev) => prev + 1);
       }
     }, 30);
 
     const interval4 = setInterval(() => {
       if (percentage4 < 5) {
-        setPercentage4(prev => prev + 1);
+        setPercentage4((prev) => prev + 1);
       }
     }, 30);
 
@@ -41,23 +41,28 @@ function Differences() {
   }, [percentage1, percentage2, percentage3, percentage4]);
 
   return (
-    <div className="differences">
+    <div className="differences container">
       <h2>Ce diferențe au făcut donațiile tale?</h2>
-      <p></p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
+        praesentium, ut vel laudantium doloremque architecto harum repudiandae
+        placeat animi asperiores ea quidem, inventore, numquam ducimus hic
+        recusandae sapiente sint voluptatum.
+      </p>
       <div className="differences-stats">
-        <div className="stat">
+        <div className="stat mx-lg-2">
           <div className="percentage1">{percentage1}%</div>
           <p>sprijin pentru comunitățile afectate de inundații și cutremure</p>
         </div>
-        <div className="stat">
+        <div className="stat mx-lg-2">
           <div className="percentage2">{percentage2}%</div>
           <p>truse, medicamente, echipamente</p>
         </div>
-        <div className="stat">
+        <div className="stat mx-lg-2">
           <div className="percentage3">{percentage3}%</div>
           <p>adăposturi și infrastructură</p>
         </div>
-        <div className="stat">
+        <div className="stat mx-lg-2">
           <div className="percentage4">{percentage4}%</div>
           <p>asistență psihologică pentru victime</p>
         </div>

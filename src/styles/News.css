@@ -24,6 +24,12 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .news-image {
