@@ -41,7 +41,7 @@ function Differences() {
   }, [percentage1, percentage2, percentage3, percentage4]);
 
   return (
-    <div className="differences container">
+    <div className="differences-container">
       <h2>Ce diferențe au făcut donațiile tale?</h2>
       <p>
         Donațiile tuturor au contribuit semnificativ la sprijinirea

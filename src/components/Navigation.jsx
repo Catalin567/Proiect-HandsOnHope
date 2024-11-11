@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/Navigation.css";
 import logo from "../images/LOGO-HOH.png";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   const [showNavLinks, setShowNavLinks] = useState(false);
@@ -17,9 +18,12 @@ function Navigation() {
   return (
     <header className="header-container">
       <div className="header">
-        <div className="logo">
-          <img src={logo} alt="Logo" />
-        </div>
+        <Link to="/">
+          <div className="logo">
+            <img src={logo} alt="Logo" />
+          </div>
+        </Link>
+
         <div className="hamburger" onClick={toggleNavLinks}>
           <i className="bx bx-menu"></i>
         </div>
@@ -28,31 +32,41 @@ function Navigation() {
             showSearchBar ? "shift-left" : ""
           }`}
         >
-          <div className="dropdown">
-            <a className="dropdown-toggle" href="#">
+          <div className="dropdown-center">
+            <a
+              className="dropdown-toggle"
+              href="#"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Cine suntem?
             </a>
             <ul className="dropdown-menu">
               <li>
-                <a className="dropdown-item" href="#">
-                  Misiunea și viziunea
+                <a className="dropdown-item">
+                  <Link to="/MisiuneViziune"> Misiunea și viziunea</Link>
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Principii după care ne ghidăm
+                <a className="dropdown-item">
+                  <Link to="/Principii">Principii după care ne ghidăm</Link>
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Proiecții pentru viitor
+                <a className="dropdown-item">
+                  <Link to="/ProiectiiViitor">Proiecții pentru viitor</Link>
                 </a>
               </li>
             </ul>
           </div>
           <a href="#services">Ce facem?</a>
-          <div className="dropdown">
-            <a className="dropdown-toggle" href="#">
+          <div className="dropdown-center">
+            <a
+              className="dropdown-toggle"
+              href="#"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Implică-te și tu
             </a>
             <ul className="dropdown-menu">

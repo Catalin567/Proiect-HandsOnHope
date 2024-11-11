@@ -33,7 +33,7 @@ function Footer() {
                 Restoring HOPE. <br /> One Hand at a Time
               </h1>
               <p>
-                Rămâi informat:
+                <span className="fw-semibold">Rămâi informat:</span>
                 <br />
                 Abonează-te la newsletter-ul nostru pentru a primi ultimele
                 știri despre campaniile noastre și modalitățile prin care poți

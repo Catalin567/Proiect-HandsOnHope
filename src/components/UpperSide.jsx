@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../styles/UpperSide.css";
 import "../styles/Navigation.css";
-import poza1 from "../images/poza-hoh3.png";
-import poza2 from "../images/poza-hoh.webp";
-import poza3 from "../images/poza-hoh4.jpg";
+import poza1 from "../images/mp-hoh6.jpg";
+import poza2 from "../images/mp-hoh13.jpg";
+import poza3 from "../images/mp-hoh9.jpg";
 
 function UpperSide() {
   const images = [poza1, poza2, poza3];

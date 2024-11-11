@@ -1,0 +1,15 @@
+.pv {
+  display: flex;
+  gap: 20px;
+  margin: 20px 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}

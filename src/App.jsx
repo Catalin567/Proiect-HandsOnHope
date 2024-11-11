@@ -1,26 +1,20 @@
 import { useState } from "react";
-import "./App.css";
-import News from "./components/News";
-import Differences from "./components/Differences";
-import MonthlyPhotos from "./components/MonthlyPhotos";
-import Footer from "./components/Footer";
-import UpperSide from "./components/UpperSide";
-import Navigation from "./components/Navigation";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import MisiuneViziune from "./pages/MisiuneViziune";
+import Principii from "./pages/Principii";
+import ProiectiiViitor from "./pages/ProiectiiViitor";
 
 function App() {
   return (
-    <>
-      <Navigation />
-
-      <UpperSide />
-      <br />
-      <News />
-      <br />
-      <Differences />
-      <br />
-      <MonthlyPhotos />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/MisiuneViziune" element={<MisiuneViziune />} />
+        <Route path="/Principii" element={<Principii />} />
+        <Route path="/ProiectiiViitor" element={<ProiectiiViitor />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
