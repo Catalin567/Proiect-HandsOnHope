@@ -16,16 +16,19 @@ function ProiectiiViitor() {
       <div className="pv">
         <div className="proiectie">
           <p>
-            În viitor, Hands on Hope își propune să extindă aria de intervenți
-            și să ajute un număr mai mare de comunități din întreaga lume.
+            În viitor, <span className="highlight">Hands On Hope</span> își
+            propune să extindă aria de intervenți și să ajute un număr mai mare
+            de comunități din <span className="highlight">întreaga lume</span>.
           </p>
-          <img src={p2}></img>
+          <img src={p2} alt="Future Projections 1"></img>
         </div>
         <div className="proiectie">
-          <img src={p3}></img>
+          <img src={p3} alt="Future Projections 2"></img>
           <p>
-            Vom dezvolta echipe de intervenție rapidă, pregătite să răspundă
-            oricărui tip de criză, și vom investi în programe educaționale de
+            Vom dezvolta
+            <span className="highlight"> echipe de intervenție rapidă</span>,
+            pregătite să răspundă oricărui tip de criză, și vom investi în
+            <span className="highlight"> programe educaționale </span>de
             prevenire și pregătire pentru situații de urgență.
           </p>
         </div>
@@ -33,18 +36,21 @@ function ProiectiiViitor() {
       <div className="pv">
         <div className="proiectie">
           <p>
-            Ne propunem să creăm un fond de rezervă pentru situații critice,
-            capabil să asigure un răspuns constant și prompt la dezastrele
-            naturale.
+            Ne propunem să creăm un{" "}
+            <span className="highlight"> fond de rezervă </span> pentru situații
+            critice, capabil să asigure un răspuns constant și prompt la
+            <span className="highlight"> dezastrele naturale</span>.
           </p>
-          <img src={p4}></img>
+          <img src={p4} alt="Future Projections 3"></img>
         </div>
         <div className="proiectie">
-          <img src={p5}></img>
+          <img src={p5} alt="Future Projections 4"></img>
           <p>
             Prin tehnologie și parteneriate globale, ne dorim să ajungem mai
-            repede și mai eficient la cei care au cea mai mare nevoie, lăsând în
-            urmă nu doar ajutor, ci și o bază solidă pentru viitor.
+            <span className="highlight"> repede</span> și mai{" "}
+            <span className="highlight"> eficient</span> la cei care au cea mai
+            mare nevoie, lăsând în urmă nu doar ajutor, ci și o bază solidă
+            pentru <span className="highlight"> viitor</span>.
           </p>
         </div>
       </div>

@@ -16,14 +16,14 @@ function MisiuneViziune() {
         <h2 className="misiune-viziune">MISIUNEA ȘI VIZIUNEA</h2>
       </div>
       <div className="mv-mesaj1 border-bottom">
-        Hands on Hope este o organizație dedicată sprijinirii comunităților
-        afectate de dezastre naturale și calamități. Fondată din dorința de a
-        aduce speranță și ajutor concret celor mai vulnerabili, Hands on Hope
-        oferă suport de urgență și contribuie la reconstrucția vieților afectate
-        de tragedii neprevăzute. Suntem o echipă de voluntari, experți și
-        parteneri, uniți prin compasiune și dedicație, cu scopul de a transforma
-        solidaritatea într-un gest concret de ajutor pentru cei care au cea mai
-        mare nevoie.
+        <span className="highlight"> Hands on Hope</span> este o organizație
+        dedicată sprijinirii comunităților afectate de dezastre naturale și
+        calamități. Fondată din dorința de a aduce speranță și ajutor concret
+        celor mai vulnerabili, Hands on Hope oferă suport de urgență și
+        contribuie la reconstrucția vieților afectate de tragedii neprevăzute.
+        Suntem o echipă de voluntari, experți și parteneri, uniți prin
+        compasiune și dedicație, cu scopul de a transforma solidaritatea într-un
+        gest concret de ajutor pentru cei care au cea mai mare nevoie.
       </div>
       <div className="viziune">
         <img src={p2}></img>

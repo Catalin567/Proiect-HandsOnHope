@@ -72,57 +72,60 @@ function Principii() {
 
   return (
     <>
-      <Navigation />
-      <div className="upper-side" style={{ backgroundImage: `url(${p1})` }}>
-        <h2>PRINCIPII ORGANIZAȚIEI NOASTRE</h2>
-      </div>
-      <div className="po-1">
-        <div>
-          <p>
-            La Hands On Hope, credem că pentru a crea un impact real și de
-            durată în comunități, nu este suficient doar să oferim ajutor —
-            trebuie să acționăm cu integritate, compasiune și profesionalism.
-          </p>
-          <p>
-            Aceste principii au fost dezvoltate pentru a răspunde nevoilor tot
-            mai mari din comunitățile vulnerabile, dar și pentru a inspira
-            încredere în rândul donatorilor și voluntarilor noștri.
-          </p>
+      <div>
+        <Navigation />
+        <div className="upper-side" style={{ backgroundImage: `url(${p1})` }}>
+          <h2>PRINCIPII ORGANIZAȚIEI NOASTRE</h2>
         </div>
-        <div className="principii">
-          <h2>PRINCIPII</h2>
-          <ul>
-            {principles.map((principle, index) => (
-              <li key={index}>{principle.title}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="po-2">
-        <p>
-          Prin respectarea acestor valori, Hands On Hope își propune să fie mai
-          mult decât o simplă organizație de caritate — să fie un partener de
-          încredere.
-        </p>
-      </div>
-      <div className="po-3">
-        <div className="principiu">
-          <img src={img} alt={title} />
+        <div className="po-1">
           <div>
-            <h3>{title}</h3>
-            <p>{text}</p>
+            <p>
+              La Hands On Hope, credem că pentru a crea un impact real și de
+              durată în comunități, nu este suficient doar să oferim ajutor —
+              trebuie să acționăm cu integritate, compasiune și profesionalism.
+            </p>
+            <p>
+              Aceste principii au fost dezvoltate pentru a răspunde nevoilor tot
+              mai mari din comunitățile vulnerabile, dar și pentru a inspira
+              încredere în rândul donatorilor și voluntarilor noștri.
+            </p>
+            <p>
+              {" "}
+              Prin respectarea acestor valori,{" "}
+              <span className="highlight"> Hands On Hope</span> își propune să
+              fie mai mult decât o simplă organizație de caritate — să fie un
+              partener de încredere, dedicat susținerii oamenilor și
+              comunităților în momentele lor cele mai dificile.
+            </p>
+          </div>
+          <div className="principii">
+            <h2>PRINCIPII</h2>
+            <ul>
+              {principles.map((principle, index) => (
+                <li key={index}>{principle.title}</li>
+              ))}
+            </ul>
           </div>
         </div>
-        <div className="po-3-buttons">
-          <button className="po-3-previews-btn" onClick={handlePrev}>
-            <i className="bx bxs-chevron-left"></i>
-          </button>
-          <button className="po-3-next-btn" onClick={handleNext}>
-            <i className="bx bxs-chevron-right"></i>
-          </button>
+        <div className="po-3">
+          <div className="principiu">
+            <img src={img} alt={title} />
+            <div>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+          </div>
+          <div className="po-3-buttons">
+            <button className="po-3-previews-btn" onClick={handlePrev}>
+              <i className="bx bxs-chevron-left"></i>
+            </button>
+            <button className="po-3-next-btn" onClick={handleNext}>
+              <i className="bx bxs-chevron-right"></i>
+            </button>
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

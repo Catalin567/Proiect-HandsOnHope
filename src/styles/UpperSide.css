@@ -49,16 +49,15 @@
 }
 
 .btn-volunteer:hover {
-  background-color: rgba(0, 128, 0, 0.1);
   color: rgba(0, 128, 0, 1);
   transform: translateY(-3px);
   box-shadow: 0 6px 8px rgba(0, 128, 0, 0.5);
 }
 
-.fade-in{
+.fade-in {
   opacity: 1;
 }
 
-.fade-out{
+.fade-out {
   opacity: 0.8;
 }
