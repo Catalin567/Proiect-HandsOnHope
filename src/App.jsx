@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import MisiuneViziune from "./pages/MisiuneViziune";
 import Principii from "./pages/Principii";
 import ProiectiiViitor from "./pages/ProiectiiViitor";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/MisiuneViziune" element={<MisiuneViziune />} />
         <Route path="/Principii" element={<Principii />} />
         <Route path="/ProiectiiViitor" element={<ProiectiiViitor />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );

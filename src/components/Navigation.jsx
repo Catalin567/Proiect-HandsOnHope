@@ -85,7 +85,7 @@ function Navigation() {
           </div>
           <a href="#help">Solicită ajutor</a>
           <a href="#blog">Blog</a>
-          <a href="#contact">Contact</a>
+          <Link to="/Contact">Contact</Link>
         </nav>
         <div className="right-side">
           <div className="search">
