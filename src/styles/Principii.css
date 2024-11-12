@@ -4,42 +4,202 @@
   background-size: cover;
   background-position: center;
   height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
 .upper-side h2 {
   position: absolute;
-  bottom: 10px;
-  left: 30px;
-  letter-spacing: 0.15cap;
+  bottom: 10%;
+  left: 5%;
+  letter-spacing: 0.15em;
   font-weight: bold;
   color: white;
+  font-size: 2.5rem;
   margin: 0;
 }
 
 .po-1 {
   display: flex;
-  gap: 20px;
-  margin: 20px 40px;
+  gap: 40px;
+  margin: 40px;
   align-items: center;
 }
 
+.po-1 > div {
+  flex: 1;
+}
+
+.po-1 p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #333;
+}
+
+.po-1 h2 {
+  color: #008000;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.po-1 ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  border: 1px solid #008000;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.po-1 ul li {
+  margin: 5px 0;
+}
+.po1-1 {
+  max-width: 1400px;
+}
+
 .po-2 {
-  display: flex;
-  gap: 20px;
   margin: 20px 40px;
-  align-items: center;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding: 15px;
+  border-left: 4px solid #008000;
+  border-right: 4px solid #008000;
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: justify;
 }
 
 .po-3 {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
   margin: 20px 40px;
-  align-items: center;
-  flex-direction: column;
 }
 
 .principiu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
   border: 1px solid #008000;
   border-radius: 15px;
-  padding: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 350px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.principiu img {
+  height: auto;
+  border-radius: 10px;
+}
+
+.principiu h3 {
+  color: #008000;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.principiu p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.po-3-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.po-3-previews-btn,
+.po-3-next-btn {
+  background-color: #ffffff;
+  border: 1px solid #008000;
+  color: #008000;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.po-3-previews-btn:hover,
+.po-3-next-btn:hover {
+  background-color: #008000;
+  color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .po-1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .po-1 > div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .upper-side {
+    height: 50vh;
+    padding: 15px;
+  }
+
+  .upper-side h2 {
+    font-size: 1.5rem;
+  }
+
+  .po-1 p,
+  .po-1 ul,
+  .po-2 {
+    font-size: 1rem;
+  }
+
+  .principiu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .principiu img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+
+  .po-3-previews-btn,
+  .po-3-next-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upper-side h2 {
+    font-size: 1.25rem;
+  }
+
+  .po-1 p,
+  .po-1 ul,
+  .po-2,
+  .principiu p {
+    font-size: 0.9rem;
+  }
+
+  .principiu h3 {
+    font-size: 1.25rem;
+  }
 }

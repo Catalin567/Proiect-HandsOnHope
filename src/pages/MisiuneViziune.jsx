@@ -15,7 +15,7 @@ function MisiuneViziune() {
       <div className="upper-side" style={{ backgroundImage: `url(${p1})` }}>
         <h2 className="misiune-viziune">MISIUNEA ȘI VIZIUNEA</h2>
       </div>
-      <div className="mv-mesaj1">
+      <div className="mv-mesaj1 border-bottom">
         Hands on Hope este o organizație dedicată sprijinirii comunităților
         afectate de dezastre naturale și calamități. Fondată din dorința de a
         aduce speranță și ajutor concret celor mai vulnerabili, Hands on Hope
@@ -29,7 +29,7 @@ function MisiuneViziune() {
         <img src={p2}></img>
         <div>
           <h2>Viziune</h2>
-          <p>
+          <p className="mesaj-viziune">
             Ne imaginăm o lume în care fiecare persoană afectată de o calamitate
             primește ajutorul de care are nevoie pentru a-și reconstrui viața cu
             demnitate și speranță. Viziunea noastră este să construim comunități
@@ -44,7 +44,7 @@ function MisiuneViziune() {
       <div className="misiune">
         <div>
           <h2>Misiune</h2>
-          <p>
+          <p className="mesaj-misiune">
             Misiunea noastră este să fim acolo când contează cel mai mult. Hands
             on Hope intervine rapid și eficient în situații de urgență, oferind
             ajutor de bază, resurse și suport emoțional celor afectați de

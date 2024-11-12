@@ -1,6 +1,6 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import p1 from "../images/mp-hoh9.jpg";
+import p1 from "../images/pv.png";
 import p2 from "../images/pv-hoh1.png";
 import p3 from "../images/pv-hoh2.png";
 import p4 from "../images/pv-hoh3.png";
@@ -11,17 +11,17 @@ function ProiectiiViitor() {
     <>
       <Navigation />
       <div className="upper-side" style={{ backgroundImage: `url(${p1})` }}>
-        <h2>PROIECTII PENTRU VIITOR</h2>
+        <h2>PROIECȚII PENTRU VIITOR</h2>
       </div>
       <div className="pv">
-        <div className="p">
+        <div className="proiectie">
           <p>
             În viitor, Hands on Hope își propune să extindă aria de intervenți
             și să ajute un număr mai mare de comunități din întreaga lume.
           </p>
           <img src={p2}></img>
         </div>
-        <div className="p">
+        <div className="proiectie">
           <img src={p3}></img>
           <p>
             Vom dezvolta echipe de intervenție rapidă, pregătite să răspundă
@@ -31,7 +31,7 @@ function ProiectiiViitor() {
         </div>
       </div>
       <div className="pv">
-        <div className="p">
+        <div className="proiectie">
           <p>
             Ne propunem să creăm un fond de rezervă pentru situații critice,
             capabil să asigure un răspuns constant și prompt la dezastrele
@@ -39,7 +39,7 @@ function ProiectiiViitor() {
           </p>
           <img src={p4}></img>
         </div>
-        <div className="p">
+        <div className="proiectie">
           <img src={p5}></img>
           <p>
             Prin tehnologie și parteneriate globale, ne dorim să ajungem mai

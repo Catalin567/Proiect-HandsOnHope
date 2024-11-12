@@ -23,10 +23,6 @@ function Navigation() {
             <img src={logo} alt="Logo" />
           </div>
         </Link>
-
-        <div className="hamburger" onClick={toggleNavLinks}>
-          <i className="bx bx-menu"></i>
-        </div>
         <nav
           className={`nav-links ${showNavLinks ? "active" : ""} ${
             showSearchBar ? "shift-left" : ""
@@ -94,13 +90,21 @@ function Navigation() {
         <div className="right-side">
           <div className="search">
             <div className={`search-bar ${showSearchBar ? "active" : ""}`}>
-              <input type="text" placeholder="Căutare..." />
+              <input
+                type="text"
+                placeholder="Căutare..."
+                onFocus={() => setShowSearchBar(true)}
+                onBlur={() => setShowSearchBar(false)}
+              />
             </div>
             <div className="search-icon" onClick={toggleSearchBar}>
               <i className="bx bx-search"></i>
             </div>
           </div>
           <i className="bx bxs-user"></i>
+          <div className="hamburger" onClick={toggleNavLinks}>
+            <i className="bx bx-menu"></i>
+          </div>
         </div>
       </div>
     </header>
