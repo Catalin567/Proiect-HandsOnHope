@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+
+.help-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .help-header-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .help-main-content {
+    padding: 20px;
+  }
+  
+  .help-introduction, .help-section, .how-it-works-section {
+    margin-bottom: 30px;
+  }
+  .help-introduction p,.how-it-works-section p{
+    text-align: center;
+    font-family: 'Chivo',sans-serif;
+  }
+  .help-section h3,.how-it-works-section h3{
+  text-align: center;  
+  color: #2DA542;
+  margin-bottom: 20px;
+  font-family: 'Chivo', sans-serif;  
+}
+.help-section ul li{
+    margin: 0.5em 0;
+    font-size: 1.1em;
+    font-family: 'Chivo', serif, black;
+}
+.highlight-text{
+    text-align: center;
+    color: #008000;
+
+}
+.form-button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    margin-top: 20px;         
+  }
+  
+  .form-button {
+    background-color: #ffffff;
+    color: #2DA542;
+    padding: 10px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 50px;  
+    width: 200px;
+  }
+.help-form {
+    background-color: #d4e7d4;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .help-form input[type="text"],
+  .help-form input[type="tel"],
+  .help-form input[type="email"],
+  .help-form input[type="number"],
+  .help-form select {
+    width: calc(50% - 10px); 
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #2da542; 
+    border-radius: 8px; 
+    background-color: #f9fdf9; 
+    box-sizing: border-box;
+    color: #333;
+  }
+  
+  .help-form input[type="text"]:focus,
+  .help-form input[type="tel"]:focus,
+  .help-form input[type="email"]:focus,
+  .help-form input[type="number"]:focus,
+  .help-form select:focus {
+    border-color: #249638;
+    outline: none;
+  }
+  
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+    .help-form input[type="text"],
+    .help-form input[type="tel"],
+    .help-form input[type="email"],
+    .help-form input[type="number"],
+    .help-form select {
+      width: 100%; 
+    }
+  }
+  
+  .help-form label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .help-form select {
+    appearance: none;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gray"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 16px;
+    background-color: #fff;
+    padding-right: 30px;
+  }
+  
+  .help-form input::placeholder,
+  .help-form select {
+    color: #777;
+  }
+  
+  .form-submit-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2da542;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  .form-submit-button:hover {
+    background-color: #249638;
+  }
+  
+  .form-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  
