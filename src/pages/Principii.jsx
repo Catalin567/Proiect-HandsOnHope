@@ -75,7 +75,7 @@ function Principii() {
       <div>
         <Navigation />
         <div className="upper-side" style={{ backgroundImage: `url(${p1})` }}>
-          <h2>PRINCIPII ORGANIZAȚIEI NOASTRE</h2>
+          <h2>PRINCIPIILE ORGANIZAȚIEI NOASTRE</h2>
         </div>
         <div className="po-1">
           <div>

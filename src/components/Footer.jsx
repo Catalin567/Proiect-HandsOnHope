@@ -12,13 +12,13 @@ function Footer() {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailPattern.test(email)) {
-      setError("Please enter a valid email address.");
+      setError("Te rog introdu o adresă de email validă.");
       setSuccessMessage("");
       return;
     }
 
     setError("");
-    setSuccessMessage("Thank you for subscribing!");
+    setSuccessMessage("Mulțumim pentru abonare!");
     setEmail("");
   };
 

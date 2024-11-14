@@ -1,167 +1,169 @@
 /* Contact.css */
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #ffffff;
-    color: #000000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 main {
-    max-width: 800px;
-    margin: 2em auto;
-    padding: 1em;
-    max-width: 80vw; 
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1em;
+  max-width: 80vw;
 }
 
 .header-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .header-image h1 {
-    font-size: 2.5em; 
-    color: #FFF;
-    text-align: center;
-    z-index: 2;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 50px; 
-    font-family: 'Chivo', sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 50px;
+  font-family: "Chivo", sans-serif;
 }
 
 .contact-header {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .contact-header h1 {
-    font-size: 2.5em; 
-    color: #FFF;
-    text-align: center;
-    z-index: 2;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 50px;
-    font-family: 'Chivo', sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 50px;
+  font-family: "Chivo", sans-serif;
 }
 
 .contact-header-text {
-    text-align: center;
-    margin-bottom: 50px;
-    font-family: 'Chivo', sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Chivo", sans-serif;
 }
 
-.contact-info h2, .contact-form h2 {
-    color: #2DA542;
-    margin-bottom: 20px;
-    font-family: 'Chivo', sans-serif;
+.contact-info h2,
+.contact-form h2 {
+  color: #2da542;
+  margin-bottom: 20px;
+  font-family: "Chivo", sans-serif;
 }
 
 .contact-form h2 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .contact-info ul {
-    list-style: none;
-    margin-top: 1em;
+  list-style: none;
+  margin-top: 1em;
 }
 
 .contact-info ul li {
-    margin: 0.5em 0;
-    font-size: 1.1em;
-    font-family: 'Chivo', serif, black;
+  margin: 0.5em 0;
+  font-size: 1.1em;
+  font-family: "Chivo", serif, black;
 }
 
 .contact-info a {
-    text-decoration: none;
-    color: #000000;
+  text-decoration: none;
+  color: #000000;
 }
 
 .contact-info a:hover {
-    color: #2DA542;
-    text-decoration: none;
+  color: #2da542;
+  text-decoration: none;
 }
 
 .contact-info img {
-    width: 30px; 
-    height: 30px;
-    margin-right: 15px;
-    vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  vertical-align: middle;
 }
 
 .contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
 }
 
-.contact-form input, .contact-form textarea {
-    padding: 0.8em;
-    border: 2px solid #2DA542;
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 1em;
-    border-radius: 5px;
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8em;
+  border: 2px solid #2da542;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1em;
+  border-radius: 5px;
 }
 
 .contact-form textarea {
-    height: 231px;
+  height: 231px;
 }
 
 .contact-form button {
-    padding: 0.8em;
-    background-color: #ffffff;
-    width: 225px;
-    height: 52px;
-    color: #2DA542;
-    border: 2px solid black;
-    cursor: pointer;
-    font-size: 1.1em;
-    border-radius: 25px;
-    display: block;
-    margin: auto;
+  padding: 0.8em;
+  background-color: #ffffff;
+  width: 225px;
+  height: 52px;
+  color: #2da542;
+  border: 2px solid black;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 25px;
+  display: block;
+  margin: auto;
 }
 
 .additional-links {
-    text-align: center;
-    margin-top: 2em;
-    font-family: 'Chivo';
+  text-align: center;
+  margin-top: 2em;
+  font-family: "Chivo";
 }
 
 .additional-links a {
-    display: block;
-    margin: 0.5em 0;
-    color: #2DA542;
-    text-decoration: none;
+  display: block;
+  margin: 0.5em 0;
+  color: #2da542;
+  text-decoration: none;
 }
 
 .additional-links p {
-    text-align: center;
+  text-align: center;
 }
 
 .map iframe {
-    width: 345px;
-    height: 308px;
-    border: none;
-    border-radius: 20px;
-    display: block;
-    margin: auto;
+  width: 345px;
+  height: 308px;
+  border: none;
+  border-radius: 20px;
+  display: block;
+  margin: auto;
 }
