@@ -5,6 +5,7 @@ import MisiuneViziune from "./pages/MisiuneViziune";
 import Principii from "./pages/Principii";
 import ProiectiiViitor from "./pages/ProiectiiViitor";
 import Contact from "./pages/Contact";
+import SolicitaAjutor from "./pages/SolicitaAjutor";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route path="/MisiuneViziune" element={<MisiuneViziune />} />
         <Route path="/Principii" element={<Principii />} />
         <Route path="/ProiectiiViitor" element={<ProiectiiViitor />} />
+        <Route path="/solicita-ajutor" element={<SolicitaAjutor />} />
+
         <Route path="/Contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

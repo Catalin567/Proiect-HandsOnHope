@@ -83,7 +83,7 @@ function Navigation() {
               </li>
             </ul>
           </div>
-          <a href="#help">Solicită ajutor</a>
+          <Link to="/solicita-ajutor">Solicită ajutor</Link>
           <a href="#blog">Blog</a>
           <Link to="/Contact">Contact</Link>
         </nav>
