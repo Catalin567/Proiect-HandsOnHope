@@ -151,4 +151,74 @@
     margin-top: 20px;
   }
   
-  
+@media (max-width: 767px) {
+  .form-row {
+      flex-direction: column;
+  }
+
+  .help-form input[type="text"],
+  .help-form input[type="tel"],
+  .help-form input[type="email"],
+  .help-form input[type="number"],
+  .help-form select {
+      width: 100%;
+  }
+
+  .help-form input, 
+  .help-form select {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .form-button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1em;
+  }
+
+  .help-form {
+      padding: 15px;
+  }
+
+  .form-submit-button {
+      width: 100%;
+      font-size: 16px;
+      padding: 15px;
+  }
+
+  .form-button-container {
+      text-align: center;
+      margin-top: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-row {
+      flex-direction: row;
+  }
+
+  .help-form input[type="text"],
+  .help-form input[type="tel"],
+  .help-form input[type="email"],
+  .help-form input[type="number"],
+  .help-form select {
+      width: calc(50% - 10px);
+  }
+
+  .help-form input, 
+  .help-form select {
+      font-size: 15px;
+      padding: 12px;
+  }
+
+  .form-button {
+      width: 200px;
+      padding: 12px 20px;
+  }
+
+  .form-submit-button {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+  }
+}
