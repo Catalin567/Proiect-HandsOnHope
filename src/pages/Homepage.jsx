@@ -15,9 +15,9 @@ function Homepage() {
       <br />
       <News />
       <br />
-      <Differences />
-      <br />
       <Testimonial />
+      <br />
+      <Differences />
       <br />
       <MonthlyPhotos />
       <Footer />

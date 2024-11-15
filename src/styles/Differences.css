@@ -1,10 +1,11 @@
 .differences-container {
   align-items: center;
   text-align: center;
-  background: transparent;
   position: relative;
   margin: 0px auto;
   max-width: 1400px;
+  padding: 40px 10px;
+  border-radius: 20px;
 }
 
 .differences h2 {
@@ -17,18 +18,19 @@
 .differences-stats {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   gap: 10px;
-  margin: 20px 0px;
+  margin: 50px 0px;
 }
 
 .stat {
   position: relative;
+  background-color: white;
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  width: 220px;
-  min-height: 250px;
+  width: 300px;
+  min-height: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
@@ -42,7 +44,7 @@
 .percentage2,
 .percentage3,
 .percentage4 {
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 700;
 }
 
@@ -63,7 +65,7 @@
 }
 
 .differences-stats p {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {

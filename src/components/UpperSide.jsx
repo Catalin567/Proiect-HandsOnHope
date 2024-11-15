@@ -27,6 +27,7 @@ function UpperSide() {
       className={`upper-side ${fade ? "fade-in" : "fade-out"}`}
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
+      <div className="uc-text">CAZURI URGENTE</div>
       <div className="button-container">
         <button className="btn-donate">DONEAZĂ</button>
         <button className="btn-volunteer">DEVINO VOLUNTAR</button>
