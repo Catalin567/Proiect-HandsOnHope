@@ -68,17 +68,22 @@ function Navigation() {
             <ul className="dropdown-menu">
               <li>
                 <a className="dropdown-item" href="#">
-                  Action
+                  Voluntariat
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  Another action
+                  Campanii
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  Something else here
+                  Redirecționează
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Donează
                 </a>
               </li>
             </ul>

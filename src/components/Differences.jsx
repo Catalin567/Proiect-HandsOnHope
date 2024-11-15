@@ -43,7 +43,7 @@ function Differences() {
   return (
     <div className="differences-container">
       <h2>Ce diferențe au făcut donațiile tale?</h2>
-      <p>
+      <p className="format-text">
         Donațiile tuturor au contribuit semnificativ la sprijinirea
         comunităților afectate de dezastre naturale. Iată cum au fost utilizate
         fondurile:
@@ -66,7 +66,7 @@ function Differences() {
           <p>asistență psihologică pentru victime</p>
         </div>
       </div>
-      <p>
+      <p className="format-text">
         Fiecare procent contează! Prin donațiile voastre, Hands on Hope a putut
         să răspundă prompt și eficient nevoilor urgente din teren, oferind nu
         doar ajutor material, ci și sprijin emoțional comunităților afectate.

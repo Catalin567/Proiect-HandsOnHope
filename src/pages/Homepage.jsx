@@ -5,6 +5,7 @@ import News from "../components/News";
 import Differences from "../components/Differences";
 import MonthlyPhotos from "../components/MonthlyPhotos";
 import Footer from "../components/Footer";
+import Testimonial from "../components/Testimonial";
 
 function Homepage() {
   return (
@@ -15,6 +16,8 @@ function Homepage() {
       <News />
       <br />
       <Differences />
+      <br />
+      <Testimonial />
       <br />
       <MonthlyPhotos />
       <Footer />
