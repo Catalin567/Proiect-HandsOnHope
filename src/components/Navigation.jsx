@@ -89,7 +89,7 @@ function Navigation() {
             </ul>
           </div>
           <Link to="/solicita-ajutor">Solicită ajutor</Link>
-          <a href="#blog">Blog</a>
+          <Link to="/Blog">Blog</Link>
           <Link to="/Contact">Contact</Link>
         </nav>
         <div className="right-side">
@@ -106,7 +106,9 @@ function Navigation() {
               <i className="bx bx-search"></i>
             </div>
           </div>
-          <i className="bx bxs-user"></i>
+          <Link to="/Login">
+            <i className="bx bxs-user"></i>
+          </Link>
           <div className="hamburger" onClick={toggleNavLinks}>
             <i className="bx bx-menu"></i>
           </div>
