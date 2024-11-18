@@ -1,15 +1,4 @@
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
-  .actions {
-    margin-top: 10px;
-  }
-}
-
-/* Main Section */
 .main-section {
   text-align: center;
   margin: 50px 20px;
@@ -32,72 +21,128 @@
   line-height: 1.5;
 }
 
-/* Blog Section */
-.blog-container {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
 
-.blog-title {
-  font-size: 28px;
-  text-align: center;
-  color: #008000;
-  margin-bottom: 30px;
-}
-
-.blog-posts {
+.card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  padding: 20px;
+  justify-content: center;
 }
 
-.blog-post {
-  background-color: #fff;
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  transition: transform 0.3s;
 }
 
-.blog-post:hover {
-  transform: scale(1.05);
+.flip-card-front {
+  background-color: #fff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
 }
 
-.blog-post img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 15px;
+.flip-card-back {
+  background-color: #008000;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
 }
 
-.blog-post-title {
+.card-title {
   font-size: 20px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 10px;
 }
 
-.blog-post-description {
-  font-size: 14px;
+.card-subtitle {
+  font-size: 16px;
   color: #555;
+  font-style: italic;
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.card-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.card-back-text {
+  font-size: 14px;
   line-height: 1.6;
 }
 
-.blog-post-link {
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
   text-decoration: none;
   color: #008000;
   font-weight: bold;
-  display: inline-block;
-  margin-top: 10px;
-  transition: color 0.3s;
 }
 
-.blog-post-link:hover {
-  color: #006400;
+.navbar ul li a:hover {
+  text-decoration: underline;
 }
 
-/* Footer */
+
 .footer {
   background-color: #ffffff;
   color: #333;
@@ -115,87 +160,33 @@
   flex-wrap: wrap;
 }
 
-.footer-newsletter {
-  flex: 1;
-  max-width: 400px;
-}
-
 .footer-title {
   font-size: 20px;
   font-weight: bold;
   color: #008000;
   margin-bottom: 15px;
-  line-height: 1.5;
-}
-
-.newsletter-form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.newsletter-input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.newsletter-button {
-  padding: 10px 20px;
-  background-color: #008000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.newsletter-button:hover {
-  background-color: #006400;
-}
-
-.footer-info {
-  flex: 1;
-  max-width: 400px;
-}
-
-.footer-subtitle {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.footer-info a {
-  color: #008000;
-  text-decoration: none;
-}
-
-.footer-info a:hover {
-  text-decoration: underline;
-}
-
-.footer-donation {
-  flex: 1;
-  max-width: 400px;
 }
 
 .social-links {
-  margin-top: 15px;
   display: flex;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .social-links a img {
   width: 24px;
   height: 24px;
-  display: block;
 }
 
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr; 
+  }
+}
+
