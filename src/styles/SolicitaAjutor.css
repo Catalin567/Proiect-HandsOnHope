@@ -10,8 +10,18 @@
   text-align: center;
   color: white;
   box-shadow: 0px 30px 50px -9px rgba(0, 0, 0, 0.45);
+  filter: none;
 }
-
+.help-header h2{
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+  color: white;
+  font-size: 2.5rem;
+  margin: 0;
+}
 .help-introduction,
 .help-section,
 .how-it-works-section {
@@ -43,14 +53,6 @@
   margin-bottom: 20px;
 }
 
-.form-button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.form-button,
 .form-submit-button {
   background-color: rgba(255, 255, 255, 0.8);
   color: #008000;
@@ -62,12 +64,12 @@
   width: 200px;
   box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
   transition: all 0.3s ease-in-out;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
   text-align: center;
 }
 
-.form-button:hover,
 .form-submit-button:hover {
   color: #006400;
   transform: translateY(-3px);
@@ -76,6 +78,15 @@
 
 .form-submit-button:active {
   transform: scale(0.98);
+}
+.help-form-section{
+  margin-top: 50px;
+}
+.help-form-title {
+  text-align: left !important; 
+  color: #008000;  
+  margin-top: 20px;
+  margin-bottom: 10px; 
 }
 
 .help-form input,
@@ -143,11 +154,40 @@
   min-width: 80px;
   max-width: 80px;
 }
+.help-form-title {
+  text-align: left !important;
+  color: #008000;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;  
+}
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+  .help-header {
+    height: 40vh;
+  }
+
+  .help-header h2 {
+    font-size: 2rem;
+    bottom: 5%;
+  }
+
+  .help-introduction p,
+  .how-it-works-section p,
+  .help-section {
+    font-size: 16px;
+  }
+
+  .form-submit-button {
+    width: 160px;
+    font-size: 0.8em;
+  }
+
   .help-form {
-    padding: 40px;
-    width: 100%;
+    padding: 30px;
+    width: 100%; 
+    margin: 0 20px; 
+    box-sizing: border-box;
   }
 
   .form-row {
@@ -162,32 +202,51 @@
     margin-bottom: 15px;
   }
 
+  .form-group input[name="numarMembriFamilie"] {
+    width: 100% !important;
+  }
+
+  .help-form-title {
+    font-size: 1.2rem;  
+    margin-top: 30px;  
+    text-align: center; 
+  }
+}
+
+@media (max-width: 1024px) {
+  .help-header {
+    height: 50vh;
+  }
+
+  .help-header h2 {
+    font-size: 2.2rem;
+    bottom: 5%;
+    left: 10%;
+  }
+
   .help-introduction p,
   .how-it-works-section p,
   .help-section {
     font-size: 18px;
   }
 
-  .form-button,
   .form-submit-button {
     width: 180px;
     font-size: 0.9em;
   }
 
-  .help-header {
-    height: 50vh;
-  }
-}
-
-@media (max-width: 768px) {
   .help-form {
-    padding: 30px;
+    padding: 40px;
+    width: 100%;
+    margin: 0 20px; 
+    height: auto; 
+    box-sizing: border-box;
   }
 
   .form-row {
     flex-direction: column;
     width: 100%;
-    gap: 5px;
+    gap: 10px;
   }
 
   .form-group {
@@ -196,53 +255,58 @@
     margin-bottom: 15px;
   }
 
-  .help-introduction p,
-  .how-it-works-section p,
-  .help-section {
-    font-size: 16px;
+  .form-group input[name="numarMembriFamilie"] {
+    width: 100% !important;
   }
 
-  .form-button,
-  .form-submit-button {
-    width: 160px;
-    font-size: 0.8em;
-  }
-
-  .help-header {
-    height: 40vh;
+  .help-form-title {
+    font-size: 1.4rem;  
+    margin-top: 40px;   
+    text-align: center; 
   }
 }
 
-@media (max-width: 480px) {
-  .help-form {
-    padding: 20px;
+@media (min-width: 1025px) {
+  .help-header {
+    height: 70vh;
   }
 
-  .form-row {
-    flex-direction: column;
-    width: 100%;
-    gap: 5px;
-  }
-
-  .form-group {
-    flex: 0 0 100%;
-    min-width: 100%;
-    margin-bottom: 10px;
+  .help-header h2 {
+    font-size: 2.5rem;
+    bottom: 10%;
+    left: 5%;
   }
 
   .help-introduction p,
   .how-it-works-section p,
   .help-section {
-    font-size: 14px;
+    font-size: 20px;
   }
 
-  .form-button,
   .form-submit-button {
-    width: 140px;
-    font-size: 0.75em;
+    width: 200px;
+    font-size: 1em;
   }
 
-  .help-header {
-    height: 35vh;
+  .help-form {
+    padding: 50px;
+    width: 1280px;
+    height: 480px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .form-row {
+    gap: 10px;
+  }
+
+  .form-group input[name="numarMembriFamilie"] {
+    width: 80px !important;
+  }
+
+  .help-form-title {
+    font-size: 1.5rem;  
+    margin-top: 50px;    
+    text-align: left;    
   }
 }

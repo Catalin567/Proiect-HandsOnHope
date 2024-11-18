@@ -30,13 +30,16 @@ const SolicitaAjutor = () => {
   };
 
   return (
-    <div className="solicita-ajutor-container">
+    <div>
       <Navigation />
 
-      <header
+      <div
         className="help-header"
         style={{ backgroundImage: `url(${helpHeaderImage})` }}
-      ></header>
+      
+      >
+        <h2>SOLICITĂ AJUTORUL</h2>
+      </div>
 
       <section className="help-introduction">
         <p>
@@ -80,6 +83,8 @@ const SolicitaAjutor = () => {
           apoi vei primi un răspuns în cel mai scurt timp posibil.
         </p>
         <h4 className="highlight-text">Nu ești singur.</h4>
+        <section className="help-form-section">
+        <h3 className="help-form-title">Formular pentru ajutor</h3>
 
         <form onSubmit={handleSubmit} className="help-form">
           <div className="form-row">
@@ -161,6 +166,7 @@ const SolicitaAjutor = () => {
                 name="numarMembriFamilie"
                 value={formData.numarMembriFamilie}
                 onChange={handleChange}
+                min="0"
                 required
               />
             </div>
@@ -177,9 +183,12 @@ const SolicitaAjutor = () => {
                 required
               >
                 <option value="">Alege opțiunea</option>
-                <option value="incendiu">Incendiu</option>
-                <option value="inundatie">Inundație</option>
-                <option value="cutremur">Cutremur</option>
+                <option value="mobilitate">Inundație</option>
+                <option value="incendiu">Cutremur</option>
+                <option value="inundatie">Incendiu</option>
+                <option value="cutremur">Alunecări de teren</option>
+                <option value="mobilitate">Ajutor social</option>
+                <option value="medical">Alta</option>
               </select>
             </div>
             <div className="form-group">
@@ -192,8 +201,12 @@ const SolicitaAjutor = () => {
                 required
               >
                 <option value="">Alege opțiunea</option>
-                <option value="financiar">Asistență financiară</option>
-                <option value="alimentar">Ajutor alimentar</option>
+                <option value="financiar">Ajutor financiar</option>
+                <option value="alimentar">Ajutor juridic</option>
+                <option value="mobilitate">Alimente și apă</option>
+                <option value="medical">Medicamente și produse alimentare</option>
+                <option value="mobilitate">Locuință temporară</option>
+                <option value="medical">Alta</option>
               </select>
             </div>
             <div className="form-group">
@@ -205,8 +218,11 @@ const SolicitaAjutor = () => {
                 onChange={handleChange}
               >
                 <option value="">Alege opțiunea</option>
-                <option value="mobilitate">Mobilitate redusă</option>
-                <option value="medical">Probleme medicale</option>
+                <option value="mobilitate">Persoane vârstnice</option>
+                <option value="medical">Copii sub 5 ani</option>
+                <option value="mobilitate">Persoane cu dizabilități</option>
+                <option value="medical">Nevoi medicale</option>
+                <option value="mobilitate"> Altele</option>
               </select>
             </div>
             <div className="form-group">
@@ -220,14 +236,15 @@ const SolicitaAjutor = () => {
               >
                 <option value="">Alege opțiunea</option>
                 <option value="urgent">Urgent</option>
-                <option value="mediu">Mediu</option>
-                <option value="scazut">Scăzut</option>
+                <option value="mediu">Ridicată</option>
+                <option value="scazut">Normală</option>
               </select>
             </div>
           </div>
 
          
         </form>
+        </section>
         <button type="submit" className="form-submit-button">
             Trimite
           </button>
