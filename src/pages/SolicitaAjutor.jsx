@@ -80,120 +80,157 @@ const SolicitaAjutor = () => {
           apoi vei primi un răspuns în cel mai scurt timp posibil.
         </p>
         <h4 className="highlight-text">Nu ești singur.</h4>
-        <div className="form-button-container">
-          <button className="form-button">FORMULAR</button>
-        </div>
 
         <form onSubmit={handleSubmit} className="help-form">
           <div className="form-row">
-            <input
-              type="text"
-              name="nume"
-              placeholder="Nume"
-              value={formData.nume}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="prenume"
-              placeholder="Prenume"
-              value={formData.prenume}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="localitate"
-              placeholder="Localitate"
-              value={formData.localitate}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="adresa"
-              placeholder="Adresă"
-              value={formData.adresa}
-              onChange={handleChange}
-              required
-            />
+            <div className="form-group">
+              <label htmlFor="nume">Nume</label>
+              <input
+                type="text"
+                id="nume"
+                name="nume"
+                value={formData.nume}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="prenume">Prenume</label>
+              <input
+                type="text"
+                id="prenume"
+                name="prenume"
+                value={formData.prenume}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="localitate">Localitate</label>
+              <input
+                type="text"
+                id="localitate"
+                name="localitate"
+                value={formData.localitate}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="adresa">Adresă</label>
+              <input
+                type="text"
+                id="adresa"
+                name="adresa"
+                value={formData.adresa}
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
 
           <div className="form-row">
-            <input
-              type="tel"
-              name="telefon"
-              placeholder="Telefon"
-              value={formData.telefon}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email (optional)"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            <input
-              type="number"
-              name="numarMembriFamilie"
-              placeholder="Număr de membri ai familiei"
-              value={formData.numarMembriFamilie}
-              onChange={handleChange}
-              required
-            />
+            <div className="form-group">
+              <label htmlFor="telefon">Telefon</label>
+              <input
+                type="tel"
+                id="telefon"
+                name="telefon"
+                value={formData.telefon}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email (optional)</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="numarMembriFamilie">
+                Număr de membri ai familiei
+              </label>
+              <input
+                type="number"
+                id="numarMembriFamilie"
+                name="numarMembriFamilie"
+                value={formData.numarMembriFamilie}
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
 
           <div className="form-row">
-            <select
-              name="tipCalamitate"
-              value={formData.tipCalamitate}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Tip calamitate</option>
-              <option value="incendiu">Incendiu</option>
-              <option value="inundatie">Inundație</option>
-              <option value="cutremur">Cutremur</option>
-            </select>
-            <select
-              name="tipAjutor"
-              value={formData.tipAjutor}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Tip ajutor solicitat</option>
-              <option value="financiar">Asistență financiară</option>
-              <option value="alimentar">Ajutor alimentar</option>
-            </select>
-            <select
-              name="nevoiSpeciale"
-              value={formData.nevoiSpeciale}
-              onChange={handleChange}
-            >
-              <option value="">Nevoi speciale</option>
-              <option value="mobilitate">Mobilitate redusă</option>
-              <option value="medical">Probleme medicale</option>
-            </select>
-            <select
-              name="prioritateaCererii"
-              value={formData.prioritateaCererii}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Prioritatea cererii</option>
-              <option value="urgent">Urgent</option>
-              <option value="mediu">Mediu</option>
-              <option value="scazut">Scăzut</option>
-            </select>
+            <div className="form-group">
+              <label htmlFor="tipCalamitate">Tip calamitate</label>
+              <select
+                id="tipCalamitate"
+                name="tipCalamitate"
+                value={formData.tipCalamitate}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Alege opțiunea</option>
+                <option value="incendiu">Incendiu</option>
+                <option value="inundatie">Inundație</option>
+                <option value="cutremur">Cutremur</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="tipAjutor">Tip ajutor solicitat</label>
+              <select
+                id="tipAjutor"
+                name="tipAjutor"
+                value={formData.tipAjutor}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Alege opțiunea</option>
+                <option value="financiar">Asistență financiară</option>
+                <option value="alimentar">Ajutor alimentar</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="nevoiSpeciale">Nevoi speciale</label>
+              <select
+                id="nevoiSpeciale"
+                name="nevoiSpeciale"
+                value={formData.nevoiSpeciale}
+                onChange={handleChange}
+              >
+                <option value="">Alege opțiunea</option>
+                <option value="mobilitate">Mobilitate redusă</option>
+                <option value="medical">Probleme medicale</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="prioritateaCererii">Prioritatea cererii</label>
+              <select
+                id="prioritateaCererii"
+                name="prioritateaCererii"
+                value={formData.prioritateaCererii}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Alege opțiunea</option>
+                <option value="urgent">Urgent</option>
+                <option value="mediu">Mediu</option>
+                <option value="scazut">Scăzut</option>
+              </select>
+            </div>
           </div>
 
-          <button type="submit" className="form-submit-button">
+         
+        </form>
+        <button type="submit" className="form-submit-button">
             Trimite
           </button>
-        </form>
       </section>
       <Footer />
     </div>
