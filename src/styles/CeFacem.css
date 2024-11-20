@@ -1,0 +1,168 @@
+/* Global container */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    font-family: "Chivo", sans-serif;
+    line-height: 1.6;
+    padding: 0;
+  }
+  
+  /* Main content */
+  .main-content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Title */
+  .title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    margin-top: 5vh;
+    color: #008000;
+  }
+  .chestii-tot {
+    margin: 0 auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 999;
+  }
+  .description {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  /* Intervention section */
+  .intervention {
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    padding: 4% 2%;
+    padding-right: 10%;
+    border-radius: 5vh;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3)
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-weight: 800;
+    color: #008000;
+  }
+  
+  .intervention-list {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  
+  /* Map section */
+  .map-section {
+    margin-bottom: 10vh;
+  }
+  
+  .map-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .map-legend {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .legend-green {
+    color: green;
+  }
+  
+  .legend-blue {
+    color: blue;
+  }
+  
+  .legend-red {
+    color: red;
+  }
+  
+  /* Services section */
+  .services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 10%;
+  }
+  
+  .service-card {
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+  }
+  
+  .service-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-weight: 600;
+    color: #008000;
+    margin-left: 5%;
+    border-radius: 8px;
+    margin-right: 5%;
+    box-sizing: border-box;
+    padding: 2% 3%;
+  }
+  
+  .service-list {
+    list-style-type: disc;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .highlight-green {
+    color: #008000;
+    font-weight: 700;
+  }
+
+  .service-texts {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 5vh;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+
+  .upper-side {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    box-shadow: none;
+  }
+
+  .harta-romaniei {
+    position: relative;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    box-shadow: none;
+    margin: 0 auto;
+  }
+  

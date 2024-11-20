@@ -9,6 +9,7 @@ import SolicitaAjutor from "./pages/SolicitaAjutor";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Blog from "./pages/Blog";
+import CeFacem from "./pages/CeFacem";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Blog" element={<Blog />} />
+        <Route path="/CeFacem" element={<CeFacem />} />
       </Routes>
     </BrowserRouter>
   );

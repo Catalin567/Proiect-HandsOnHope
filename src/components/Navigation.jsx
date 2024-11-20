@@ -55,7 +55,7 @@ function Navigation() {
               </li>
             </ul>
           </div>
-          <a href="#services">Ce facem?</a>
+          <Link to="/CeFacem">Ce facem?</Link>
           <div className="dropdown-center">
             <a
               className="dropdown-toggle"
