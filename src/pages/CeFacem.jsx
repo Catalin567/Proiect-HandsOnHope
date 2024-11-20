@@ -65,9 +65,8 @@ const CeFacem = () => {
           <div className="service-card">
             <h3 className="service-title">Servicii Juridice</h3>
             <p className="service-texts">
-            In multe situații critice, accesul la suport juridic devine esențial pentru a ajuta oamenii să-și protejeze 
-            drepturile și să-și rezolve problemele. Parteneriatele noastre cu notari din toată țara oferă servicii juridice 
-            cum ar fi:
+            În multe situații critice, accesul la suport juridic devine esențial pentru a ajuta oamenii să-și protejeze 
+            drepturile și să-și rezolve problemele. Parteneriatele noastre cu notari din toată țara oferă servicii juridice cum ar fi:
             </p>
             <ul className="service-list">
               <li><span className="highlight-green">Asistență pentru documente legale </span> necesare în procesul de obținere a sprijinului social, în special în cazurile de evacuare și pierdere de bunuri.</li><br></br>
