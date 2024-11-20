@@ -20,6 +20,7 @@
             <form action="login-assets/">
                 <input type="text" id="email" name="email" placeholder="Adresa de e-mail"><br>
                 <input type="password" id="password" name="password" placeholder="Parolă"><br><br>
+                <p class="forgot-password">Ai uitat parola?</p>
                 <input type="submit" value="CONECTEAZĂ-TE" id="submit">
             </form>
         </div>
@@ -27,7 +28,7 @@
         <!-- Right Banner -->
         <div class="right-banner" id="right-banner">
 
-            <img src="login-assets/logo.png" class="right-banner-logo" />
+            <img src="login-assets/logo.png" class="right-banner-logo" onclick="window.history.go(-1); return false;">
             <p class="right-banner-text">
                 ESTI NOU AICI?
                 <br><br>
@@ -36,6 +37,7 @@
             <a href="register.html"><button class="right-banner-button">CREEAZĂ UN CONT</button></a>
         </div>
         <div class="close-right-banner"  id="close-right-banner" onclick="closeBanner()"></div>
+
     </body>
     <script src="login-assets/right-banner-animation.js"></script>
 </html>
