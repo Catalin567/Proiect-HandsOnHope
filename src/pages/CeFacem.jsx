@@ -65,7 +65,7 @@ const CeFacem = () => {
           <div className="service-card">
             <h3 className="service-title">Servicii Juridice</h3>
             <p className="service-texts">
-            În multe situații critice, accesul la suport juridic devine esențial pentru a ajuta oamenii să-și protejeze 
+            In multe situații critice, accesul la suport juridic devine esențial pentru a ajuta oamenii să-și protejeze 
             drepturile și să-și rezolve problemele. Parteneriatele noastre cu notari din toată țara oferă servicii juridice 
             cum ar fi:
             </p>
