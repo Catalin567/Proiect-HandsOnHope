@@ -9,17 +9,28 @@
   position: relative;
   transition: opacity 1.2s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  animation: upperside 2.5s 1;
+}
+
+@keyframes upperside {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 .uc-text {
   position: absolute;
-  bottom: 150px;
+  bottom: 40%;
   letter-spacing: 0.15em;
   font-weight: bold;
   color: rgb(255, 255, 255);
   font-size: 3rem;
-  -webkit-text-stroke: 1.5px rgb(63, 233, 11);
-  text-shadow: 0 0 0 #32e60f;
+  text-shadow: 0 1px 5px #101010;
+  animation: uctext 2.5s 1;
+}
+
+@keyframes uctext {
+  0% {letter-spacing: -15px;}
+  100% {letter-spacing: 0.15em;}
 }
 
 .button-container {

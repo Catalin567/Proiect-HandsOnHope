@@ -16,7 +16,7 @@ function UpperSide() {
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFade(true);
-      }, 500);
+      }, 1500);
     }, 3000);
 
     return () => clearInterval(interval);
