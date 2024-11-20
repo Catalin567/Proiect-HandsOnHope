@@ -191,3 +191,121 @@
   }
 }
 
+.sections {
+  display: flex;
+  flex-direction: column;
+  padding: 90px; /* Distanță de la marginile ecranului */
+  gap: 20px; /* Spațiu între secțiuni */
+}
+
+.section-odd {
+  display: flex;
+  align-items: center; /* Aliniază vertical textul și imaginea */
+  justify-content: space-between;
+  gap: 30px; /* Spațiu între text și imagine */
+  height: 372px; /* Înălțime fixă pentru întreaga secțiune */
+  flex-direction: row;
+  padding-top: 50px;
+}
+
+.title-odd {
+  font-size: 40px; /* Dimensiune pentru titlu */
+  font-weight: bold;
+  margin: 0; /* Eliminare margini implicite */
+}
+
+.text-odd {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column; /* Text în coloană */
+  justify-content: center; /* Centrare verticală a textului */
+  margin: 0; /* Eliminare margini implicite */
+  padding-top: 20px;
+}
+
+.image-odd {
+  width: 644px; /* Dimensiune fixă pentru imagine */
+  height: 372px; /* Înălțime fixă pentru imagine */
+  object-fit: cover; /* Ajustare proporțională a imaginii */
+  border-radius: 10px !important; /* Eliminare completă a colțurilor rotunjite */
+}
+.columns-section {
+  padding: 0px; /* Distanță de la marginile ecranului */
+}
+
+.section-columns {
+  display: flex;
+  gap: 40px; /* Spațiu între coloane */
+}
+
+.column {
+  flex: 1; /* Coloane egale */
+}
+
+.title {
+  font-size: 24px; /* Dimensiune titlu */
+  font-weight: bold;
+  color: green; /* Verde, conform designului */
+  margin-bottom: 10px; /* Spațiu între titlu și text */
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.6; /* Text ușor de citit */
+}
+
+.section-even {
+  padding-top: 70px;
+  display: flex;
+  align-items: center; /* Aliniază vertical textul și imaginea */
+  justify-content: space-between;
+  gap: 30px; /* Spațiu între text și imagine */
+  height: 372px; /* Înălțime fixă pentru întreaga secțiune */
+  flex-direction: row-reverse;
+}
+
+
+
+.image-even {
+  width: 644px; /* Dimensiune fixă pentru imagine */
+  height: 372px; /* Înălțime fixă pentru imagine */
+  object-fit: cover; /* Ajustare proporțională a imaginii */
+  border-radius: 10px !important; /* Eliminare completă a colțurilor rotunjite */
+}
+
+.title-even {
+  font-size: 40px; /* Dimensiune pentru titlu */
+  font-weight: bold;
+  margin: 0; /* Eliminare margini implicite */
+}
+.text-even {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column; /* Text în coloană */
+  justify-content: center; /* Centrare verticală a textului */
+  margin: 0; /* Eliminare margini implicite */
+  padding-top: 20px;
+}
+
+.columns-section2 {
+  padding-top: 80px; /* Distanță de la marginile ecranului */
+}
+
+.section-columns2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spațiu între coloane */
+  text-align: center;
+}
+
+#section-maria {
+  padding-top: 70px;
+}
+
+.text-content-even{
+  text-align: center;
+}
