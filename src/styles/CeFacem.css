@@ -41,7 +41,8 @@
     padding: 4% 2%;
     padding-right: 10%;
     border-radius: 5vh;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3)
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 8vh;
   }
   
   .section-title {
@@ -153,10 +154,10 @@
 
   .harta-romaniei {
     position: relative;
-    width: 50%;
+    width: 60%;
     background-size: cover;
     background-position: center;
-    height: 50vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,5 +165,100 @@
     color: white;
     box-shadow: none;
     margin: 0 auto;
+    fill: white;
+    stroke: black;
+    stroke-width: .3px;
+  }
+
+  .eveniment-judet {
+    display: none;
+    width: 50vw;
+    height: auto;
+    background-color: rgb(243, 243, 243);
+    color: black;
+    position: fixed;
+    top: 20vh;
+    left: 25vw;
+    right: 25vw;
+    z-index: 9999;
+    border-radius: 8px;
+    padding: 5vh 5vw;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .serviciu-social-highlight {
+    color: #1DAEEF;
+    font-weight: 700;
+  }
+
+  .serviciu-juridic-highlight {
+    color: #00A500;
+    font-weight: 700;
+  }
+
+  .close-button-event {
+    float: right;
+    font-weight: 500 !important;
+    padding: 5px 20px !important;
+    border: 2px solid green !important;
+    border-radius: 30px !important;
+    transition: background-color 0.3s !important;
+  }
+
+  .close-button-event:hover {
+    color: white;
+    background-color: green;
+  }
+
+  .serviciu-dezastre-highlight {
+    color: #F40014;
+    font-weight: 700;
+  }
+
+  .eveniment-judet-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #008000;
+  }
+
+  .harta-buton {
+    cursor: pointer;
+    fill: white;
+  }
+
+  .harta-buton:hover {
+    fill: rgb(242, 255, 222);
+  }
+
+  #green-pin {
+    fill: #00A500;
+  }
+
+  #red-pin {
+    fill: #F40014;
+  }
+
+  #blue-pin {
+    fill: #1DAEEF;
+  }
+
+  #Legenda {
+    stroke: none;
+    fill: black;
+  }
+
+  #blue_00000065753709190977333940000007931203685532145835_ {
+    fill: #1DAEEF;
+    stroke: black;
+  }
+
+  #blue_00000071557122348622784080000001949003724375887278_ {
+    fill: #00A500;
+    stroke: black;
+  }
+
+  #blue_00000029761336745988867740000000458534418561085108_ {
+    fill: #F40014;
+    stroke: black;
   }
   

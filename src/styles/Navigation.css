@@ -16,6 +16,12 @@
   border-radius: 5px;
   margin-top: 10px;
   overflow: visible;
+  animation: navigation 2s 1;
+}
+
+@keyframes navigation {
+  0% {margin-top: -100px; opacity: 0;}
+  100% {  margin-top: 10px; opacity: 1;}
 }
 
 .logo img {
