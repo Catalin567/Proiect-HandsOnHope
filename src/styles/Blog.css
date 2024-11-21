@@ -119,6 +119,126 @@
   font-size: 14px;
   line-height: 1.6;
 }
+.details-button {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button:hover {
+  background-color: #003d82;
+}
+
+.details-button2 {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button2:hover {
+  background-color: #003d82;
+}
+
+.details-button:hover {
+  background-color: #003d82;
+}
+.details-button3 {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button3:hover {
+  background-color: #003d82;
+}
+
+.details-button4 {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button4:hover {
+  background-color: #003d82;
+}
+.details-button5 {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button5:hover {
+  background-color: #003d82;
+}
+.details-button6 {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button6:hover {
+  background-color: #003d82;
+}
 
 
 .navbar ul {

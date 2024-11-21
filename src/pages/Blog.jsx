@@ -20,9 +20,10 @@ const Blog = () => {
         <div id="card-container" className="card-container">
           {[
             {
+              id:"title1",
               title: "Reconstrucția unei case după inundații",
               subtitle: "Cazul lui Vasile",
-              image: "pictures/Picture1 1.png",
+              image: "pictures/img1.jpeg",
               description:
                 "La vârsta de 73 de ani, Vasile a trecut printr-un moment cumplit...",
               date: "18.06.2024",
@@ -30,9 +31,10 @@ const Blog = () => {
                 "Inundațiile masive care au lovit comunitatea i-au distrus complet casa în care locuia de o viață. Rămas singur și cu resurse financiare foarte limitate, reconstrucția casei era, pentru Vasile, un vis imposibil de realizat.",
             },
             {
+              id: "title2",
               title: "Reconstrucția unei case după incendii",
               subtitle: "Cazul lui Maria",
-              image: "pictures/Picture2 2.png",
+              image: "pictures/img2.jpeg",
               description:
                 "La vârsta de 62 de ani, Maria a trecut printr-un moment dificil...",
               date: "10.05.2024",
@@ -40,9 +42,10 @@ const Blog = () => {
                 "Familia Popescu, formată din patru membri (Ion, Maria și cei doi copii, Andrei și Ana), locuia într-un apartament modest dintr-un cartier popular al orașului. Totul a luat o întorsătură dramatică într-o noapte de iarnă, când un scurtcircuit a provocat un incendiu devastator.",
             },
             {
+              id: "title3",
               title: "Ajutor pentru o familie defavorizată",
               subtitle: "Cazul familiei Popescu",
-              image: "pictures/Picture4 2.png",
+              image: "pictures/img3.jpeg",
               description:
                 "Familia Popescu are nevoie urgentă de ajutor pentru o nouă casă...",
               date: "01.07.2024",
@@ -50,9 +53,10 @@ const Blog = () => {
                 "Detalii complete despre cazul familiei Popescu și cum îi poți ajuta vor apărea aici.",
             },
             {
+              id: "title4",
               title: "Educație pentru copii fără acces",
               subtitle: "Cazul lui Andrei",
-              image: "pictures/Picture5 2.png",
+              image: "pictures/img4.jpeg",
               description:
                 "Andrei visează să meargă la școală, dar are nevoie de sprijinul nostru...",
               date: "15.08.2024",
@@ -60,6 +64,7 @@ const Blog = () => {
                 "Cu doi copii mici, de 3 și 5 ani, Maria își găsise stabilitatea lucrând ca vânzătoare la un magazin din orașul ei. A început să acuze dureri persistente la spate, iar după mai multe investigații medicale, a fost diagnosticată cu o problemă de coloană care îi cerea o perioadă lungă de recuperare și o intervenție chirurgicală.",
             },
             {
+              id: "title5",
               title: "Povestea lui Ion",
               subtitle: "Refacerea după o boală",
               image: "pictures/Picture3 1.png",
@@ -70,9 +75,10 @@ const Blog = () => {
                 "Mihai lucra ca mecanic auto, având un venit stabil care asigura traiul familiei. Însă a suferit un accident de muncă provocându-și o fractură complexă la picior.",
             },
             {
+              id: "title6",
               title: "Descoperă cum poți ajuta:",
               subtitle: "tipuri de donații acceptate",
-              image: "pictures/Picture7 2.png",
+              image: "pictures/img6.jpeg",
               description:
                 "În platforma noastră, înțelegem că sprijinul vine sub multe forme și că fiecare contribuție poate face o diferență în viața celor aflați în nevoie.",
               date: "",
@@ -95,6 +101,73 @@ const Blog = () => {
                 </div>
                 <div className="flip-card-back">
                   <p className="card-back-text">{card.backText}</p>
+                  <button
+  className="details-button"
+  onClick={() => {
+    document.getElementById("title1").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }}
+>
+  Detalii
+</button>
+<button
+  className="details-button2"
+  onClick={() => {
+    document.getElementById("title2").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }}
+>
+  Detalii
+</button>
+<button
+  className="details-button3"
+  onClick={() => {
+    document.getElementById("title3").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }}
+>
+  Detalii
+</button>
+<button
+  className="details-button4"
+  onClick={() => {
+    document.getElementById("title4").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }}
+>
+  Detalii
+</button>
+<button
+  className="details-button5"
+  onClick={() => {
+    document.getElementById("title5").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }}
+>
+  Detalii
+</button>
+<button
+  className="details-button6"
+  onClick={() => {
+    document.getElementById("title6").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }}
+>
+  Detalii
+</button>
+
                 </div>
               </div>
             </div>
@@ -103,7 +176,7 @@ const Blog = () => {
         <div className="sections">
   <div className="section-odd">
     <div className="text-content">
-      <h1 className="title-odd">
+      <h1 className="title-odd" id="title1">
         Cazul lui Vasile: Reconstrucția unei <br /> case după inundații
       </h1>
       <p className="text-odd">
@@ -115,7 +188,7 @@ const Blog = () => {
         Vasile se vedea nevoit să ceară ajutorul comunității.
       </p>
     </div>
-    <img className="image-odd" src="pictures/img1blog.jpeg" alt="img1" />
+    <img className="image-odd" src="pictures/img1.jpeg" alt="img1" />
   </div>
   <div className="columns-section">
   <div className="section-columns">
@@ -161,15 +234,15 @@ const Blog = () => {
 </div>
 <div className="section-even">
     <div className="text-content-even">
-      <h1 className="title-even">
-      Povestea familiei Radu - O nouă casă, O nouă speranță <br /> 
+      <h1 className="title-even" id="title2">
+      Povestea familiei Popescu - Reconstrucția unei vieți <br /> 
       </h1>
       <p className="text-even">
       Familia Radu, formată din Alex, Irina și cei doi copii, Ilinca și Matei, locuia într-un mic sat din România.  Alex, un bărbat de 45 de ani, era fermier, cunoscut în comunitate pentru pasiunea și grija sa față de pământul pe care lucra. Însă, după ce casa lor a fost grav afectată de o alunecare de teren cauzată de ploi abundente, familia s-a trezit fără locuință și fără resurse pentru reconstrucție. 
       Alunecarea de teren a distrus pereții casei, acoperișul, și a avariat structura de rezistență. În fața unei situații disperate și fără economii pentru o construcție nouă, Alex și Irina au realizat că au nevoie de ajutor pentru a-și reconstrui viața. 
       </p>
     </div>
-    <img className="image-even" src="pictures/Picture2 2.png" alt="img2" />
+    <img className="image-even" src="pictures/img2.jpeg" alt="img2" />
   </div>
   <div className="columns-section2">
   <div className="section-columns2">
@@ -198,7 +271,7 @@ Ion a început să caute un nou loc de muncă, reușind să obțină un post sim
 </div>
 <div className="section-odd">
     <div className="text-content">
-      <h1 className="title-odd">
+      <h1 className="title-odd" id="title3">
       Povestea familiei Radu - O nouă casă, O nouă speranță 
       </h1>
       <p className="text-odd">
@@ -206,7 +279,7 @@ Ion a început să caute un nou loc de muncă, reușind să obțină un post sim
 Alunecarea de teren a distrus pereții casei, acoperișul, și a avariat structura de rezistență. În fața unei situații disperate și fără economii pentru o construcție nouă, Alex și Irina au realizat că au nevoie de ajutor pentru a-și reconstrui viața.  
       </p>
     </div>
-    <img className="image-odd" src="pictures/Picture4 2.png" alt="img1" />
+    <img className="image-odd" src="pictures/img3.jpeg" alt="img1" />
   </div>
   <div className="columns-section2" >
   <div className="section-columns2">
@@ -240,14 +313,14 @@ Povestea familiei Radu nu este doar despre reconstrucția unei case, ci și desp
   </div>
   <div className="section-even">
     <div className="text-content">
-      <h1 className="title-odd">
+      <h1 className="title-odd" id="title4">
       Maria – Sprijin pentru o mamă singură 
       </h1>
       <p className="text-odd">
         Maria este o tânără mamă singură care, la doar 29 de ani, a fost nevoită să înfrunte o situație critică. Cu doi copii mici, de 3 și 5 ani, Maria își găsise stabilitatea lucrând ca vânzătoare la un magazin din orașul ei. A început să acuze dureri persistente la spate, iar după mai multe investigații medicale, a fost diagnosticată cu o problemă de coloană care îi cerea o perioadă lungă de recuperare și o intervenție chirurgicală. Pierzându-și locul de muncă, Maria s-a văzut brusc într-o situație disperată: fără un venit stabil și cu doi copii de întreținut, s-a confruntat cu realitatea dureroasă că risca să piardă și locuința. 
       </p>
     </div>
-    <img className="image-odd" src="pictures/Picture5 2.png" alt="img4" />
+    <img className="image-odd" src="pictures/img4.jpeg" alt="img4" />
   </div>
   <div className="columns-section" id="section-maria">
   <div className="section-columns">
@@ -271,7 +344,7 @@ Povestea familiei Radu nu este doar despre reconstrucția unei case, ci și desp
 
 <div className="section-odd">
     <div className="text-content">
-      <h1 className="title-odd">
+      <h1 className="title-odd" id="title5">
         Cazul lui Vasile: Reconstrucția unei <br /> case după inundații
       </h1>
       <p className="text-odd">
@@ -317,14 +390,14 @@ Povestea lui Mihai nu este doar despre lupta cu boala și dificultățile financ
 </div>
 <div className="section-even">
     <div className="text-content-even">
-      <h1 className="title-even">
+      <h1 className="title-even" id="title6">
       Descoperă cum poți ajuta: tipuri de donații acceptate și cum fiecare contează <br /> 
       </h1>
       <p className="text-even">
       În platforma noastră, înțelegem că sprijinul vine sub multe forme și că fiecare contribuție  poate face o diferență în viața celor aflați în nevoie. Iată câteva dintre tipurile de donații pe care le acceptăm și cum fiecare tip poate schimba o viață:
     </p>
     </div>
-    <img className="image-even" src="pictures/Picture2 2.png" alt="img2" />
+    <img className="image-even" src="pictures/img6.jpeg" alt="img2" />
   </div>
   <div className="columns-section2">
   <div className="section-columns2">
