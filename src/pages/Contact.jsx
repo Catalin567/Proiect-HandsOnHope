@@ -1,10 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Contact.css";
 import headerImage from "../images/people.jpg";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    nume: "",
+    prenume: "",
+    subiect: "",
+    mesaj: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const validate = () => {
+    const newErrors = {};
+
+    if (!formData.nume.trim()) newErrors.nume = "Numele este obligatoriu.";
+
+    if (!formData.prenume.trim()) {
+      newErrors.prenume = "Prenumele este obligatoriu.";
+    } 
+
+    if (!formData.subiect.trim()) {
+      newErrors.subiect = "Subiectul este obligatoriu.";
+    }
+
+    if (!formData.mesaj.trim()) newErrors.mesaj = "Mesajul este obligatoriu.";
+
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      console.log("Form data:", formData);
+      alert("Formularul a fost trimis cu succes!");
+    }
+  };
+
   return (
     <div>
       <Navigation />
@@ -14,6 +60,7 @@ const Contact = () => {
       >
         <h2>CONTACTEAZĂ-NE</h2>
       </div>
+
       <section className="contact-section">
         <div className="contact-header-text">
           <p>
@@ -29,45 +76,93 @@ const Contact = () => {
           <ul>
             <li>
               <a href="#">
-                <i class="bx bx-envelope" /> Email general: info@handsonhope.org
+                <i className="bx bx-envelope" /> Email general: info@handsonhope.org
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="bx bx-envelope" /> Suport pentru donatori:
+                <i className="bx bx-envelope" /> Suport pentru donatori:
                 donations@handsonhope.org
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="bx bx-envelope" /> Voluntariat și colaborări:
+                <i className="bx bx-envelope" /> Voluntariat și colaborări:
                 volunteer@handsonhope.org
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="bx bx-map" /> Adresă: Str. Solidarității Nr. 10, Iași,
+                <i className="bx bx-map" /> Adresă: Str. Solidarității Nr. 10, Iași,
                 România
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="bx bx-phone" /> Telefon: +40 XXX XXX XXX
+                <i className="bx bx-phone" /> Telefon: +40 XXX XXX XXX
               </a>
             </li>
           </ul>
         </div>
       </section>
+
       <section className="contact-form">
         <h2>Formular contact</h2>
-        <form>
-          <input type="text" placeholder="Nume" />
-          <input type="email" placeholder="Email" />
-          <input type="tel" placeholder="Telefon" />
-          <textarea placeholder="Mesaj"></textarea>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="nume">Nume</label>
+            <input
+              type="text"
+              name="nume"
+              id="nume"
+              value={formData.nume}
+              onChange={handleChange}
+              className="small-input"
+            />
+            {formSubmitted && errors.nume && <span className="error">{errors.nume}</span>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="prenume">Prenume</label>
+            <input
+              type="text"
+              name="prenume"
+              id="prenume"
+              value={formData.prenume}
+              onChange={handleChange}
+              className="small-input"
+
+            />
+            {formSubmitted && errors.prenume && <span className="error">{errors.prenume}</span>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="subiect">Subiect</label>
+            <input
+              type="text"
+              name="subiect"
+              id="subiect"
+              value={formData.subiect}
+              onChange={handleChange}
+            />
+            {formSubmitted && errors.subiect && <span className="error">{errors.subiect}</span>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="mesaj">Mesaj</label>
+            <textarea
+              name="mesaj"
+              id="mesaj"
+              value={formData.mesaj}
+              onChange={handleChange}
+            ></textarea>
+            {formSubmitted && errors.mesaj && <span className="error">{errors.mesaj}</span>}
+          </div>
+
           <button type="submit">TRIMITE</button>
         </form>
       </section>
+
       <section className="additional-links">
         <a href="#">Întrebări Frecvente</a>
         <p>
@@ -87,12 +182,14 @@ const Contact = () => {
           on Hope, suntem deschiși la parteneriate.
         </p>
       </section>
+
       <section className="map">
         <iframe
           src="https://maps.google.com/?q=Universitatea+Alexandru+Ioan+Cuza,+Iași&output=embed"
           title="Location"
         ></iframe>
       </section>
+
       <Footer />
     </div>
   );
