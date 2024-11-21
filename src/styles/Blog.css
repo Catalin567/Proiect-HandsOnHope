@@ -429,3 +429,115 @@
 .text-content-even{
   text-align: center;
 }
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  .section-odd,
+  .section-even {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    gap: 20px; /* Micșorează spațiul pentru a optimiza aspectul pe ecrane mai mici */
+    padding: 20px; /* Adaugă padding pentru a asigura spațiu adecvat între secțiuni */
+  }
+
+  .image-odd,
+  .image-even {
+    width: 100%; /* Setează lățimea imaginii la 100% pentru a ocupa întreg containerul */
+    height: auto; /* Păstrează proporțiile imaginii */
+  }
+
+  .text-odd,
+  .text-even {
+    width: 100%;
+    padding: 0 20px; /* Adaugă padding pentru margini */
+    text-align: center; /* Asigură-te că textul este centrat */
+  }
+  
+  .columns-section .section-columns {
+    flex-direction: column;
+    gap: 20px; /* Micșorează spațiul pentru a optimiza aspectul */
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Adaugă spațiu între elementele din footer */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .title-odd,
+  .title-even {
+    font-size: 30px; /* Micșorează fontul pentru ecrane mai mici */
+    padding: 10px; /* Adaugă puțin spațiu pentru a menține lizibilitatea */
+  }
+
+  .quote {
+    font-size: 20px;
+    padding: 20px; /* Micșorează paddingul pentru a se potrivi mai bine pe ecrane mici */
+  }
+
+  .flip-card {
+    width: 100%; /* Asigură-te că flip-card-ul ocupă toată lățimea containerului */
+    height: auto; /* Ajustează înălțimea pentru a păstra proporțiile */
+  }
+
+  .details-button {
+    padding: 8px 16px;
+    font-size: 12px; /* Ajustează dimensiunea fontului pentru a menține lizibilitatea */
+  }
+}
+
+@media (max-width: 480px) {
+  .quote {
+    font-size: 18px; /* Ajustează dimensiunea pentru a fi mai potrivită pe ecrane mici */
+    padding: 15px; /* Ajustează paddingul pentru a optimiza spațiul */
+  }
+
+  .title-odd,
+  .title-even {
+    font-size: 24px;
+  }
+
+  .text-odd,
+  .text-even {
+    font-size: 16px; /* Ajustează dimensiunea fontului pentru o lizibilitate mai bună */
+    padding: 0 10px; /* Micșorează padding-ul pentru a maximiza spațiul */
+  }
+
+  .footer-container {
+    padding: 20px; /* Adaugă padding pentru a asigura o separare vizuală bună */
+    flex-direction: column;
+    text-align: center;
+    gap: 15px; /* Micșorează spațiul între elemente pentru a optimiza aspectul */
+  }
+
+  .card-title {
+    font-size: 18px; /* Micșorează titlul pentru ecrane mici */
+  }
+
+  .card-description,
+  .card-back-text {
+    font-size: 12px; /* Dimensiune mai mică pentru a menține totul lizibil */
+  }
+
+  .details-button {
+    padding: 6px 12px; /* Ajustează paddingul pentru a nu ocupa prea mult spațiu */
+    font-size: 10px; /* Dimensiune mai mică pentru a optimiza aspectul */
+  }
+
+  .image-odd,
+  .image-even {
+    width: 100%;
+    height: auto; /* Ajustează înălțimea pentru a păstra proporțiile */
+  }
+}

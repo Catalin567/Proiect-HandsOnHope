@@ -3,9 +3,14 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Blog.css";
 const Blog = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }}
   return (
     <div>
-      <Navigation />
+      <Navigation className="navigation-blog" />
       <main>
         <div className="main-section">
           <p className="text-line"></p>
@@ -102,72 +107,11 @@ const Blog = () => {
                 <div className="flip-card-back">
                   <p className="card-back-text">{card.backText}</p>
                   <button
-  className="details-button"
-  onClick={() => {
-    document.getElementById("title1").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }}
->
-  Detalii
-</button>
-<button
-  className="details-button2"
-  onClick={() => {
-    document.getElementById("title2").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }}
->
-  Detalii
-</button>
-<button
-  className="details-button3"
-  onClick={() => {
-    document.getElementById("title3").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }}
->
-  Detalii
-</button>
-<button
-  className="details-button4"
-  onClick={() => {
-    document.getElementById("title4").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }}
->
-  Detalii
-</button>
-<button
-  className="details-button5"
-  onClick={() => {
-    document.getElementById("title5").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }}
->
-  Detalii
-</button>
-<button
-  className="details-button6"
-  onClick={() => {
-    document.getElementById("title6").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }}
->
-  Detalii
-</button>
-
+                    className="details-button"
+                    onClick={() => scrollToSection(card.id)}
+                  >
+                    Detalii
+                  </button>
                 </div>
               </div>
             </div>
