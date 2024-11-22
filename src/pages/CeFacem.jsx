@@ -29,7 +29,7 @@ const CeFacem = () => {
         <Harta />
 
         <section className="intervention">
-          <h2 className="section-title">Cum intervenim?</h2>
+          <h2 className="section-title">Cum intervenim noi?</h2>
           <p className="intervention-text">
           Răspundem apelurilor directe pentru ajutor, primite prin formularul nostru de solicitare.
           <br></br><br></br>
