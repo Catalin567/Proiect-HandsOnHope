@@ -1,5 +1,6 @@
 
 .main-section {
+  padding-top: 20px;
   text-align: center;
   margin: 50px 20px;
 }
@@ -118,6 +119,126 @@
   font-size: 14px;
   line-height: 1.6;
 }
+.details-button {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button:hover {
+  background-color: #003d82;
+}
+
+.details-button2 {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button2:hover {
+  background-color: #003d82;
+}
+
+.details-button:hover {
+  background-color: #003d82;
+}
+.details-button3 {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button3:hover {
+  background-color: #003d82;
+}
+
+.details-button4 {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button4:hover {
+  background-color: #003d82;
+}
+.details-button5 {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button5:hover {
+  background-color: #003d82;
+}
+.details-button6 {
+  position: absolute;
+  bottom: 15px; /* Poziționează butonul la baza cardului */
+  left: 50%; /* Centrează butonul pe orizontală */
+  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-button6:hover {
+  background-color: #003d82;
+}
 
 
 .navbar ul {
@@ -190,3 +311,216 @@
   }
 }
 
+.sections {
+  display: flex;
+  flex-direction: column;
+  padding: 90px; /* Distanță de la marginile ecranului */
+  gap: 20px; /* Spațiu între secțiuni */
+}
+
+.section-odd {
+  display: flex;
+  align-items: center; /* Aliniază vertical textul și imaginea */
+  justify-content: space-between;
+  gap: 30px; /* Spațiu între text și imagine */
+  height: 372px; /* Înălțime fixă pentru întreaga secțiune */
+  flex-direction: row;
+  padding-top: 50px;
+}
+
+.title-odd {
+  font-size: 40px; /* Dimensiune pentru titlu */
+  font-weight: bold;
+  margin: 0; /* Eliminare margini implicite */
+}
+
+.text-odd {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column; /* Text în coloană */
+  justify-content: center; /* Centrare verticală a textului */
+  margin: 0; /* Eliminare margini implicite */
+  padding-top: 20px;
+}
+
+.image-odd {
+  width: 644px; /* Dimensiune fixă pentru imagine */
+  height: 372px; /* Înălțime fixă pentru imagine */
+  object-fit: cover; /* Ajustare proporțională a imaginii */
+  border-radius: 10px !important; /* Eliminare completă a colțurilor rotunjite */
+}
+.columns-section {
+  padding: 0px; /* Distanță de la marginile ecranului */
+}
+
+.section-columns {
+  display: flex;
+  gap: 40px; /* Spațiu între coloane */
+}
+
+.column {
+  flex: 1; /* Coloane egale */
+}
+
+.title {
+  font-size: 24px; /* Dimensiune titlu */
+  font-weight: bold;
+  color: green; /* Verde, conform designului */
+  margin-bottom: 10px; /* Spațiu între titlu și text */
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.6; /* Text ușor de citit */
+}
+
+.section-even {
+  padding-top: 70px;
+  display: flex;
+  align-items: center; /* Aliniază vertical textul și imaginea */
+  justify-content: space-between;
+  gap: 30px; /* Spațiu între text și imagine */
+  height: 372px; /* Înălțime fixă pentru întreaga secțiune */
+  flex-direction: row-reverse;
+}
+
+
+
+.image-even {
+  width: 644px; /* Dimensiune fixă pentru imagine */
+  height: 372px; /* Înălțime fixă pentru imagine */
+  object-fit: cover; /* Ajustare proporțională a imaginii */
+  border-radius: 10px !important; /* Eliminare completă a colțurilor rotunjite */
+}
+
+.title-even {
+  font-size: 40px; /* Dimensiune pentru titlu */
+  font-weight: bold;
+  margin: 0; /* Eliminare margini implicite */
+}
+.text-even {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column; /* Text în coloană */
+  justify-content: center; /* Centrare verticală a textului */
+  margin: 0; /* Eliminare margini implicite */
+  padding-top: 20px;
+}
+
+.columns-section2 {
+  padding-top: 80px; /* Distanță de la marginile ecranului */
+}
+
+.section-columns2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spațiu între coloane */
+  text-align: center;
+}
+
+#section-maria {
+  padding-top: 70px;
+}
+
+.text-content-even{
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .section-odd,
+  .section-even {
+    flex-direction: column; /* Așează imaginea și textul unul sub altul */
+    align-items: center; /* Centrează vertical */
+    text-align: center; /* Centrează textul */
+    height: auto; /* Elimină înălțimea fixă */
+    gap: 20px; /* Micșorează spațiul între text și imagine */
+    padding: 20px; /* Ajustează padding pentru a asigura spațiu pe dispozitive mai mici */
+  }
+
+  .image-odd,
+  .image-even {
+    width: 100%; /* Ocupă întreaga lățime a containerului */
+    height: auto; /* Păstrează proporțiile imaginii */
+  }
+
+  .text-odd,
+  .text-even {
+    padding: 0 20px; /* Adaugă padding pentru margini */
+  }
+
+  .columns-section .section-columns {
+    flex-direction: column; /* Coloane în coloană pentru spațiu limitat */
+    gap: 20px; /* Spațiu mai mic între coloane */
+  }
+
+  .title-odd,
+  .title-even {
+    font-size: 30px; /* Dimensiune mai mică pentru titlu */
+  }
+}
+
+/* Breakpoint pentru telefoane medii și mici - max-width 768px */
+@media (max-width: 768px) {
+  .sections {
+    padding: 40px; /* Reducerea padding-ului pentru dispozitive mai mici */
+  }
+
+  .title-odd,
+  .title-even {
+    font-size: 26px; /* Dimensiune titlu redusă pentru lizibilitate */
+  }
+
+  .text-odd,
+  .text-even {
+    font-size: 18px; /* Ajustare dimensiune text */
+    padding: 0 15px; /* Micșorează paddingul pentru marginile laterale */
+  }
+
+  .image-odd,
+  .image-even {
+    border-radius: 5px; /* Redu colțurile rotunjite pentru a se potrivi mai bine pe ecrane mici */
+  }
+
+  .section-columns {
+    gap: 15px; /* Reducerea spațiului între coloane pentru dispozitive mai mici */
+  }
+}
+
+/* Breakpoint pentru telefoane foarte mici - max-width 480px */
+@media (max-width: 480px) {
+  .title-odd,
+  .title-even {
+    font-size: 22px; /* Titlu redus pentru telefoane mici */
+  }
+
+  .text-odd,
+  .text-even {
+    font-size: 16px; /* Dimensiune text mai mică pentru lizibilitate mai bună */
+    padding: 0 10px; /* Ajustare padding pentru spațiu limitat */
+  }
+
+  .image-odd,
+  .image-even {
+    width: 100%; /* Asigură-te că imaginea ocupă întreaga lățime a containerului */
+    height: auto; /* Păstrează proporțiile imaginii */
+  }
+
+  .columns-section2 {
+    padding-top: 40px; /* Reducere padding pentru telefoane mici */
+  }
+
+  .title {
+    font-size: 20px; /* Ajustare dimensiune titlu pentru coloane */
+  }
+
+  .text {
+    font-size: 16px; /* Ajustare dimensiune text pentru coloane */
+  }
+
+  .section-columns2 {
+    gap: 15px; /* Reducerea spațiului între coloane pentru spațiu limitat */
+  }
+}

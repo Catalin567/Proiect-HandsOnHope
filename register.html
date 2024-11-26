@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creează un cont - Hands On Hope</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="login-assets/login.css">
+    </head>
+    <body>
+        <!-- Main Frame / Form -->
+        <div id="main-frame" id="main-frame">
+            <h1 class="login-title">CONECTEAZĂ-TE</h1>
+            <div id="login-logos">
+                <img src="login-assets/facebook.png" class="login-icons">
+                <img src="login-assets/google.webp" class="login-icons">
+            </div>
+
+            <form action="login-assets/">
+                <input type="text" id="username" name="username" placeholder="Nume utilizator"><br>
+                <input type="text" id="email" name="email" placeholder="Adresa de e-mail"><br>
+                <input type="password" id="password" name="password" placeholder="Parolă"><br><br>
+                <input type="submit" value="CREEAZĂ CONTUL" id="submit">
+            </form>
+        </div>
+
+        <!-- Right Banner -->
+        <div class="right-banner" id="right-banner">
+
+            <img src="login-assets/logo.png" class="right-banner-logo" onclick="window.history.go(-1); return false;">
+            <p class="right-banner-text">
+                BINE AI VENIT!
+                <br><br>
+                Alătură-te misiunii nostre și împreună putem construi un viitor mai bun!
+            </p>
+            <a href="login.html"><button class="right-banner-button">INTRĂ ÎN CONT</button></a>
+        </div>
+        <div class="close-right-banner"  id="close-right-banner" onclick="closeBanner()"></div>
+    </body>
+    <script src="login-assets/right-banner-animation.js"></script>
+</html>

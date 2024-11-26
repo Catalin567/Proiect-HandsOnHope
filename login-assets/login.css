@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: white;
+    font-family: "Chivo", sans-serif;
+}
+
+#main-frame {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transition: 1s;
+}
+
+.right-banner {
+    width: 30%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(0, 97, 0, 0.6);
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: fixed;
+    z-index: 99;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+.right-banner-text {
+    text-align: center;
+    font-family: "Chivo", sans-serif;
+    box-sizing: border-box;
+    color: white;
+    font-size: 3vh;
+}
+
+.close-right-banner {
+    width: 5vh;
+    height: 5vh;
+    top: 0.5vh;
+    right: 0.5vh;
+    position: fixed;
+    z-index: 9999;
+    background-image: url("image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.right-banner-logo {
+    margin-left: 10%;
+    width: 80%;
+    margin-right: 10%;
+    cursor: pointer;
+}
+
+.forgot-password {
+    cursor: pointer;
+}
+
+.right-banner-button {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    border-radius: 5vh;
+    text-align: center;
+    border: 0.2vh #005F00 solid;
+    box-shadow: 0 0.2vh 0.2vh rgba(0, 0, 0, 0.37);
+    background-color: rgb(241, 241, 241);
+    font-family: "Chivo", sans-serif;
+    font-size: 1.75vh;
+    padding: 5% 0;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 5vh;
+    text-align: center;
+    border: 0.2vh #005F00 solid;
+    box-shadow: 0 0.2vh 0.2vh rgba(0, 0, 0, 0.37);
+    background-color: rgb(241, 241, 241);
+    font-family: "Chivo", sans-serif;
+    font-size: 2vh;
+    padding: 1.25% 0;
+    margin: 0.8% 0;
+    width: 50%;
+}
+
+.login-title {
+    margin-top: 5%;
+}
+
+#login-logos {
+    width: 16%;
+    margin-left: 42%;
+}
+
+.login-icons {
+    width: 40%;
+    margin: 5%;
+    height: auto;
+    float: left;
+    margin-bottom: 15%;
+}
+
+#submit {
+    background-color: rgba(0, 97, 0, 0.6);
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 2% 0;
+    width: 40%;
+}
+
+#submit:hover {
+    background-color: rgba(0, 128, 0, 0.6);
+
+}
+
+.right-banner-button:hover, input:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes banner-slide-out {
+    0% {right: 0;}
+    100% {right: -45%;}
+}
+
+@keyframes main-expand {
+    0% {width: 70%;}
+    100% {width: 100%;}
+}
+
+@keyframes banner-slide-out-2 {
+    0% {right: -45%;}
+    100% {right: 0;}
+}
+
+@keyframes main-expand-2 {
+    0% {width: 100%;}
+    100% {width: 70%;}
+}

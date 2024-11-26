@@ -55,7 +55,7 @@ function Navigation() {
               </li>
             </ul>
           </div>
-          <a href="#services">Ce facem?</a>
+          <Link to="/CeFacem">Ce facem?</Link>
           <div className="dropdown-center">
             <a
               className="dropdown-toggle"
@@ -106,7 +106,7 @@ function Navigation() {
               <i className="bx bx-search"></i>
             </div>
           </div>
-          <i className="bx bxs-user"></i>
+          <a className="loginLink" href="login.html"><i className="bx bxs-user"></i></a>
           <div className="hamburger" onClick={toggleNavLinks}>
             <i className="bx bx-menu"></i>
           </div>
