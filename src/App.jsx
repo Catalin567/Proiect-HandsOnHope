@@ -28,7 +28,7 @@ function App() {
         <Route path="/Blog" element={<Blog />} />
         <Route path="/CeFacem" element={<CeFacem />} />
         <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="Campanii" element={<Campanii />} />
+        <Route path="/Campanii" element={<Campanii />} />
       </Routes>
     </BrowserRouter>
   );

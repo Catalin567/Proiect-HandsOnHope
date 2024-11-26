@@ -72,9 +72,7 @@ function Navigation() {
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Campanii
-                </a>
+                <Link to="/Campanii">Campanii</Link>
               </li>
               <li>
                 <a className="dropdown-item" href="#">
@@ -106,7 +104,9 @@ function Navigation() {
               <i className="bx bx-search"></i>
             </div>
           </div>
-          <a className="loginLink" href="login.html"><i className="bx bxs-user"></i></a>
+          <a className="loginLink" href="login.html">
+            <i className="bx bxs-user"></i>
+          </a>
           <div className="hamburger" onClick={toggleNavLinks}>
             <i className="bx bx-menu"></i>
           </div>
