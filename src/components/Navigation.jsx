@@ -72,9 +72,7 @@ function Navigation() {
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Campanii
-                </a>
+                <Link to="/Campanii">Campanii</Link>
               </li>
               <li>
                 <a className="dropdown-item" href="#">

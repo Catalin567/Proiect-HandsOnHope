@@ -10,7 +10,7 @@ const Blog = () => {
     }}
   return (
     <div>
-      <Navigation className="navigation-blog" />
+      <Navigation/>
       <main>
         <div className="main-section">
           <p className="text-line"></p>
