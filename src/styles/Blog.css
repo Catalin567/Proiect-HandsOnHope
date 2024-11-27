@@ -1,4 +1,3 @@
-
 .main-section {
   padding-top: 20px;
   text-align: center;
@@ -22,7 +21,6 @@
   line-height: 1.5;
 }
 
-
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -30,7 +28,6 @@
   padding: 20px;
   justify-content: center;
 }
-
 
 .flip-card {
   background-color: transparent;
@@ -240,7 +237,6 @@
   background-color: #003d82;
 }
 
-
 .navbar ul {
   display: flex;
   justify-content: center;
@@ -262,7 +258,6 @@
 .navbar ul li a:hover {
   text-decoration: underline;
 }
-
 
 .footer {
   background-color: #ffffff;
@@ -299,15 +294,15 @@
   height: 24px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .card-container {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 }
 
@@ -386,8 +381,6 @@
   flex-direction: row-reverse;
 }
 
-
-
 .image-even {
   width: 644px; /* Dimensiune fixă pentru imagine */
   height: 372px; /* Înălțime fixă pentru imagine */
@@ -426,7 +419,7 @@
   padding-top: 70px;
 }
 
-.text-content-even{
+.text-content-even {
   text-align: center;
 }
 @media (max-width: 1024px) {

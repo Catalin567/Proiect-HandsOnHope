@@ -49,7 +49,7 @@ function Footer() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Introduceți adresa de email"
                   />
-                  <button className="btn btn-outline-success" type="submit">
+                  <button className="btn-abonare" type="submit">
                     Abonare
                   </button>
                   {error && <p className="error-message">{error}</p>}

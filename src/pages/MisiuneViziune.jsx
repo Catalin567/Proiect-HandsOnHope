@@ -59,9 +59,15 @@ function MisiuneViziune() {
       <div className="parteneri">
         <p>Partenerii noștri</p>
         <div>
-          <img src={l1} />
-          <img src={l2} />
-          <img src={l3} />
+          <a href="https://www.altex.ro">
+            <img src={l1} />
+          </a>
+          <a href="https://www.careffour.ro">
+            <img src={l2} />
+          </a>
+          <a href="https://www.kaufland.ro">
+            <img src={l3} />
+          </a>
         </div>
       </div>
       <Footer />
