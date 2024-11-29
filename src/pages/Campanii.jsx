@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import "../styles/Campanii.css";
 
 const Campanii = () => {
   return (
@@ -8,11 +9,11 @@ const Campanii = () => {
       <Navigation />
       <main>
         <img
-          src="pictures/imgcampanii.png"
+          src="pictures/heroimg.png"
           alt="campaniiimg"
           className="img-campanii"
         />
-        <p className="hero-text">Campanii</p>
+
         <br />
         <p className="p1-campanii">
           <br /> Campaniile noastre sunt mai mult decât simple evenimente, sunt
