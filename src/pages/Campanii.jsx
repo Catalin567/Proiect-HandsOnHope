@@ -2,17 +2,14 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Campanii.css";
+import img from "/pictures/imgcampanii.png";
 
 const Campanii = () => {
   return (
     <div>
       <Navigation />
       <main>
-        <img
-          src="pictures/heroimg.png"
-          alt="campaniiimg"
-          className="img-campanii"
-        />
+        <img src={img} alt="campaniiimg" className="img-campanii" />
 
         <br />
         <p className="p1-campanii">
