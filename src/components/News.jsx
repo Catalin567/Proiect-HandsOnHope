@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function News() {
   return (
     <section className="news-container">
-      <h2 className="title">Ultimele știri</h2>
+      <h2 className="title-news">Ultimele știri</h2>
       <div className="news-cards">
         <div className="news-item">
           <img src={news1} alt="News 1" className="news-image" />

@@ -7,9 +7,11 @@
   padding: 10px;
 }
 
-.testimonial-text {
+.testimonial-text h2 {
+  font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 
 .right-image img,
