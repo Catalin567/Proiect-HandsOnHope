@@ -55,13 +55,7 @@ const SolicitaAjutor = () => {
       formErrors.telefon = "Telefonul trebuie să fie un număr valid de telefon.";
       isValid = false;
     }
-    if (!formData.email) {
-      formErrors.email = "Email-ul este obligatoriu.";
-      isValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      formErrors.email = "Adresa de email nu este validă.";
-      isValid = false;
-    }
+    
     if (!formData.numarMembriFamilie) {
       formErrors.numarMembriFamilie = "Numărul de membri ai familiei este obligatoriu.";
       isValid = false;
@@ -254,10 +248,8 @@ const SolicitaAjutor = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={errors.email ? 'input-error' : ''}
 
               />
-              {errors.email && <div className="error">{errors.email}</div>}
 
             </div>
             <div className="form-group">
@@ -280,85 +272,84 @@ const SolicitaAjutor = () => {
           </div>
 
           <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="tipCalamitate">Tip calamitate</label>
-              <select
-                id="tipCalamitate"
-                name="tipCalamitate"
-                value={formData.tipCalamitate}
-                onChange={handleChange}
-                className={errors.tipCalamitate ? 'input-error' : ''}
+          <div className="form-group">
+  <label htmlFor="tipCalamitate">Tip calamitate</label>
+  <select
+    id="tipCalamitate"
+    name="tipCalamitate"
+    value={formData.tipCalamitate}
+    onChange={handleChange}
+    className={errors.tipCalamitate ? 'input-error' : ''}
+  >
+    <option value="">Alege opțiunea</option>
+    <option value="inundatie">Inundație</option>
+    <option value="cutremur">Cutremur</option>
+    <option value="alunecari_teren">Alunecări de teren</option>
+    <option value="ajutor_social">Ajutor social</option>
+    <option value="alta">Alta</option>
+  </select>
+  {errors.tipCalamitate && <div className="error">{errors.tipCalamitate}</div>}
+</div>
 
-              >
-                <option value="">Alege opțiunea</option>
-                <option value="mobilitate">Inundație</option>
-                <option value="incendiu">Cutremur</option>
-                <option value="inundatie">Incendiu</option>
-                <option value="cutremur">Alunecări de teren</option>
-                <option value="mobilitate">Ajutor social</option>
-                <option value="medical">Alta</option>
-              </select>
-              {errors.tipCalamitate && <div className="error">{errors.tipCalamitate}</div>}
-            </div>
-            <div className="form-group">
-              <label htmlFor="tipAjutor">Tip ajutor solicitat</label>
-              <select
-                id="tipAjutor"
-                name="tipAjutor"
-                value={formData.tipAjutor}
-                onChange={handleChange}
-                className={errors.tipAjutor ? 'input-error' : ''}
+<div className="form-group">
+  <label htmlFor="tipAjutor">Tip ajutor solicitat</label>
+  <select
+    id="tipAjutor"
+    name="tipAjutor"
+    value={formData.tipAjutor}
+    onChange={handleChange}
+    className={errors.tipAjutor ? 'input-error' : ''}
+  >
+    <option value="">Alege opțiunea</option>
+    <option value="ajutor_financiar">Ajutor financiar</option>
+    <option value="ajutor_juridic">Ajutor juridic</option>
+    <option value="alimente_si_apa">Alimente și apă</option>
+    <option value="medicamente_si_produse">Medicamente și produse sanitare</option>
+    <option value="locuinta_temporara">Locuință temporară</option>
+    <option value="alta">Alta</option>
 
-              >
-                <option value="">Alege opțiunea</option>
-                <option value="financiar">Ajutor financiar</option>
-                <option value="alimentar">Ajutor juridic</option>
-                <option value="mobilitate">Alimente și apă</option>
-                <option value="medical">Medicamente și produse alimentare</option>
-                <option value="mobilitate">Locuință temporară</option>
-                <option value="medical">Alta</option>
-              </select>
-              {errors.tipAjutor && <div className="error">{errors.tipAjutor}</div>}
-            </div>
-            <div className="form-group">
-              <label htmlFor="nevoiSpeciale">Nevoi speciale</label>
-              <select
-                id="nevoiSpeciale"
-                name="nevoiSpeciale"
-                value={formData.nevoiSpeciale}
-                onChange={handleChange}
-                className={errors.nevoiSpeciale ? 'input-error' : ''}
+    
+  </select>
+  {errors.tipAjutor && <div className="error">{errors.tipAjutor}</div>}
+</div>
 
-              >
-                <option value="">Alege opțiunea</option>
-                <option value="mobilitate">Persoane vârstnice</option>
-                <option value="medical">Copii sub 5 ani</option>
-                <option value="mobilitate">Persoane cu dizabilități</option>
-                <option value="medical">Nevoi medicale</option>
-                <option value="mobilitate"> Altele</option>
-              </select>
-              {errors.nevoiSpeciale && <div className="error">{errors.nevoiSpeciale}</div>}
-            </div>
-            <div className="form-group">
-              <label htmlFor="prioritateaCererii">Prioritatea cererii</label>
-              <select
-                id="prioritateaCererii"
-                name="prioritateaCererii"
-                value={formData.prioritateaCererii}
-                onChange={handleChange}
-                className={errors.prioritateaCererii ? 'input-error' : ''}
+<div className="form-group">
+  <label htmlFor="nevoiSpeciale">Nevoi speciale</label>
+  <select
+    id="nevoiSpeciale"
+    name="nevoiSpeciale"
+    value={formData.nevoiSpeciale}
+    onChange={handleChange}
+    className={errors.nevoiSpeciale ? 'input-error' : ''}
+  >
+    <option value="">Alege opțiunea</option>
+    <option value="persoane_varstnice">Persoane vârstnice</option>
+    <option value="copii_sub_5_ani">Copii sub 5 ani</option>
+    <option value="persoane_cu_dizabilitati">Persoane cu dizabilități</option>
+    <option value="nevoi_medicale">Nevoi medicale</option>
+    <option value="altele">Altele</option>
+  </select>
+  {errors.nevoiSpeciale && <div className="error">{errors.nevoiSpeciale}</div>}
+</div>
 
-              >
-                <option value="">Alege opțiunea</option>
-                <option value="urgent">Urgent</option>
-                <option value="mediu">Ridicată</option>
-                <option value="scazut">Normală</option>
-              </select>
-              {errors.prioritateaCererii && <div className="error">{errors.prioritateaCererii}</div>}
-            </div>
+<div className="form-group">
+  <label htmlFor="prioritateaCererii">Prioritatea cererii</label>
+  <select
+    id="prioritateaCererii"
+    name="prioritateaCererii"
+    value={formData.prioritateaCererii}
+    onChange={handleChange}
+    className={errors.prioritateaCererii ? 'input-error' : ''}
+  >
+    <option value="">Alege opțiunea</option>
+    <option value="urgent">Urgentă</option>
+    <option value="ridicata">Ridicată</option>
+    <option value="normala">Normală</option>
+  </select>
+  {errors.prioritateaCererii && <div className="error">{errors.prioritateaCererii}</div>}
+</div>
+
           </div>
-
-          
         </form>
         </section>
         <button onClick={handleSubmit} type="submit" className="form-submit-button">
