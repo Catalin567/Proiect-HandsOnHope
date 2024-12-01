@@ -78,7 +78,7 @@ function Navigation() {
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  <Link to="">Redirecționează</Link>
+                  <Link to="/Redirectioneaza">Redirecționează</Link>
                 </a>
               </li>
               <li>

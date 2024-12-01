@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard";
 import Campanii from "./pages/Campanii";
 import Voluntariat from "./pages/Voluntariat";
 import Doneaza from "./pages/Doneaza";
+import Redirectioneaza from "./pages/Redirectioneaza";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/Campanii" element={<Campanii />} />
         <Route path="/Voluntariat" element={<Voluntariat />} />
         <Route path="/Doneaza" element={<Doneaza />} />
+        <Route path="/Redirectioneaza" element={<Redirectioneaza />} />
       </Routes>
     </BrowserRouter>
   );
