@@ -93,7 +93,7 @@
 .contact-form textarea {
   padding: 0.8em;
   border: 2px solid #008000;
-  border-radius: 14px; 
+  border-radius: 14px;
   background-color: #ffffff;
   color: #000000;
   font-size: 1em;
@@ -181,19 +181,31 @@
   }
 }
 
-.error {
+.contact-error {
   color: red;
   font-size: 14px;
   margin-top: 5px;
 }
 
-.input-error {
-  border: 2px solid red;
-  outline: none;
-}
-
-.form-group input.small-input {
+.contact-form-group input.contact-small-input {
   width: 30%;
   border-radius: 14px;
   padding: 8px;
 }
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+
+.contact-small-input {
+  padding: 0.8em;
+  border: 2px solid #008000;
+  border-radius: 14px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1em;
+}
+
+
+

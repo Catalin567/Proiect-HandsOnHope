@@ -166,8 +166,8 @@ const SolicitaAjutor = () => {
         <h3 className="help-form-title">Formular pentru ajutor</h3>
 
         <form onSubmit={handleSubmit} className="help-form">
-          <div className="form-row">
-            <div className="form-group">
+          <div className="form-row-ajutor">
+            <div className="form-group-ajutor">
               <label htmlFor="nume">Nume</label>
               <input
                 type="text"
@@ -181,7 +181,7 @@ const SolicitaAjutor = () => {
             {errors.nume && <div className="error">{errors.nume}</div>}
 
             </div>
-            <div className="form-group">
+            <div className="form-group-ajutor">
               <label htmlFor="prenume">Prenume</label>
               <input
                 type="text"
@@ -195,7 +195,7 @@ const SolicitaAjutor = () => {
               {errors.prenume && <div className="error">{errors.prenume}</div>}
 
             </div>
-            <div className="form-group">
+            <div className="form-group-ajutor">
               <label htmlFor="localitate">Localitate</label>
               <input
                 type="text"
@@ -209,7 +209,7 @@ const SolicitaAjutor = () => {
               {errors.localitate && <div className="error">{errors.localitate}</div>}
 
             </div>
-            <div className="form-group">
+            <div className="form-group-ajutor">
               <label htmlFor="adresa">Adresă</label>
               <input
                 type="text"
@@ -225,8 +225,8 @@ const SolicitaAjutor = () => {
             </div>
           </div>
 
-          <div className="form-row">
-            <div className="form-group">
+          <div className="form-row-ajutor">
+            <div className="form-group-ajutor">
               <label htmlFor="telefon">Telefon</label>
               <input
                 type="tel"
@@ -240,7 +240,7 @@ const SolicitaAjutor = () => {
               {errors.telefon && <div className="error">{errors.telefon}</div>}
 
             </div>
-            <div className="form-group">
+            <div className="form-group-ajutor">
               <label htmlFor="email">Email (optional)</label>
               <input
                 type="email"
@@ -252,7 +252,7 @@ const SolicitaAjutor = () => {
               />
 
             </div>
-            <div className="form-group">
+            <div className="form-group-ajutor">
               <label htmlFor="numarMembriFamilie">
                 Număr de membri ai familiei
               </label>
@@ -271,8 +271,8 @@ const SolicitaAjutor = () => {
             </div>
           </div>
 
-          <div className="form-row">
-          <div className="form-group">
+          <div className="form-row-ajutor">
+          <div className="form-group-ajutor">
   <label htmlFor="tipCalamitate">Tip calamitate</label>
   <select
     id="tipCalamitate"
@@ -291,7 +291,7 @@ const SolicitaAjutor = () => {
   {errors.tipCalamitate && <div className="error">{errors.tipCalamitate}</div>}
 </div>
 
-<div className="form-group">
+<div className="form-group-ajutor">
   <label htmlFor="tipAjutor">Tip ajutor solicitat</label>
   <select
     id="tipAjutor"
@@ -313,7 +313,7 @@ const SolicitaAjutor = () => {
   {errors.tipAjutor && <div className="error">{errors.tipAjutor}</div>}
 </div>
 
-<div className="form-group">
+<div className="form-group-ajutor">
   <label htmlFor="nevoiSpeciale">Nevoi speciale</label>
   <select
     id="nevoiSpeciale"
@@ -332,7 +332,7 @@ const SolicitaAjutor = () => {
   {errors.nevoiSpeciale && <div className="error">{errors.nevoiSpeciale}</div>}
 </div>
 
-<div className="form-group">
+<div className="form-group-ajutor">
   <label htmlFor="prioritateaCererii">Prioritatea cererii</label>
   <select
     id="prioritateaCererii"

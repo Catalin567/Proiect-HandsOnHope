@@ -27,7 +27,7 @@ const Contact = () => {
 
     if (!formData.prenume.trim()) {
       newErrors.prenume = "Prenumele este obligatoriu.";
-    } 
+    }
 
     if (!formData.subiect.trim()) {
       newErrors.subiect = "Subiectul este obligatoriu.";
@@ -109,7 +109,7 @@ const Contact = () => {
       <section className="contact-form">
         <h2>Formular contact</h2>
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
+          <div className="contact-form-group">
             <label htmlFor="nume">Nume</label>
             <input
               type="text"
@@ -117,12 +117,14 @@ const Contact = () => {
               id="nume"
               value={formData.nume}
               onChange={handleChange}
-              className="small-input"
+              className="contact-small-input"
             />
-            {formSubmitted && errors.nume && <span className="error">{errors.nume}</span>}
+            {formSubmitted && errors.nume && (
+              <span className="contact-error">{errors.nume}</span>
+            )}
           </div>
 
-          <div className="form-group">
+          <div className="contact-form-group">
             <label htmlFor="prenume">Prenume</label>
             <input
               type="text"
@@ -130,13 +132,14 @@ const Contact = () => {
               id="prenume"
               value={formData.prenume}
               onChange={handleChange}
-              className="small-input"
-
+              className="contact-small-input"
             />
-            {formSubmitted && errors.prenume && <span className="error">{errors.prenume}</span>}
+            {formSubmitted && errors.prenume && (
+              <span className="contact-error">{errors.prenume}</span>
+            )}
           </div>
 
-          <div className="form-group">
+          <div className="contact-form-group">
             <label htmlFor="subiect">Subiect</label>
             <input
               type="text"
@@ -145,10 +148,12 @@ const Contact = () => {
               value={formData.subiect}
               onChange={handleChange}
             />
-            {formSubmitted && errors.subiect && <span className="error">{errors.subiect}</span>}
+            {formSubmitted && errors.subiect && (
+              <span className="contact-error">{errors.subiect}</span>
+            )}
           </div>
 
-          <div className="form-group">
+          <div className="contact-form-group">
             <label htmlFor="mesaj">Mesaj</label>
             <textarea
               name="mesaj"
@@ -156,7 +161,9 @@ const Contact = () => {
               value={formData.mesaj}
               onChange={handleChange}
             ></textarea>
-            {formSubmitted && errors.mesaj && <span className="error">{errors.mesaj}</span>}
+            {formSubmitted && errors.mesaj && (
+              <span className="contact-error">{errors.mesaj}</span>
+            )}
           </div>
 
           <button type="submit">TRIMITE</button>

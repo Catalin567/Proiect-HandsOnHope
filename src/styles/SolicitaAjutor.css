@@ -120,7 +120,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-row {
+.form-row-ajutor {
   display: flex;
   justify-content: flex-start;
   margin: 20px;
@@ -129,7 +129,7 @@
   margin-bottom: 20px;
 }
 
-.form-group {
+.form-group-ajutor {
   display: flex;
   flex-direction: column;
   flex: 0 0 calc(25% - 10px);
@@ -137,7 +137,7 @@
   margin-bottom: 20px;
 }
 
-.form-group label {
+.form-group-ajutor label {
   display: flex;
   flex-direction: flex-start;
 }
@@ -147,7 +147,7 @@
   min-width: 180px;
 }
 
-.form-group input[name="numarMembriFamilie"] {
+.form-group-ajutor input[name="numarMembriFamilie"] {
   width: 80px !important;
   font-size: 14px;
   padding: 10px 8px;
@@ -190,19 +190,19 @@
     box-sizing: border-box;
   }
 
-  .form-row {
+  .form-row-ajutor {
     flex-direction: column;
     width: 100%;
     gap: 10px;
   }
 
-  .form-group {
+  .form-group-ajutor {
     flex: 0 0 100%;
     min-width: 100%;
     margin-bottom: 15px;
   }
 
-  .form-group input[name="numarMembriFamilie"] {
+  .form-group-ajutor input[name="numarMembriFamilie"] {
     width: 100% !important;
   }
 
@@ -243,19 +243,19 @@
     box-sizing: border-box;
   }
 
-  .form-row {
+  .form-row-ajutor {
     flex-direction: column;
     width: 100%;
     gap: 10px;
   }
 
-  .form-group {
+  .form-group-ajutor {
     flex: 0 0 100%;
     min-width: 100%;
     margin-bottom: 15px;
   }
 
-  .form-group input[name="numarMembriFamilie"] {
+  .form-group-ajutor input[name="numarMembriFamilie"] {
     width: 100% !important;
   }
 
@@ -296,11 +296,11 @@
     box-sizing: border-box;
   }
 
-  .form-row {
+  .form-row-ajutor {
     gap: 10px;
   }
 
-  .form-group input[name="numarMembriFamilie"] {
+  .form-group-ajutor input[name="numarMembriFamilie"] {
     width: 80px !important;
   }
 
@@ -311,7 +311,7 @@
   }
 
 }
-.form-group {
+.form-group-ajutor {
   position: relative; 
 }
 .error {
