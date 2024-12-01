@@ -12,6 +12,8 @@ import Blog from "./pages/Blog";
 import CeFacem from "./pages/CeFacem";
 import Dashboard from "./pages/Dashboard";
 import Campanii from "./pages/Campanii";
+import Voluntariat from "./pages/Voluntariat";
+import Doneaza from "./pages/Doneaza";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/CeFacem" element={<CeFacem />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Campanii" element={<Campanii />} />
+        <Route path="/Voluntariat" element={<Voluntariat />} />
+        <Route path="/Doneaza" element={<Doneaza />} />
       </Routes>
     </BrowserRouter>
   );

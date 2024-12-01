@@ -68,7 +68,7 @@ function Navigation() {
             <ul className="dropdown-menu">
               <li>
                 <a className="dropdown-item" href="#">
-                  <Link to="">Voluntariat</Link>
+                  <Link to="/Voluntariat">Voluntariat</Link>
                 </a>
               </li>
               <li>
@@ -83,7 +83,7 @@ function Navigation() {
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  <Link to="">Donează</Link>
+                  <Link to="/Doneaza">Donează</Link>
                 </a>
               </li>
             </ul>
