@@ -207,7 +207,7 @@ const Voluntariat = () =>{
         </div>
       </form>
     </div>
-
+      <Footer/>
         </main>
     )
 }
