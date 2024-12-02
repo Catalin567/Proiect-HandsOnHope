@@ -8,7 +8,7 @@
   }
   
   /* Main content */
-  .main-content {
+  .main-content-div {
     max-width: 100%;
     margin: 0 auto;
   }
@@ -154,7 +154,7 @@
 
   .harta-romaniei {
     position: relative;
-    width: 60%;
+    width: 90%;
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -168,7 +168,8 @@
     fill: white;
     stroke: black;
     stroke-width: .3px;
-    margin-left: 20%;
+    margin-left: 5%;
+    padding-left: 10%;
   }
 
   .eveniment-judet {

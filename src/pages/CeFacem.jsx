@@ -13,9 +13,8 @@ const CeFacem = () => {
   return (
     <div>
       <Navigation />
-
-      <main className="main-content">
       <div className="upper-side" style={{ backgroundImage: `url(${p1})` }}></div>
+      <main className="main-content-div">
 
       <div className="chestii-tot">
         <h1 className="title">Ce facem?</h1>

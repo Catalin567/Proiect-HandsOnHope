@@ -8,3 +8,169 @@
 .text-test {
     font-weight: 800;
 }
+
+.dashboard {
+    font-family: "Chivo", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dashboard-header {
+    top: 12vh;
+    right: 10vh;
+    text-align: right;
+    position: fixed;
+    font-weight: 300;
+  }
+
+  .solicita-ajutor {
+    border: none;
+    background-color: #fbfb7b80;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.458);
+    border-radius: 15vh;
+  }
+
+  .solicita-ajutor:hover {
+    background-color: #fbfb7b;
+  }
+
+  .padding {
+    width: 90%;
+    padding: 0 5%;
+    margin: 0 auto;
+  }
+
+  .dashboard-title {
+    margin-top: 20vh;
+    margin-left: 5%;
+    font-weight: 300;
+  }
+  
+  .dashboard-header h1 {
+    margin: 0;
+  }
+  
+  .dashboard-header .highlight {
+    color: green;
+  }
+  
+  .dashboard-header a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    padding: 20px;
+  }
+
+  li{
+    color: black;
+  }
+  
+  .dashboard-sidebar {
+    width: 25%;
+    background-color: #ffffff;
+    padding-right: 2%;
+  }
+  
+  .dashboard-sidebar .user-info {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .user-info {
+    border: black 0.1vh solid;
+    border-radius: 2vh;
+    padding: 5%;
+  }
+
+  p {
+    margin: 0 !important;
+  }
+
+  .dashboard-sidebar h2 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  .dashboard-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dashboard-sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-sidebar a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .dashboard-content {
+    width: 75%;
+    border: black 0.1vh solid;
+    border-radius: 2vh;
+    padding: 5%;
+  }
+  
+  .dashboard-content p {
+    margin-bottom: 20px;
+  }
+  
+  .cases-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .case-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .case-card p {
+    margin-bottom: 20px;
+  }
+  
+  .case-card button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .case-card button:hover {
+    background-color: darkgreen;
+  }
+  
+  .titlu-highlight {
+    font-weight: 300;
+    font-style: italic;
+    color: #008000;
+  }
+
+  a {
+    color: inherit !important; /* Moștenește culoarea textului părintelui */
+    text-decoration: none !important; /* Elimină sublinierea */
+  }
+
+  li:hover {
+    color: rgb(80, 80, 80);
+  }
+
+  .sidebar-menu {
+    border: black 0.1vh solid;
+    border-radius: 2vh;
+    padding: 5%;
+  }
+  
