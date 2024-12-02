@@ -4,7 +4,11 @@ import Footer from "../components/Footer";
 import "../styles/Voluntariat.css";
 
 const Voluntariat = () =>{
-    return(
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Previne comportamentul default al formularului
+    alert("Formularul a fost înregistrat cu succes!");
+  };  
+  return(
         
         <main>
             <Navigation/>
@@ -137,7 +141,7 @@ const Voluntariat = () =>{
     </div>
     
     <div className="form-container">
-      <form className="volunteer-form">
+      <form className="volunteer-form" onSubmit={handleSubmit}>
         <div className="form-row">
           <div className="form-group">
             <label>Nume</label>
@@ -206,6 +210,7 @@ const Voluntariat = () =>{
           <button type="submit" className="submit-button">TRIMITE</button>
         </div>
       </form>
+      
     </div>
       <Footer/>
         </main>

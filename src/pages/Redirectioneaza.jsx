@@ -6,6 +6,10 @@ import Footer from "../components/Footer";
 import "../styles/Redirectioneaza.css";
 
 const Redirectioneaza = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Previne comportamentul default al formularului
+    alert("Formularul a fost înregistrat cu succes!");
+  }; 
         const sigCanvas = useRef(null);
     
         const clearSignature = () => {
@@ -22,7 +26,7 @@ const Redirectioneaza = () => {
       Cu gesturi mici, putem face lucruri mari. Alege să sprijini persoanele aflate în nevoie redirecționând o parte din impozitul pe   profit, fără costuri suplimentare pentru tine! Astfel, ne poți ajuta să continuăm misiunea noastră de a oferi ajutor acolo unde este nevoie cel mai mult.
       </p>
 
-      <form className="donation-form">
+      <form className="donation-form" onSubmit={handleSubmit}>
         <h2>Date Companie/Societate</h2>
         <div className="form-grid">
           <input type="text" placeholder="Denumire *" required />
@@ -73,7 +77,7 @@ const Redirectioneaza = () => {
         de a oferi ajutor acolo unde este nevoie cel mai mult.
       </p>
 
-      <form className="donation-form">
+      <form className="donation-form" onSubmit={handleSubmit}>
         {/* Date Personale */}
         <h2>Date personale</h2>
         <div className="form-grid-3">
