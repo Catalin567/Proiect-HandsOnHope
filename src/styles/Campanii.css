@@ -10,17 +10,15 @@
 }
 .img-campanii {
   animation: fadeIn 3s ease-in-out;
-  margin-top: -20px;
-  height: 700px;
+  height: 70vh;
   width: 100%;
   background-attachment: fixed;
 }
 
 .p1-campanii {
   text-align: center;
-  font-family: "Chivo", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
 }
 .cards-container {
   padding-top: 50px;

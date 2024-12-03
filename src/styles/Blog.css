@@ -1,7 +1,7 @@
 .main-section {
   padding-top: 20px;
   text-align: center;
-  margin: 50px 20px;
+  margin: 70px 20px;
 }
 
 .text-line {
@@ -9,7 +9,7 @@
   height: 1px;
   background-color: black;
   width: 40%;
-  margin: 20px auto;
+  margin: 20px auto !important;
 }
 
 .quote {
@@ -27,12 +27,14 @@
   gap: 20px;
   padding: 20px;
   justify-content: center;
+  max-width: 1600px;
+  margin: 20px auto;
 }
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 400px;
+  width: 350px;
+  height: 500px;
   perspective: 1000px;
   margin: 0 auto;
 }
@@ -294,13 +296,13 @@
   height: 24px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1140px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 760px) {
   .card-container {
     grid-template-columns: 1fr;
   }
@@ -422,7 +424,7 @@
 .text-content-even {
   text-align: center;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .section-odd,
   .section-even {
     flex-direction: column; /* Așează imaginea și textul unul sub altul */

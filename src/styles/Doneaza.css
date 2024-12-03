@@ -1,342 +1,340 @@
 .img-donate {
-    width: 100%;
-    margin-top: -200px;
-    height: 800px;
+  width: 100%;
+  height: 800px;
+  height: 70vh;
 }
 /* DonationSection.css */
 .donation-container {
-    text-align: center;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
-  .donate-h3 {
-    text-align: center;
-  }
-  
-  .highlight {
-    color: #008000; /* Adjust the color as needed */
-    font-weight: bold;
-  }
-  
-  .donation-container hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-  }
-  
-  .donation-container h3 {
-    font-weight: 600;
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #000;
-  }
-  
-  .donation-container p {
-    margin: 10px 0;
-  }
-  
+  text-align: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+.donate-h3 {
+  text-align: center;
+}
+
+.highlight {
+  color: #008000; /* Adjust the color as needed */
+  font-weight: bold;
+}
+
+.donation-container hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.donation-container h3 {
+  font-size: 24px;
+  color: #000;
+}
+
+.donation-container p {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
 /* DonationSteps.css */
 .steps-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .steps-container h3 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #000;
-    margin-bottom: 10px;
-  }
-  
-  .steps-container p {
-    text-align: center;
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-    gap: 20px;
-    column-gap: 190px;
-  }
-  
-  .step-card {
-    height: 200px;
-    display: grid;
-    grid-template-columns: 60px 1fr; /* Number on the left, content on the right */
-    align-items: center;
-    background: #fff;
-    border-radius: 25px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #eee;
-  }
-  
-  .step-number {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
 
-    background: #7abd7a;
-    color: #000;
-    font-weight: bold;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    height: 150px;
-    width: 30px;
-  }
-  
-  .step-content {
-    text-align: centrer;
-    padding-left: 20px;
-  }
-  
-  .step-card h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px; /* Space between title and paragraph */
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .step-card p {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 0;
-    line-height: 1.6;
-  }
-  /* DonationForm.css */
+.steps-container h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.steps-container p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 20px;
+  column-gap: 190px;
+}
+
+.step-card {
+  height: 200px;
+  display: grid;
+  grid-template-columns: 60px 1fr; /* Number on the left, content on the right */
+  align-items: center;
+  background: #fff;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.step-number {
+  background: #7abd7a;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  height: 150px;
+  width: 30px;
+}
+
+.step-content {
+  text-align: centrer;
+  padding-left: 20px;
+}
+
+.step-card h4 {
+  font-size: 24px;
+  margin-bottom: 10px; /* Space between title and paragraph */
+  color: #333;
+  font-weight: bold;
+}
+
+.step-card p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+/* DonationForm.css */
 .donation-forms-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h3 {
+  font-weight: 600;
+  text-align: left;
+  padding-top: 40px;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.forms-grid {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 110px;
+}
+
+.form-card {
+  height: 500px;
+  background: #a9d18e;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+hr {
+  border: 1px solid #000;
+  margin: 20px 0;
+}
+
+.form-inputs input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.donation-amounts button,
+.donation-actions button,
+.submit-button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 20px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.donation-amounts button:hover,
+.donation-actions button:hover,
+.submit-button:hover {
+  background: #ddd;
+  color: black;
+}
+
+.card-details {
+  display: flex;
+  gap: 10px;
+}
+
+.card-details input {
+  width: calc(50% - 5px); /* Ensure inputs fit evenly */
+}
+
+.submit-button {
+  margin-top: 20px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+}
+.donation-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #000000;
+}
+
+.donation-text {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.donation-content {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.money-bag {
+  width: 300px;
+  height: auto;
+  margin-right: 120px;
+}
+
+.account-details {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.account-details p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1300px) {
+  .steps-container {
+    padding: 20px;
+    font-size: 14px; /* Ajustăm textul */
+    max-width: 800px;
   }
-  
-  h3 {
-    font-weight: 600;
-    text-align: left;
-    padding-top: 40px;
-    font-size: 1.7rem;
-    margin-bottom: 20px;
-    color: black;
+
+  .steps-grid {
+    grid-template-columns: 1fr; /* O coloană pe rând */
+    gap: 20px;
   }
-  
-  .forms-grid {
-    padding-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 110px;
+}
+/* General responsiveness */
+@media only screen and (max-width: 1200px) {
+  .donation-container {
+    padding: 20px;
+    font-size: 14px; /* Micșorăm fontul */
   }
-  
-  .form-card {
-    height: 500px;
-    background: #a9d18e;
-    border-radius: 15px;
-    padding: 40px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .step-card {
+    height: auto; /* Eliminăm înălțimea fixă */
+    display: flex;
+    flex-direction: column; /* Elemente stivuite vertical */
+    align-items: center; /* Centrare pe orizontală */
+    justify-content: flex-start; /* Aliniere sus */
+    text-align: center; /* Text centrat */
+    padding: 20px;
   }
-  
-  .form-card h4 {
-    font-size: 1.2rem;
-    font-weight: bold;
+
+  .step-number {
+    width: 50px;
+    font-size: 1rem;
+    height: 50px; /* Ajustăm dimensiunea pentru mobil */
+    width: 50px; /* Ajustăm dimensiunea pentru mobil */
     margin-bottom: 10px;
-    color: #000;
   }
-  
-  hr {
-    border: 1px solid #000;
-    margin: 20px 0;
+
+  .form-card {
+    padding: 20px;
+    margin: 0px auto;
+    max-width: 800px;
   }
-  
-  .form-inputs input {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    font-size: 0.9rem;
+
+  .donation-forms-container h3 {
+    text-align: center;
   }
-  
+  .forms-grid {
+    grid-template-columns: 1fr; /* O coloană pe rând */
+    gap: 20px;
+  }
+
   .donation-amounts button,
   .donation-actions button,
   .submit-button {
-    margin: 10px 5px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 20px;
-    background: #fff;
-    color: #000;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    font-size: 0.8rem; /* Reducem dimensiunea butoanelor */
+    padding: 10px;
   }
-  
-  .donation-amounts button:hover,
-  .donation-actions button:hover,
-  .submit-button:hover {
-    background: #ddd;
-    color: black;
-  }
-  
+
   .card-details {
-    display: flex;
-    gap: 10px;
+    flex-direction: column; /* Stivuim inputurile vertical */
+    gap: 5px;
   }
-  
+
   .card-details input {
-    width: calc(50% - 5px); /* Ensure inputs fit evenly */
+    width: 100%; /* Inputurile ocupă întreaga lățime */
   }
-  
-  .submit-button {
-    margin-top: 20px;
-    width: 100%;
-    background: #000;
-    color: #fff;
-    font-weight: bold;
-  }
-  .donation-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 40px;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    color: #000000;
-  }
-  
-  .donation-text {
-    margin-bottom: 20px;
-    font-size: 16px;
-  }
-  
-  .donation-content {
-    padding-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-  
+
   .money-bag {
-    width: 300px;
-    height: auto;
-    margin-right: 120px;
+    width: 150px; /* Dimensiuni mai mici pentru imagine */
+    margin-right: 0;
+    margin-bottom: 20px; /* Adăugăm spațiu între imagine și text */
   }
-  
+
+  .donation-content {
+    flex-direction: column; /* Elementele sunt afișate pe verticală */
+  }
+
   .account-details {
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px; /* Ajustăm fontul */
   }
-  
-  .account-details p {
-    margin-bottom: 15px;
-  }
-  /* General responsiveness */
-@media only screen and (max-width: 768px) {
-    .img-donate {
-        margin-top: -100px;
-        height: 300px; /* Ajustăm înălțimea pentru mobile */
-    }
-
-    .donation-container {
-        padding: 20px;
-        font-size: 14px; /* Micșorăm fontul */
-    }
-
-    .steps-container {
-        padding: 20px;
-        font-size: 14px; /* Ajustăm textul */
-    }
-
-    .steps-grid {
-        grid-template-columns: 1fr; /* O coloană pe rând */
-        gap: 20px;
-    }
-
-    .step-card {
-        height: auto; /* Eliminăm înălțimea fixă */
-        display: flex;
-        flex-direction: column; /* Elemente stivuite vertical */
-        align-items: center; /* Centrare pe orizontală */
-        justify-content: flex-start; /* Aliniere sus */
-        text-align: center; /* Text centrat */
-        padding: 20px;
-    }
-
-    .step-number {
-        width: 50px;
-        font-size: 1rem;
-        height: 50px; /* Ajustăm dimensiunea pentru mobil */
-        width: 50px; /* Ajustăm dimensiunea pentru mobil */
-        margin-bottom: 10px;
-    }
-
-    .form-card {
-        height: auto; /* Eliminăm înălțimea fixă */
-        padding: 20px;
-    }
-
-    .forms-grid {
-        grid-template-columns: 1fr; /* O coloană pe rând */
-        gap: 20px;
-    }
-
-    .donation-amounts button,
-    .donation-actions button,
-    .submit-button {
-        font-size: 0.8rem; /* Reducem dimensiunea butoanelor */
-        padding: 10px;
-    }
-
-    .card-details {
-        flex-direction: column; /* Stivuim inputurile vertical */
-        gap: 5px;
-    }
-
-    .card-details input {
-        width: 100%; /* Inputurile ocupă întreaga lățime */
-    }
-
-    .money-bag {
-        width: 150px; /* Dimensiuni mai mici pentru imagine */
-        margin-right: 0;
-        margin-bottom: 20px; /* Adăugăm spațiu între imagine și text */
-    }
-
-    .donation-content {
-        flex-direction: column; /* Elementele sunt afișate pe verticală */
-    }
-
-    .account-details {
-        font-size: 14px; /* Ajustăm fontul */
-    }
 }
 
 /* Extra small screens */
 @media only screen and (max-width: 480px) {
-    .donation-container,
-    .steps-container,
-    .donation-forms-container {
-        padding: 10px; /* Reducem paddingul */
-    }
+  .donation-container,
+  .steps-container,
+  .donation-forms-container {
+    padding: 10px; /* Reducem paddingul */
+  }
 
-    h3 {
-        font-size: 1.2rem; /* Dimensiune mai mică pentru titluri */
-    }
+  h3 {
+    font-size: 1.2rem; /* Dimensiune mai mică pentru titluri */
+  }
 
-    .step-card h4,
-    .form-card h4 {
-        font-size: 1rem; /* Micșorăm fontul */
-    }
+  .step-card h4,
+  .form-card h4 {
+    font-size: 1rem; /* Micșorăm fontul */
+  }
 }
-
-  
