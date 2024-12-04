@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "../styles/MonthlyPhotos.css";
+import logo from "../images/LOGO-HOH.png";
 import mp1 from "../images/mp-hoh1.png";
 import mp2 from "../images/mp-hoh2.png";
 import mp3 from "../images/mp-hoh3.png";
@@ -28,41 +29,62 @@ function MonthlyPhotos() {
     mp11,
     mp12,
   ];
-  const itemsPerPage = 8;
-  const [startIndex, setStartIndex] = useState(0);
 
-  const handleNext = () => {
-    setStartIndex((prevIndex) =>
-      prevIndex + 1 >= photos.length - itemsPerPage ? 0 : prevIndex + 1
-    );
+  const carouselRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
   };
 
-  const handlePrev = () => {
-    setStartIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? photos.length - itemsPerPage : prevIndex - 1
-    );
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    carouselRef.current.scrollLeft = scrollLeft - walk;
   };
+
+  const handleMouseUp = () => setIsDragging(false);
+  const handleMouseLeave = () => setIsDragging(false);
 
   return (
     <div className="monthly-photos">
       <h2>Pozele lunii</h2>
-      <div className="carousel">
-        <button className="carousel-btn-left" onClick={handlePrev}>
-          <i className="bx bxs-chevron-left"></i>
-        </button>
-        <div
-          className="carousel-track"
-          style={{ transform: `translateX(-${startIndex * 200}px)` }}
-        >
+      <div
+        className="carousel"
+        ref={carouselRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+        style={{ cursor: isDragging ? "grabbing" : "grab" }}
+      >
+        <div className="carousel-track">
           {photos.map((photo, index) => (
-            <div key={index} className="carousel-photo">
-              <img src={photo} alt={`Slide ${index}`} />
+            <div className="post">
+              <div className="post-header">
+                <img src={logo} alt="Profile" className="profile-pic" />
+                <span className="username">HandsOnHope</span>
+              </div>
+              <div className="post-image">
+                <img src={photo} alt={`Slide ${index}`} />
+              </div>
+              <div className="post-actions">
+                <div className="actions-left">
+                  <i className="bx bx-heart"></i>
+                  <i className="bx bx-message-rounded"></i>
+                  <i className="bx bx-send"></i>
+                </div>
+                <i className="bx bx-bookmark"></i>
+              </div>
             </div>
           ))}
         </div>
-        <button className="carousel-btn-right" onClick={handleNext}>
-          <i className="bx bxs-chevron-right"></i>
-        </button>
       </div>
     </div>
   );

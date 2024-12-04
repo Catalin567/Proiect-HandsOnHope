@@ -1,62 +1,139 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+.monthly-photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  margin: 0 auto;
+}
+
 .monthly-photos h2 {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 60px;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 .carousel {
   position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
   width: 100%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  cursor: grab;
+  padding: 20px 10px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding-top: 30px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel:active {
+  cursor: grabbing;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease;
-  width: max-content;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.carousel-photo {
-  min-width: 200px;
+.post {
+  max-width: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.post-image {
+  width: 350px;
   height: 300px;
-  margin: 0 5px;
-  transition: transform 0.3s ease;
 }
 
-.carousel-photo img {
+.post-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.carousel-btn-left,
-.carousel-btn-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
+.post-actions {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+}
+
+.actions-left {
+  display: flex;
+  gap: 15px;
+}
+
+.actions-left i,
+.bx-bookmark {
+  font-size: 26px;
   cursor: pointer;
-  padding: 10px;
-  font-size: 24px;
-  z-index: 10;
+  transition: transform 0.2s ease;
 }
 
-.carousel-btn-left {
-  left: 10px;
+.actions-left i:hover,
+.bx-bookmark:hover {
+  transform: scale(1.1);
+  color: #ff7043;
 }
 
-.carousel-btn-right {
-  right: 10px;
+.bx-heart:hover {
+  color: red !important;
 }
 
-.carousel-btn-left:hover,
-.carousel-btn-right:hover {
-  background: rgba(0, 0, 0, 0.8);
+@media (max-width: 420px) {
+  .post {
+    max-width: 300px;
+  }
+  .post-image {
+    width: 295px;
+    height: 250px;
+  }
 }
