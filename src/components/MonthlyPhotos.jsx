@@ -69,7 +69,11 @@ function MonthlyPhotos() {
             <div className="post">
               <div className="post-header">
                 <img src={logo} alt="Profile" className="profile-pic" />
-                <span className="username">HandsOnHope</span>
+                <span className="username">
+                  <a href="https://www.instagram.com" className="insta">
+                    handsonhope_
+                  </a>
+                </span>
               </div>
               <div className="post-image">
                 <img src={photo} alt={`Slide ${index}`} />

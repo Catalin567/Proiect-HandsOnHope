@@ -78,12 +78,12 @@ function Navigation() {
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  Redirecționează
+                  <Link to="/Redirectioneaza">Redirecționează</Link>
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  Donează
+                  <Link to="/Doneaza">Doneaza</Link>
                 </a>
               </li>
             </ul>

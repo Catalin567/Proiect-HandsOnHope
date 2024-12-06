@@ -38,9 +38,15 @@ function App() {
         <Route path="/Voluntariat" element={<Voluntariat />} />
         <Route path="/Doneaza" element={<Doneaza />} />
         <Route path="/Redirectioneaza" element={<Redirectioneaza />} />
-        <Route path="/Dashboard/CazurileSustinute" element={<CazurileSustinute />} />
+        <Route
+          path="/Dashboard/CazurileSustinute"
+          element={<CazurileSustinute />}
+        />
         <Route path="/Dashboard/DatePreferinte" element={<DatePreferinte />} />
-        <Route path="/Dashboard/IntrebariSugestii" element={<IntrebariSugestii />} />
+        <Route
+          path="/Dashboard/IntrebariSugestii"
+          element={<IntrebariSugestii />}
+        />
       </Routes>
     </BrowserRouter>
   );

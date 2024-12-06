@@ -1,5 +1,5 @@
 .upper-side {
-  height: 65vh;
+  height: 70vh;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -8,7 +8,7 @@
   align-items: center;
   position: relative;
   transition: opacity 1.2s ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px !important;
   animation: upperside 2.5s 1;
 }
 

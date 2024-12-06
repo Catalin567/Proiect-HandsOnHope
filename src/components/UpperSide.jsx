@@ -4,6 +4,7 @@ import "../styles/Navigation.css";
 import poza1 from "../images/mp-hoh6.jpg";
 import poza2 from "../images/mp-hoh13.jpg";
 import poza3 from "../images/mp-hoh9.jpg";
+import { Link } from "react-router-dom";
 
 function UpperSide() {
   const images = [poza1, poza2, poza3];
@@ -29,8 +30,12 @@ function UpperSide() {
     >
       <div className="uc-text">CAZURI URGENTE</div>
       <div className="button-container">
-        <button className="btn-donate">DONEAZĂ</button>
-        <button className="btn-volunteer">DEVINO VOLUNTAR</button>
+        <button className="btn-donate">
+          <Link to="/Doneaza">DONEAZĂ</Link>
+        </button>
+        <button className="btn-volunteer">
+          <Link to="/Voluntariat">DEVINO VOLUNTAR</Link>
+        </button>
       </div>
     </div>
   );

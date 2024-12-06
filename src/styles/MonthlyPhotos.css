@@ -5,6 +5,7 @@
   align-items: center;
   padding: 30px;
   margin: 0 auto;
+  max-width: 1600px;
 }
 
 .monthly-photos h2 {
@@ -24,12 +25,15 @@
   align-items: center;
   overflow-x: auto;
   cursor: grab;
-  padding: 20px 10px;
+  padding: 50px 20px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding-top: 30px;
+  box-shadow: 0 10px 30px rgba(57, 146, 16, 0.1);
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.insta {
+  cursor: pointer;
 }
 
 .carousel:active {
@@ -54,7 +58,6 @@
   border: none;
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
   background-color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
