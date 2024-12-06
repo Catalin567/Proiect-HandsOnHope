@@ -15,6 +15,9 @@ import Campanii from "./pages/Campanii";
 import Voluntariat from "./pages/Voluntariat";
 import Doneaza from "./pages/Doneaza";
 import Redirectioneaza from "./pages/Redirectioneaza";
+import CazurileSustinute from "./pages/dashboard/CazurileSustinute";
+import DatePreferinte from "./pages/dashboard/DatePreferinte";
+import IntrebariSugestii from "./pages/dashboard/IntrebariSugestii";
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
         <Route path="/Voluntariat" element={<Voluntariat />} />
         <Route path="/Doneaza" element={<Doneaza />} />
         <Route path="/Redirectioneaza" element={<Redirectioneaza />} />
+        <Route path="/Dashboard/CazurileSustinute" element={<CazurileSustinute />} />
+        <Route path="/Dashboard/DatePreferinte" element={<DatePreferinte />} />
+        <Route path="/Dashboard/IntrebariSugestii" element={<IntrebariSugestii />} />
       </Routes>
     </BrowserRouter>
   );
