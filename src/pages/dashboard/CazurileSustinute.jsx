@@ -46,6 +46,7 @@ const CazurileSustinute = () => {
     </div>
     </div>
     <Footer />
+    <ChatBot />
   </main>
 
 

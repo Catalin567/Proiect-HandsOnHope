@@ -6,6 +6,7 @@ import p3 from "../images/pv-hoh2.png";
 import p4 from "../images/pv-hoh3.png";
 import p5 from "../images/pv-hoh4.png";
 import "../styles/ProiectiiViitor.css";
+import ChatBot from "../components/ChatBot";
 function ProiectiiViitor() {
   return (
     <>
@@ -54,6 +55,7 @@ function ProiectiiViitor() {
           </p>
         </div>
       </div>
+      <ChatBot />
       <Footer />
     </>
   );

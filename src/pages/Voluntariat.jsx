@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import ChatBot from "../components/ChatBot";
 import "../styles/Voluntariat.css";
 
 const Voluntariat = () => {
@@ -281,6 +282,7 @@ const Voluntariat = () => {
           </div>
         </form>
       </div>
+      <ChatBot />
       <Footer />
     </main>
   );

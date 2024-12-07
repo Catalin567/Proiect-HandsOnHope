@@ -2,17 +2,35 @@ import React, { useState, useRef, useEffect } from "react";
 import "../styles/ChatBot.css";
 
 function ChatBot() {
-  const [messages, setMessages] = useState([]); // Mesaje
-  const [userMessage, setUserMessage] = useState(""); // Mesajul curent al utilizatorului
-  const conversationEndRef = useRef(null); // Referință pentru a derula la sfârșitul conversației
+  const toggleChatBot = () => {
+    const chatBotBtn = document.querySelector(".chatBot-btn");
+    const chatBot = document.querySelector("#chatBot");
+
+    // Ascunde butonul și afișează chatbot-ul
+    if (chatBotBtn && chatBot) {
+      chatBotBtn.style.display = "none";
+      chatBot.style.display = "block";
+      chatBot.style.animation = "fade 1s 1";
+    }
+  };
+  
+  const [messages, setMessages] = useState([
+    { sender: "bot", text: "Bună! Sunt Horia, asistentul tău virtual de la HandsOnHope, cu ce te pot ajuta?" },
+  ]); // Mesaje inițiale
+  const [userMessage, setUserMessage] = useState(""); // Mesajul utilizatorului
+  const [isTyping, setIsTyping] = useState(false); // Stare pentru animația de tastare
+  const conversationEndRef = useRef(null); // Referință pentru scroll
 
   const handleSendMessage = () => {
     if (!userMessage.trim()) return; // Nu trimite mesaje goale
 
-    const newMessages = [
-      ...messages,
-      { sender: "human", text: userMessage }, // Mesaj utilizator
-    ];
+    // Adaugă mesajul utilizatorului
+    const newMessages = [{ sender: "human", text: userMessage }];
+    setMessages(newMessages); // Afișează doar mesajul utilizatorului
+    setUserMessage(""); // Resetează input-ul
+
+    // Activează animația de tastare
+    setIsTyping(true);
 
     // Generează răspunsul botului
     let botResponse = "Îmi pare rău, nu înțeleg întrebarea.";
@@ -24,11 +42,14 @@ function ChatBot() {
       botResponse = "Eu sunt Horia, asistentul tău virtual.";
     }
 
-    setMessages([
-      ...newMessages,
-      { sender: "bot", text: botResponse }, // Mesaj bot
-    ]);
-    setUserMessage(""); // Resetează input-ul
+    // După 1 secundă, afișează răspunsul botului
+    setTimeout(() => {
+      setMessages([
+        { sender: "human", text: userMessage },
+        { sender: "bot", text: botResponse },
+      ]); // Păstrează doar ultimele două mesaje
+      setIsTyping(false); // Dezactivează animația de tastare
+    }, 1000);
   };
 
   // Derulează automat la sfârșitul conversației
@@ -36,11 +57,19 @@ function ChatBot() {
     if (conversationEndRef.current) {
       conversationEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [messages]);
+  }, [messages, isTyping]);
 
   return (
-    <main className="chatBot" id="chatBot">
+    <main>
+    <div className="chatBot-btn" id="chatBot-btn" onClick={toggleChatBot}></div>
+    <main className="chatBot" id="chatBot" style={{ display: "none" }}>
       <section className="chatbotul">
+        <div className="x-button"         onClick={(e) => {
+          const chatBotBtn = document.querySelector("#chatBot-btn");
+          const chatBot = document.querySelector("#chatBot");
+          chatBotBtn.style.display = "block"; // Ascunde butonul
+          chatBot.style.display = "none"; // Afișează chatbot-ul
+        }}>✖</div>
         <div className="top">DISCUTĂ CU HORIA</div>
         <div className="top-logo" />
         <div className="top-bot-icon" />
@@ -55,6 +84,14 @@ function ChatBot() {
               {message.text}
             </div>
           ))}
+          {/* Animație de tastare */}
+          {isTyping && (
+            <div className="bot-message typing">
+              <span>.</span>
+              <span>.</span>
+              <span>.</span>
+            </div>
+          )}
           {/* Referință pentru scroll */}
           <div ref={conversationEndRef}></div>
         </section>
@@ -69,9 +106,10 @@ function ChatBot() {
         </button>
         <div className="bottom">
           Horia te poate ajuta să găsești răspunsul la întrebarea ta! Dacă totuși
-          nu l-ai găsit, nu ezita să ne contactezi.
+          nu l-ai găsit, nu ezita să ne <a href="../Contact"><b style={{ color: "green" , cursor: "pointer"}}>contactezi</b></a>.
         </div>
       </section>
+    </main>
     </main>
   );
 }

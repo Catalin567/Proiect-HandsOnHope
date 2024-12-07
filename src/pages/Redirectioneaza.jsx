@@ -3,6 +3,8 @@ import { useRef } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Redirectioneaza.css";
+import ChatBot from "../components/ChatBot";
+import SignatureCanvas from "react-signature-canvas"; // Importă componenta
 
 const Redirectioneaza = () => {
   const handleSubmit = (e) => {
@@ -150,7 +152,7 @@ const Redirectioneaza = () => {
             {/* Semnătura */}
             <h2>Semnătura</h2>
             <div className="signature-container">
-              <SignatureCanvas
+            <SignatureCanvas
                 ref={sigCanvas}
                 penColor="green"
                 canvasProps={{
@@ -189,6 +191,7 @@ const Redirectioneaza = () => {
           </form>
         </div>
       </main>
+      <ChatBot />
       <Footer />
     </div>
   );

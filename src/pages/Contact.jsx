@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Contact.css";
 import headerImage from "../images/people.jpg";
+import ChatBot from "../components/ChatBot";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -196,7 +197,7 @@ const Contact = () => {
           title="Location"
         ></iframe>
       </section>
-
+      <ChatBot />
       <Footer />
     </div>
   );

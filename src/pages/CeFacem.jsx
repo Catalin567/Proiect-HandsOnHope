@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import Harta from "../components/Harta";
 import Footer from "../components/Footer";
 import "../styles/CeFacem.css";
+import ChatBot from "../components/ChatBot";
 import p1 from "../images/cefacem.jpg";
 
 function closeEventDiv() {
@@ -153,7 +154,7 @@ const CeFacem = () => {
           </section>
         </div>
       </main>
-
+      <ChatBot />
       <Footer />
     </div>
   );

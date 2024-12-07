@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import "../styles/Register.css";
+import ChatBot from "../components/ChatBot";
 function Register() {
   const closeBanner = () => {
     document.getElementById("right-banner").style.display = "none";
@@ -77,6 +78,7 @@ function Register() {
         id="close-right-banner"
         onClick={closeBanner}
       ></div>
+            <ChatBot />
       <Footer />
     </div>
   );

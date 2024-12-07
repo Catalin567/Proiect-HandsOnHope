@@ -11,6 +11,7 @@ import p6 from "../images/principiul5.png";
 import p7 from "../images/principiul6.png";
 import p8 from "../images/principiul7.png";
 import p9 from "../images/principiul8.png";
+import ChatBot from "../components/ChatBot";
 
 function Principii() {
   const principles = [
@@ -124,6 +125,7 @@ function Principii() {
             </button>
           </div>
         </div>
+        <ChatBot />
         <Footer />
       </div>
     </>

@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/SolicitaAjutor.css";
 import helpHeaderImage from "../images/help-people.png";
+import ChatBot from "../components/ChatBot";
 
 const SolicitaAjutor = () => {
   const [formData, setFormData] = useState({
@@ -358,6 +359,7 @@ const SolicitaAjutor = () => {
           {formSubmitted && <div className="success">Formularul a fost trimis cu succes!</div>}
 
       </section>
+      <ChatBot />
       <Footer />
     </div>
   );

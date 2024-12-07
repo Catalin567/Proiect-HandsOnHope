@@ -6,6 +6,7 @@ import Differences from "../components/Differences";
 import MonthlyPhotos from "../components/MonthlyPhotos";
 import Footer from "../components/Footer";
 import Testimonial from "../components/Testimonial";
+import ChatBot from "../components/ChatBot";
 
 function Homepage() {
   return (
@@ -20,6 +21,7 @@ function Homepage() {
       <Differences />
       <br />
       <MonthlyPhotos />
+      <ChatBot />
       <Footer />
     </>
   );

@@ -1,142 +1,178 @@
 .top {
-    width: 100%;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 6vh;
-    text-align: center;
-    padding: 3% 2%;
-    background-color: #00800040;
-    border-radius: 1vh;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 6vh;
+  text-align: center;
+  padding: 3% 2%;
+  background-color: #00800040;
+  border-radius: 1vh;
 }
 
 .bottom {
-    position: fixed;
-    width: 25%;
-    height: 7vh;
-    border-radius: 1vh;
-    bottom: 5%;
-    right: 5%;
-    font-size: 1.5vh;
-    text-align: center;
-    box-sizing: border-box;
-    padding-left: 1%;
-    padding-top: .5%;
-    padding-right: 1%;
-    background-color: #00800040;
+  position: fixed;
+  width: 25%;
+  height: 7vh;
+  border-radius: 1vh;
+  bottom: 5%;
+  right: 5%;
+  font-size: 1.5vh;
+  text-align: center;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-top: .5%;
+  padding-right: 1%;
+  background-color: #00800040;
 }
 
 
 .input-user {
-    position: fixed;
-    width: 19.5%;
-    height: 5vh;
-    border-radius: 1vh;
-    bottom: 13%;
-    right: 10%;
-    font-size: 2vh;
-    text-align: left;
-    box-sizing: border-box;
-    border: 1px solid black;
-    outline: none;
-    padding-left: .5%;
-    padding-top: 1.2%;
-    padding-right: 1%;
-    background-color: white;
-    box-shadow: none;
-  }
-
-  .send-btn {
-    position: fixed;
-    width: 4%;
-    height: 6vh;
-    border-radius: 1vh;
-    bottom: 14%;
-    right: 5.5%;
-    font-size: 2vh;
-    text-align: center;
-    box-sizing: border-box;
-    border: 1px solid black;
-    outline: none;
-    background-color: #008000;
-    color: white;
-    box-shadow: none;
-  }
-
-  .top-bot-icon {
-    position: fixed;
-    bottom: 54vh;
-    right: 25%;
-    height: 20vh;
-    width: 20vh;
-    background-image: url("../images/horia.png");
-    background-size: cover;
-  }
-
-  .top-logo {
-    position: fixed;
-    bottom: 55vh;
-    right: 5%;
-    height: 10vh;
-    width: 10vh;
-    background-image: url("../images/LOGO-HOH.png");
-    background-size: cover;
-  }
-
-  .conversation {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 5vh;
-    margin-left: 2%;
-    font-size: 1.7vh;
-    margin-right: 2%;
-  }
-
-  .bot-message {
-    background-color: white;
-    width: 68%;
-    margin-right: 28%;
-    padding: 1%;
-    border-radius: 1vh;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.338);
-    margin-top: 3%;
-  }
-
-  .human-message {
-    background-color: #00800030;
-    width: 68%;
-    margin-left: 32%;
-    padding: 1%;
-    border-radius: 1vh;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.338);
-    margin-top: 3%;
-  }
-
-  .conversation {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin-top: 5vh;
-    margin-left: 2%;
-    margin-right: 2%;
-    font-size: 1.7vh;
-    max-height: 60vh; /* Înălțimea maximă a containerului */
-    overflow-y: auto; /* Activează scroll vertical */
-    padding-right: 10px; /* Spațiu pentru scrollbar */
-    scrollbar-width: thin; /* Ajustează grosimea scrollbar-ului */
-    scrollbar-color: #00800040 white; /* Stilizează scrollbar-ul */
+  position: fixed;
+  width: 19.5%;
+  height: 5vh;
+  border-radius: 1vh;
+  bottom: 13%;
+  right: 10%;
+  font-size: 2vh;
+  text-align: left;
+  box-sizing: border-box;
+  border: 1px solid black;
+  outline: none;
+  padding-left: .5%;
+  padding-top: 1.2%;
+  padding-right: 1%;
+  background-color: white;
+  box-shadow: none;
 }
 
-/* Opțional: Stilizează scrollbar-ul pentru browser-ele compatibile */
-.conversation::-webkit-scrollbar {
-    width: 6px; /* Lățimea scrollbar-ului */
+.send-btn {
+  position: fixed;
+  width: 4%;
+  height: 6vh;
+  border-radius: 1vh;
+  bottom: 14%;
+  right: 5.5%;
+  font-size: 2vh;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  outline: none;
+  background-color: #008000;
+  color: white;
+  box-shadow: none;
 }
 
-.conversation::-webkit-scrollbar-thumb {
-    background-color: #00800040; /* Culoarea scrollbar-ului */
-    border-radius: 10px; /* Rotunjirea colțurilor scrollbar-ului */
+.top-bot-icon {
+  position: fixed;
+  bottom: 54vh;
+  right: 25%;
+  height: 20vh;
+  width: 20vh;
+  background-image: url("../images/horia-png.png");
+  background-size: cover;
 }
 
-.conversation::-webkit-scrollbar-track {
-    background-color: white; /* Fundalul pistei scrollbar-ului */
+.top-logo {
+  position: fixed;
+  bottom: 55vh;
+  right: 5%;
+  height: 10vh;
+  width: 10vh;
+  background-image: url("../images/LOGO-HOH.png");
+  background-size: cover;
 }
+
+.conversation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+  margin-left: 2%;
+  font-size: 1.7vh;
+  margin-right: 2%;
+}
+
+.bot-message {
+  background-color: white;
+  width: 68%;
+  margin-right: 28%;
+  padding: 1%;
+  border-radius: 1vh;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.338);
+  margin-top: 3%;
+}
+
+.human-message {
+  background-color: #00800030;
+  width: 68%;
+  margin-left: 32%;
+  padding: 1%;
+  border-radius: 1vh;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.338);
+  margin-top: 3%;
+}
+
+.typing span {
+  display: inline-block;
+  font-size: 1.7vh;
+  animation: blink 1s infinite;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+ .chatBot-btn {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  height: 15vh;
+  width: 25vh;
+  background-image: url("../images/discuta-horia.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 99999;
+  cursor: pointer;
+  animation: slide 1.5s 1;
+ }
+
+ @keyframes slide {
+  0% {bottom: -30vh}
+  100% {bottom: 5%}
+ }
+
+ @keyframes fade {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+ }
+
+ .x-button {
+  position: fixed;
+  bottom: 65vh;
+  right: 5%;
+  height: 3vh;
+  width: 3vh;
+  user-select: none;
+  cursor: pointer;
+  text-align: center;
+  padding: none;
+  color: black;
+  border-radius: 5vh;
+  padding-bottom: 1.7%;
+
+ }

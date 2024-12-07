@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Campanii.css";
+import ChatBot from "../components/ChatBot";
 
 
 const Campanii = () => {
@@ -118,6 +119,7 @@ const Campanii = () => {
           </div>
         </div>
       </main>
+      <ChatBot />
       <Footer />
     </div>
   );

@@ -42,13 +42,13 @@ const IntrebariSugestii = () => {
           Ai întrebări? Suntem aici să răspundem!
         </p> <br />
         <p>
-          Poti gasi toate detaliile contactului HandsOnHope aici.
+          Poti gasi toate detaliile contactului HandsOnHope <a href="../Contact"><b style={{ color: "green !important" , cursor: "pointer"}}>aici</b></a>.
         </p><br />
         <p>
           De asemenea, asistentul nostru online, Horia, este aici pentru a raspunde intrebarilor tale sau pentru a primi sugestii.         
         </p>
 
-        <img src={horia} style={{width:"70%", margin: "2% 15%"}}/>
+        <img src={horia} style={{width:"70%", margin: "2% 15%"}} />
         </section>
       </div>
       </div>

@@ -6,6 +6,7 @@ import p3 from "../images/mv-hoh3.png";
 import "../styles/MisiuneViziune.css";
 import l1 from "../images/Altex.png";
 import l2 from "../images/Careffour.png";
+import ChatBot from "../components/ChatBot";
 import l3 from "../images/Kaufland.png";
 
 function MisiuneViziune() {
@@ -70,6 +71,7 @@ function MisiuneViziune() {
           </a>
         </div>
       </div>
+      <ChatBot />
       <Footer />
     </div>
   );

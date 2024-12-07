@@ -2,6 +2,7 @@ import React from "react";
 import NavigationDashboard from "../components/NavigationDashboard";
 import Footer from "../components/Footer";
 import "../styles/Dashboard.css";
+import ChatBot from "../components/ChatBot";
 import p1 from "../images/case.jpg";
 
 
@@ -41,7 +42,7 @@ const Dashboard = () => {
             Iti multumim ca ai ales sa le oferi oamenilor ajutorul tau cand este mai mare nevoie!
           </p>
           <p className="textt"><br />
-          De asemenea, te invitam sa fii voluntar HandsOnHope completand formularul de  <span style={{ color: "green" , cursor: "pointer"}}>aici</span>, pentru a putea aduce impreuna zambete!
+          De asemenea, te invitam sa fii voluntar HandsOnHope completand formularul de  <a href="Voluntariat"><span style={{ color: "green" , cursor: "pointer"}}>aici</span></a>, pentru a putea aduce impreuna zambete!
           </p>
           <p className="textt"><br />
           Din contul tau, poti afla detalii despre actiunile pe care le realizezi, sa administrezi datele personale si sa editezi datele contului tau.
@@ -59,33 +60,34 @@ const Dashboard = () => {
             </div>
               <p>O familie cu 5 copii și-a pierdut casa într-un incendiu. Donațiile colectate sunt folosite pentru materiale de construcție și reabilitarea locuinței, astfel încât familia să poată petrece iarna într-un mediu sigur.
               </p>
-              <button>Donează pentru acest caz</button>
+              <a href="Doneaza"><button>Donează pentru acest caz</button></a>
             </div>
             <div className="case-card">
             <div className="image-container">
               <img src={p1} />
             </div>
               <p>Gabriela a suferit multiple fracturi și are nevoie de proteze și terapie de recuperare, costurile ridicându-se la 25.000 de euro. Fondurile colectate vor acoperi intervențiile chirurgicale și tratamentul pentru a putea merge din nou.</p>
-              <button>Donează pentru acest caz</button>
+              <a href="Doneaza"><button>Donează pentru acest caz</button></a>
             </div>
             <div className="case-card">
               <div className="image-container">
                 <img src={p1} />
               </div>
               <p>O tânără care necesită 20.000 de euro pentru o intervenție chirurgicală în străinătate. Campania este activă pentru a colecta suma necesară tratamentului, care poate salva viața fetei.</p>
-              <button>Donează pentru acest caz</button>
+              <a href="Doneaza"><button>Donează pentru acest caz</button></a>
             </div>
             <div className="case-card">
               <div className="image-container">
                 <img src={p1} />
               </div>
               <p>O tânără care necesită 20.000 de euro pentru o intervenție chirurgicală în străinătate. Campania este activă pentru a colecta suma necesară tratamentului, care poate salva viața fetei.</p>
-              <button>Donează pentru acest caz</button>
+              <a href="Doneaza"><button>Donează pentru acest caz</button></a>
             </div>
           </div>
         </section>
       </div>
       </div>
+      <ChatBot />
       <Footer />
     </main>
 

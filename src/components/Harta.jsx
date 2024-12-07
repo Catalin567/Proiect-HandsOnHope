@@ -129,9 +129,11 @@ function Harta() {
   }
   
   return (
-    <section className="map-section">
-          <h2 className="section-title">Harta Nevoilor din România</h2>
-          <svg className="harta-romaniei">
+    <div>
+    <h2 className="section-title">Harta Nevoilor din România</h2>
+    <section className="map-section" >
+
+          <svg className="harta-romaniei" >
            <path id="RO-AB" class="st0" d="M165.1,162.9l0.1,0.4l1.2,1.2l1.1,0l2.2,0.9l1.2-0.2l1.9-1.4
               l0.7-0.1l1.1,0.1l0.4,0.5l1.1,0l0.7-0.6l1.3,0.5l1.3,1.7l0.4,3.1l1.1,0.5l-0.7,2l0.3,0.4l0.8-0.4l2.1,0.5l0.4-0.4l0.1-1.1l0.5-0.6
               l1.1,0l0.9-1l1.4-0.6l0.4,0.1l1-0.3l0.3,1.3l3.2,0.6l0.5-0.6l1.4-0.1l0.4-0.9l1.4-1l1,0l1.8-0.9l1.3-1.8l1-0.3l0.8,0.1l0.9,0.8
@@ -1241,6 +1243,7 @@ function Harta() {
             </g>
           </svg>
         </section>
+        </div>
   );
 }
 

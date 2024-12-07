@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Doneaza.css";
+import ChatBot from "../components/ChatBot";
 
 const Doneaza = () => {
   const steps = [
@@ -155,6 +156,7 @@ const Doneaza = () => {
           </div>
         </div>
       </main>
+      <ChatBot />
       <Footer />
     </div>
   );

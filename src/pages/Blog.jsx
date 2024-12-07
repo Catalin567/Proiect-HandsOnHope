@@ -2,6 +2,8 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Blog.css";
+import ChatBot from "../components/ChatBot";
+
 const Blog = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -380,6 +382,7 @@ Așadar, alătură-te celor care fac deja o diferență – fie prin donații fi
 
 
       </main>
+      <ChatBot />
       <Footer />
     </div>
   );
