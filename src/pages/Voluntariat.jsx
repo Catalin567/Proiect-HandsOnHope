@@ -1,14 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import ChatBot from "../components/ChatBot";
 import "../styles/Voluntariat.css";
 
 const Voluntariat = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Previne comportamentul default al formularului
-    alert("Formularul a fost înregistrat cu succes!");
+  const [formData, setFormData] = useState({
+    nume: "",
+    prenume: "",
+    varsta: "",
+    ocupatie: "",
+    adresa: "",
+    disponibilitate: "",
+    experienta: "",
+    ore: "",
+    motiv: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:5000/voluntariat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Formularul a fost înregistrat cu succes!");
+        setFormData({
+          nume: "",
+          prenume: "",
+          varsta: "",
+          ocupatie: "",
+          adresa: "",
+          disponibilitate: "",
+          experienta: "",
+          ore: "",
+          motiv: "",
+        });
+      } else {
+        alert("A apărut o eroare. Vă rugăm să încercați din nou.");
+      }
+    } catch (error) {
+      console.error("Eroare la trimiterea formularului:", error);
+      alert("Eroare la conectarea cu serverul.");
+    }
+  };
+
   return (
     <main>
       <Navigation />
@@ -204,11 +254,23 @@ const Voluntariat = () => {
           <div className="form-row">
             <div className="form-group">
               <label>Nume</label>
-              <input type="text" placeholder="Introdu numele" />
+              <input
+                type="text"
+                name="nume"
+                value={formData.nume}
+                onChange={handleChange}
+                placeholder="Introdu numele"
+              />
             </div>
             <div className="form-group">
               <label>Prenume</label>
-              <input type="text" placeholder="Introdu prenumele" />
+              <input
+                type="text"
+                name="prenume"
+                value={formData.prenume}
+                onChange={handleChange}
+                placeholder="Introdu prenumele"
+              />
             </div>
           </div>
 
@@ -216,27 +278,46 @@ const Voluntariat = () => {
             <div className="form-group">
               <label>Vârsta</label>
               <input
+                type="number"
+                name="varsta"
+                value={formData.varsta}
+                onChange={handleChange}
                 min={1}
                 max={99}
-                type="number"
                 placeholder="Introdu vârsta"
               />
             </div>
             <div className="form-group">
               <label>Ocupație</label>
-              <input type="text" placeholder="Introdu ocupația" />
+              <input
+                type="text"
+                name="ocupatie"
+                value={formData.ocupatie}
+                onChange={handleChange}
+                placeholder="Introdu ocupația"
+              />
             </div>
             <div className="form-group">
               <label>Adresa</label>
-              <input type="text" placeholder="Introdu adresa" />
+              <input
+                type="text"
+                name="adresa"
+                value={formData.adresa}
+                onChange={handleChange}
+                placeholder="Introdu adresa"
+              />
             </div>
           </div>
 
           <div className="form-row">
             <div className="form-group">
               <label>Când poți participa la activități?</label>
-              <select>
-                <option>Alege opțiunea</option>
+              <select
+                name="disponibilitate"
+                value={formData.disponibilitate}
+                onChange={handleChange}
+              >
+                <option value="">Alege opțiunea</option>
                 <option>De luni până vineri, dimineața</option>
                 <option>De luni până vineri, seara</option>
                 <option>În weekend</option>
@@ -250,10 +331,24 @@ const Voluntariat = () => {
               <label>Ai experiență anterioară ca voluntar?</label>
               <div className="radio-group">
                 <label>
-                  <input type="radio" name="experience" value="Da" /> DA
+                  <input
+                    type="radio"
+                    name="experienta"
+                    value="Da"
+                    checked={formData.experienta === "Da"}
+                    onChange={handleChange}
+                  />{" "}
+                  DA
                 </label>
                 <label>
-                  <input type="radio" name="experience" value="Nu" /> NU
+                  <input
+                    type="radio"
+                    name="experienta"
+                    value="Nu"
+                    checked={formData.experienta === "Nu"}
+                    onChange={handleChange}
+                  />{" "}
+                  NU
                 </label>
               </div>
             </div>
@@ -261,6 +356,9 @@ const Voluntariat = () => {
               <label>Ore disponibile pe zi</label>
               <input
                 type="number"
+                name="ore"
+                value={formData.ore}
+                onChange={handleChange}
                 placeholder="Introdu orele"
                 min="1"
                 max={8}
@@ -271,7 +369,13 @@ const Voluntariat = () => {
           <div className="form-row">
             <div className="form-group full-width">
               <label>Ce te-a determinat să te înscrii ca voluntar?</label>
-              <textarea placeholder="Scrie aici..." rows="4"></textarea>
+              <textarea
+                name="motiv"
+                value={formData.motiv}
+                onChange={handleChange}
+                placeholder="Scrie aici..."
+                rows="4"
+              ></textarea>
             </div>
           </div>
 

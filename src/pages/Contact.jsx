@@ -39,7 +39,7 @@ const Contact = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormSubmitted(true);
 
@@ -47,10 +47,36 @@ const Contact = () => {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      console.log("Form data:", formData);
-      alert("Formularul a fost trimis cu succes!");
+      try {
+        const response = await fetch("http://localhost:5000/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert("Formularul a fost trimis cu succes!");
+          setFormData({
+            nume: "",
+            prenume: "",
+            subiect: "",
+            mesaj: "",
+          });
+        } else {
+          alert("A apărut o eroare: " + data.error);
+        }
+      } catch (error) {
+        console.error("Eroare la trimiterea formularului:", error);
+        alert("A apărut o eroare la trimiterea formularului.");
+      }
     }
   };
+
+  
 
   return (
     <div>

@@ -82,31 +82,48 @@ const SolicitaAjutor = () => {
     return isValid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+  
     if (validateForm()) {
-      console.log("Formularele sunt valide:", formData);
-      setFormSubmitted(true);
-      setTimeout(() => {
-        setFormData({
-          nume: "",
-          prenume: "",
-          localitate: "",
-          adresa: "",
-          telefon: "",
-          email: "",
-          numarMembriFamilie: "",
-          tipCalamitate: "",
-          tipAjutor: "",
-          nevoiSpeciale: "",
-          prioritateaCererii: "",
+      try {
+        const response = await fetch('http://localhost:5000/solicita-ajutor', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData), // trimite datele din formular ca JSON
         });
-        setFormSubmitted(false);
-      }, 3000);
+  
+        const data = await response.json();
+        if (response.ok) {
+          console.log('Formularul a fost trimis cu succes:', data);
+          setFormSubmitted(true);
+          // Resetarea formularului după succes
+          setFormData({
+            nume: "",
+            prenume: "",
+            localitate: "",
+            adresa: "",
+            telefon: "",
+            email: "",
+            numarMembriFamilie: "",
+            tipCalamitate: "",
+            tipAjutor: "",
+            nevoiSpeciale: "",
+            prioritateaCererii: "",
+          });
+        } else {
+          console.log('Eroare la trimiterea formularului:', data.error);
+        }
+      } catch (error) {
+        console.error('A apărut o eroare:', error);
+      }
     } else {
-      console.log("Formularul nu a fost validat.");
+      console.log('Formularul nu a fost validat.');
     }
   };
+  
   
 
   return (
