@@ -34,3 +34,16 @@ CREATE TABLE voluntari (
     motivatie TEXT                         
 );
 
+CREATE TABLE donatii (
+  id SERIAL PRIMARY KEY,                    
+  nume VARCHAR(255) NOT NULL,                
+  prenume VARCHAR(255) NOT NULL,            
+  suma_libera NUMERIC NOT NULL,            
+  tip_donatie VARCHAR(50),                 
+  tip_plata VARCHAR(50),                    
+  nume_card VARCHAR(255),                   
+  data_expirare DATE,                       
+  cvc VARCHAR(3),                          
+  email VARCHAR(255) NOT NULL,             
+  data_donatie TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+);

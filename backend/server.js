@@ -174,6 +174,67 @@ app.post("/voluntariat", async (req, res) => {
     res.status(500).json({ error: "A apărut o eroare la salvarea datelor." });
   }
 });
+app.get('/doneaza', async (req, res) => {
+  try {
+    // Aici ordonăm rezultatele după 'id' sau alt câmp dorit
+    const result = await pool.query('SELECT * FROM donatii ORDER BY id ASC');  
+    // Returnăm datele ca JSON
+    res.status(200).json({
+      message: 'Datele formularului',
+      data: result.rows,  
+    });
+  } catch (error) {
+    console.error('Eroare la obținerea datelor:', error);
+    res.status(500).json({
+      error: 'A apărut o eroare la obținerea datelor.',
+    });
+  }
+});
+app.post('/doneaza', async (req, res) => {
+  const {
+    nume,
+    prenume,
+    sumaLiberă,  // Acesta va fi utilizat pentru valoarea donației
+    tipDonație,
+
+    email,
+  } = req.body;
+
+  // Verificăm ce date primim la server
+  console.log(req.body); // Adaugă acest log pentru a verifica datele trimise
+
+  // Validăm că câmpurile esențiale sunt furnizate
+  if (!nume || !prenume || !sumaLiberă || !tipDonație || !email) {
+    return res.status(400).json({
+      error: "Toate câmpurile esențiale sunt obligatorii!",
+    });
+  }
+
+  try {
+    // Inserăm datele în baza de date
+    const result = await pool.query(
+      `INSERT INTO donatii (nume, prenume, suma_libera, tip_donatie, tip_plata, nume_card, numar_card, data_expirare, cvc, email) 
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *`,
+      [
+        nume, prenume, sumaLiberă, tipDonație, tipPlata, 
+        numeCard, numarCard, dataExpirare, cvc, email
+      ]
+    );
+    
+
+    res.status(200).json({
+      message: 'Donația a fost procesată cu succes!',
+      data: result.rows[0],  // Returnează datele donației
+    });
+  } catch (error) {
+    console.error('Eroare la trimiterea donației:', error);
+    res.status(500).json({
+      error: 'A apărut o eroare la trimiterea donației.',
+    });
+  }
+});
+
+
 
 app.listen(port, () => {
   console.log(`Serverul rulează pe portul ${port}`);

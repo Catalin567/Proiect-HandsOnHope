@@ -1,10 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Doneaza.css";
 import ChatBot from "../components/ChatBot";
 
 const Doneaza = () => {
+  const [formData, setFormData] = useState({
+    nume: '',
+    prenume: '',
+    sumaLiberă: '',
+    tipDonație: '',
+    numeCard: '',
+    numarCard: '',
+    dataExpirare: '',
+    cvc: '',
+    email: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      const response = await fetch('http://localhost:5000/doneaza', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',  // Setează tipul de conținut la JSON
+        },
+        body: JSON.stringify(formData),  // Trimite datele ca JSON
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert('Donația ta a fost procesată cu succes!');
+      } else {
+        alert(data.error || 'A apărut o eroare la procesarea donației!');  // Afișează eroarea din server, dacă există
+      }
+    } catch (error) {
+      console.error('Eroare la trimiterea formularului:', error);
+      alert('A apărut o eroare!');
+    }
+  };
+  
+  
+
   const steps = [
     {
       number: 1,
@@ -31,6 +78,7 @@ const Doneaza = () => {
         "După ce ai completat formularul și ai trimis donația, vei primi un email de confirmare din partea noastră, cu toate detaliile tranzacției. Acest mesaj va servi și ca o dovadă a sprijinului tău.",
     },
   ];
+
   return (
     <div>
       <Navigation />
@@ -79,24 +127,42 @@ const Doneaza = () => {
               <h4>DONEAZĂ</h4>
               <hr />
               <div className="form-inputs">
-                <input type="text" placeholder="Nume" />
-                <input type="text" placeholder="Prenume" />
+                <input 
+                  type="text" 
+                  placeholder="Nume" 
+                  name="nume" 
+                  value={formData.nume} 
+                  onChange={handleChange} 
+                />
+                <input 
+                  type="text" 
+                  placeholder="Prenume" 
+                  name="prenume" 
+                  value={formData.prenume} 
+                  onChange={handleChange} 
+                />
                 <br />
                 <br />
               </div>
               <div className="donation-amounts">
-                <button>50 RON</button>
-                <button>100 RON</button>
-                <button>200 RON</button>
+                <button onClick={() => setFormData({ ...formData, sumaLiberă: 50 })}>50 RON</button>
+                <button onClick={() => setFormData({ ...formData, sumaLiberă: 100 })}>100 RON</button>
+                <button onClick={() => setFormData({ ...formData, sumaLiberă: 200 })}>200 RON</button>
                 <br /> <br />
               </div>
-              <input type="text" placeholder="Sumă liberă" />
+              <input 
+                type="text" 
+                placeholder="Sumă liberă" 
+                name="sumaLiberă" 
+                value={formData.sumaLiberă} 
+                onChange={handleChange} 
+              />
               <br />
               <br />
               <div className="donation-actions">
-                <button>Donează Acum</button>
-                <button>Donează Lunar</button>
-                <button>Donează Anual</button>
+                <button onClick={() => setFormData({ ...formData, tipDonație: "unica" })}>Donează Acum</button>
+                <button onClick={() => setFormData({ ...formData, tipDonație: "lunar" })}>Donează Lunar</button>
+                <button onClick={() => setFormData({ ...formData, tipDonație: "anual" })}>Donează Anual</button>
               </div>
             </div>
 
@@ -105,16 +171,46 @@ const Doneaza = () => {
               <h4>Plata cu cardul bancar</h4>
               <hr />
               <div className="form-inputs">
-                <input type="text" placeholder="Nume deținător" />
-                <input type="text" placeholder="Număr card bancar" />
+                <input 
+                  type="text" 
+                  placeholder="Nume deținător" 
+                  name="numeCard" 
+                  value={formData.numeCard} 
+                  onChange={handleChange} 
+                />
+                <input 
+                  type="text" 
+                  placeholder="Număr card bancar" 
+                  name="numarCard" 
+                  value={formData.numarCard} 
+                  onChange={handleChange} 
+                />
                 <div className="card-details">
-                  <input type="text" placeholder="Data expirare (ZZ/MM/YY)" />
-                  <input type="text" placeholder="CVC" />
+                  <input 
+                    type="text" 
+                    placeholder="Data expirare (ZZ/MM/YY)" 
+                    name="dataExpirare" 
+                    value={formData.dataExpirare} 
+                    onChange={handleChange} 
+                  />
+                  <input 
+                    type="text" 
+                    placeholder="CVC" 
+                    name="cvc" 
+                    value={formData.cvc} 
+                    onChange={handleChange} 
+                  />
                 </div>
-                <input type="email" placeholder="Email" />
+                <input 
+                  type="email" 
+                  placeholder="Email" 
+                  name="email" 
+                  value={formData.email} 
+                  onChange={handleChange} 
+                />
               </div>
               <hr />
-              <button className="submit-button">DONEAZĂ</button>
+              <button className="submit-button" onClick={handleSubmit}>DONEAZĂ</button>
             </div>
           </div>
         </div>
