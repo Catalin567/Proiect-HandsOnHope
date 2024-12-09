@@ -114,7 +114,16 @@ h2{
   .submit-button:hover {
     background-color: #005f00;
   }
+
+  .container-to-animate {
+    animation: container 1s 1;
+  }
   
+  @keyframes container {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
   /* Responsive Styling */
   @media (max-width: 768px) {
     .form-grid {
@@ -283,6 +292,22 @@ h2{
     background-color: #005f00;
   }
   
+  .butoane-select {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #008000;
+    color: white;
+    border-radius: 15vh;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 2.5% 5%;
+    padding: 3% 0;
+  }
+
+  .butoane-select:hover {
+    background-color: #00ab00;
+  }
+
   /* Responsive Styling */
   @media (max-width: 768px) {
     .form-grid-3 {
