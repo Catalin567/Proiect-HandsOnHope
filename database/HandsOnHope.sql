@@ -47,3 +47,25 @@ CREATE TABLE donatii (
   email VARCHAR(255) NOT NULL,             
   data_donatie TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
 );
+CREATE TABLE redirectionari (
+    id SERIAL PRIMARY KEY,
+    nume VARCHAR(255),
+    prenume VARCHAR(255),
+    initiala_prenume_tata CHAR(1),
+    cnp VARCHAR(13),
+    telefon VARCHAR(20),
+    email VARCHAR(255),
+    strada VARCHAR(255),
+    numar VARCHAR(10) NOT NULL,
+    bloc VARCHAR(10),
+    scara VARCHAR(10),
+    etaj VARCHAR(10),
+    apartament VARCHAR(10),
+    localitate VARCHAR(255),
+    judet_sector VARCHAR(255),
+    cod_postal VARCHAR(20),
+    perioada_donatie INTEGER,
+    semnatura TEXT,
+    acord_politica BOOLEAN,
+    acord_anaf BOOLEAN
+);

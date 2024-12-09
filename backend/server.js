@@ -233,8 +233,173 @@ app.post('/doneaza', async (req, res) => {
     });
   }
 });
+app.get('/redirectioneaza', async (req, res) => {
+  try {
+    // Aici ordonăm rezultatele după 'id' sau alt câmp dorit
+    const result = await pool.query('SELECT * FROM redirectionari ORDER BY id ASC');  
+    // Returnăm datele ca JSON
+    res.status(200).json({
+      message: 'Datele formularului',
+      data: result.rows,  
+    });
+  } catch (error) {
+    console.error('Eroare la obținerea datelor:', error);
+    res.status(500).json({
+      error: 'A apărut o eroare la obținerea datelor.',
+    });
+  }
+});
+app.post('/redirectioneaza', async (req, res) => {
+  const {
+    nume,
+    prenume,
+    initialaPrenumeTata,
+    cnp,
+    telefon,
+    email,
+    strada,
+    numar,
+    bloc,
+    scara,
+    etaj,
+    apartament,
+    localitate,
+    judetSector,
+    codPostal,
+    perioadaDonatie,
+    semnatura,
+    acordPolitica,
+    acordAnaf,
+  } = req.body;
 
+  try {
+    const result = await pool.query(
+      `INSERT INTO redirectionari 
+      (nume, prenume, initiala_prenume_tata, cnp, telefon, email, strada, numar, bloc, scara, etaj, apartament, localitate, judet_sector, cod_postal, perioada_donatie, semnatura, acord_politica, acord_anaf) 
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) RETURNING *`,
+      [
+        nume,
+        prenume,
+        initialaPrenumeTata,
+        cnp,
+        telefon,
+        email,
+        strada,
+        numar,
+        bloc,
+        scara,
+        etaj,
+        apartament,
+        localitate,
+        judetSector,
+        codPostal,
+        perioadaDonatie,
+        semnatura,
+        acordPolitica,
+        acordAnaf,
+      ]
+    );
 
+    res.status(200).json({
+      message: 'Formularul a fost trimis cu succes!',
+      data: result.rows[0],
+    });
+  } catch (error) {
+    console.error('Eroare la trimiterea formularului:', error);
+    res.status(500).json({ error: 'A apărut o eroare la trimiterea formularului.' });
+  }
+});
+app.get('/redirectioneaza-pj', async (req, res) => {
+  try {
+    // Aici ordonăm rezultatele după 'id' sau alt câmp dorit
+    const result = await pool.query('SELECT * FROM redirectionari_pj ORDER BY id ASC');  
+    // Returnăm datele ca JSON
+    res.status(200).json({
+      message: 'Datele formularului',
+      data: result.rows,  
+    });
+  } catch (error) {
+    console.error('Eroare la obținerea datelor:', error);
+    res.status(500).json({
+      error: 'A apărut o eroare la obținerea datelor.',
+    });
+  }
+});
+app.post('/redirectioneaza-pj', async (req, res) => {
+  const {
+    denumire,
+    adresa_sediu_social,
+    cui,
+    nr_reg_comert,
+    cont_bancar,
+    banca,
+    reprezentant,
+    functie,
+    telefon,
+    email,
+    suma_redirectionata,
+    strada,
+    numar,
+    bloc,
+    scara,
+    etaj,
+    apartament,
+    localitate,
+    judet_sector,
+    cod_postal,
+    acord_politica,
+    acord_date,
+  } = req.body;
+
+  // Validare simplă
+  if (
+    !denumire ||
+    !adresa_sediu_social ||
+    !cui ||
+    !nr_reg_comert ||
+    !cont_bancar ||
+    !banca ||
+    !reprezentant ||
+    !functie ||
+    !telefon ||
+    !email ||
+    !suma_redirectionata ||
+    !strada ||
+    !numar ||
+    !localitate ||
+    !judet_sector ||
+    !cod_postal ||
+    acord_politica === undefined ||
+    acord_date === undefined
+  ) {
+    return res.status(400).json({ message: 'Toate câmpurile obligatorii trebuie completate.' });
+  }
+
+  try {
+    // Inserarea în baza de date
+    const query = `
+      INSERT INTO redirectionari_pj (
+        denumire, adresa_sediu_social, cui, nr_reg_comert, cont_bancar, banca,
+        reprezentant, functie, telefon, email, suma_redirectionata, strada, numar,
+        bloc, scara, etaj, apartament, localitate, judet_sector, cod_postal, acord_politica, acord_date
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22)
+      RETURNING id;
+    `;
+    const values = [
+      denumire, adresa_sediu_social, cui, nr_reg_comert, cont_bancar, banca,
+      reprezentant, functie, telefon, email, suma_redirectionata, strada, numar,
+      bloc, scara, etaj, apartament, localitate, judet_sector, cod_postal,
+      acord_politica, acord_date
+    ];
+
+    const result = await pool.query(query, values);
+
+    res.status(201).json({ message: 'Formularul a fost înregistrat cu succes!', id: result.rows[0].id });
+  } catch (error) {
+    console.error('Eroare la inserarea în baza de date:', error);
+    res.status(500).json({ message: 'A apărut o eroare la înregistrarea formularului.' });
+  }
+});
 
 app.listen(port, () => {
   console.log(`Serverul rulează pe portul ${port}`);
