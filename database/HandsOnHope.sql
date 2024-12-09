@@ -69,3 +69,29 @@ CREATE TABLE redirectionari (
     acord_politica BOOLEAN,
     acord_anaf BOOLEAN
 );
+CREATE TABLE redirectionari_pj (
+    id SERIAL PRIMARY KEY,
+    denumire VARCHAR(255) NOT NULL,
+    adresa_sediu_social TEXT NOT NULL,
+    cui VARCHAR(50) NOT NULL,
+    nr_reg_comert VARCHAR(50) NOT NULL,
+    cont_bancar VARCHAR(50) NOT NULL,
+    banca VARCHAR(100) NOT NULL,
+    reprezentant VARCHAR(100) NOT NULL,
+    functie VARCHAR(100) NOT NULL,
+    telefon VARCHAR(20) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    suma_redirectionata DECIMAL(10, 2) NOT NULL,
+    strada TEXT NOT NULL,
+    numar VARCHAR(10) NOT NULL,
+    bloc VARCHAR(10),
+    scara VARCHAR(10),
+    etaj VARCHAR(10),
+    apartament VARCHAR(10),
+    localitate VARCHAR(100) NOT NULL,
+    judet_sector VARCHAR(100) NOT NULL,
+    cod_postal VARCHAR(20) NOT NULL,
+    acord_politica BOOLEAN NOT NULL,
+    acord_date BOOLEAN NOT NULL,
+    data_inregistrare TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
