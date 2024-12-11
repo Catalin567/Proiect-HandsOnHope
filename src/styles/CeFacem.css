@@ -66,14 +66,14 @@
 
 /* Map section */
 .map-section {
-  margin-bottom: 10vh;
+  margin-bottom: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 85vh;
   margin: 0 auto;
   width: 100%;
-  padding: 0 15%;
+  padding-left: 5%;
   box-sizing: border-box;
 }
 
@@ -169,7 +169,7 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,12 +274,17 @@
   stroke: black;
 }
 
+.section-title.mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .harta-romaniei {
-    margin: 0px auto;
     padding: 0;
     width: 100%;
-    height: 50vh;
+    height: 100vh;
+    scale: 0.8;
+    margin-bottom: -90%;
   }
 
   .eveniment-judet {
@@ -287,4 +292,66 @@
     left: 10vw;
     right: 10vw;
   }
+
+  .section-title.desktop {
+    display: none;
+  }
+  .section-title.mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .map-section {
+    display: none;
+  }
+
+  .map-section {display: none !important; height: 0px !important; width: 0px !important;}
+
+  .title {
+    width: 90% !important;
+    margin-left: 5% !important;
+    text-align: center !important;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .map-section {
+    padding: 0;
+    width: 100vh;
+    margin: 0;
+    margin-left: 5%;
+    rotate: z 90deg;
+    height: 100vh;
+    margin-bottom: 10%;
+  }
+
+  .intervention {
+    width: 100%;
+    padding: 2% 2%;
+  }
+
+  .main-content-div {
+    width: 100%;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .services {
+    margin: 0;
+    width: 100%;
+    justify-content: none;
+    display: block;
+  }
+
+  .service-card {
+    flex: none;
+    width: 100%;
+    padding: 0;
+  }
+
+
 }

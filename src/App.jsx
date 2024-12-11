@@ -18,6 +18,7 @@ import Redirectioneaza from "./pages/Redirectioneaza";
 import CazurileSustinute from "./pages/dashboard/CazurileSustinute";
 import DatePreferinte from "./pages/dashboard/DatePreferinte";
 import IntrebariSugestii from "./pages/dashboard/IntrebariSugestii";
+import HartaRo from "./pages/HartaRo";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/Voluntariat" element={<Voluntariat />} />
         <Route path="/Doneaza" element={<Doneaza />} />
         <Route path="/Redirectioneaza" element={<Redirectioneaza />} />
+        <Route path="/HartaRo" element={<HartaRo />} />
         <Route
           path="/Dashboard/CazurileSustinute"
           element={<CazurileSustinute />}

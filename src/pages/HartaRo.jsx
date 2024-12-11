@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/CeFacem.css";
+import "../styles/HartaRo.css";
 
-function Harta() {
+function HartaRo() {
   function afiseazaEvenimente(jud) {
     const judet = jud;
     if (judet == "Vrancea") {
@@ -127,13 +127,30 @@ function Harta() {
   
     document.getElementById("eveniment-judet").style.display = "block";
   }
+
+  function closeEventDiv() {
+    document.getElementById("eveniment-judet").style.display = "none";
+  }
   
   return (
     <div>
-    <h2 className="section-title desktop">Harta Nevoilor din România</h2>
-    <h2 className="section-title mobile">Harta Nevoilor din România - <a href="HartaRo">Click aici pentru a vizualiza pe mobil</a></h2>
-    <section className="map-section" >
+      <div className="eveniment-judet" id="eveniment-judet">
+            <section
+              className="evenimente-content"
+              id="eveniment-tot"
+            ></section>
 
+            <button
+              className="close-button-event"
+              onClick={() => closeEventDiv()}
+            >
+              Inchide
+          </button>
+      </div>
+    <h2 className="section-title desktop">Harta Nevoilor din România</h2>
+    <h2 className="section-title mobileb">Vă rugăm să rotiți dispozitivul pentru a putea vizualiza harta.</h2>
+    <section className="map-section" >
+      <a href="CeFacem"><div className="inapoi-acasa"> ← Înapoi pe pagina "Ce Facem"</div></a>
           <svg className="harta-romaniei" >
            <path id="RO-AB" class="st0" d="M165.1,162.9l0.1,0.4l1.2,1.2l1.1,0l2.2,0.9l1.2-0.2l1.9-1.4
               l0.7-0.1l1.1,0.1l0.4,0.5l1.1,0l0.7-0.6l1.3,0.5l1.3,1.7l0.4,3.1l1.1,0.5l-0.7,2l0.3,0.4l0.8-0.4l2.1,0.5l0.4-0.4l0.1-1.1l0.5-0.6
@@ -1248,4 +1265,4 @@ function Harta() {
   );
 }
 
-export default Harta;
+export default HartaRo;

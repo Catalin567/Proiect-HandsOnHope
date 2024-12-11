@@ -1,0 +1,199 @@
+/* Global container */
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+/* Map section */
+.map-section {
+  margin-bottom: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  margin: 0 auto;
+  width: 95%;
+  box-sizing: border-box;
+  padding: 0 !important;
+  margin-left: 5%;
+}
+
+.map-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+.map-legend {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.legend-green {
+  color: green;
+}
+
+.legend-blue {
+  color: blue;
+}
+
+.legend-red {
+  color: red;
+}
+
+
+
+.highlight-green {
+  color: #008000;
+  font-weight: 700;
+}
+
+.service-texts {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 5vh;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.harta-romaniei {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  box-shadow: none;
+  margin: 0px auto;
+  fill: white;
+  stroke: black;
+  stroke-width: 0.3px;
+}
+
+.inapoi-acasa {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  background-color: #008000;
+  font-size: 3vh;
+  padding: 1vh 3%;
+  border-radius: 5vh;
+  font-weight: 600;
+  color: white;
+}
+
+.inapoi-acasa:hover {
+  background-color: #00a500;
+}
+
+.eveniment-judet {
+  display: none;
+  width: 50vw;
+  height: auto;
+  background-color: rgb(243, 243, 243);
+  color: black;
+  position: fixed;
+  top: 20vh;
+  left: 25vw;
+  right: 25vw;
+  z-index: 9999;
+  border-radius: 8px;
+  padding: 5vh 5vw;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.serviciu-social-highlight {
+  color: #1daeef;
+  font-weight: 700;
+}
+
+.serviciu-juridic-highlight {
+  color: #00a500;
+  font-weight: 700;
+}
+
+.close-button-event {
+  float: right;
+  font-weight: 500 !important;
+  padding: 5px 20px !important;
+  border: 2px solid green !important;
+  border-radius: 30px !important;
+  transition: background-color 0.3s !important;
+}
+
+.close-button-event:hover {
+  color: white;
+  background-color: green;
+}
+
+.serviciu-dezastre-highlight {
+  color: #f40014;
+  font-weight: 700;
+}
+
+.eveniment-judet-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #008000;
+}
+
+.harta-buton {
+  cursor: pointer;
+  fill: white;
+}
+
+.harta-buton:hover {
+  fill: rgb(242, 255, 222);
+}
+
+#green-pin {
+  fill: #00a500;
+}
+
+#red-pin {
+  fill: #f40014;
+}
+
+#blue-pin {
+  fill: #1daeef;
+}
+
+#Legenda {
+  stroke: none;
+  fill: black;
+}
+
+#blue_00000065753709190977333940000007931203685532145835_ {
+  fill: #1daeef;
+  stroke: black;
+}
+
+#blue_00000071557122348622784080000001949003724375887278_ {
+  fill: #00a500;
+  stroke: black;
+}
+
+#blue_00000029761336745988867740000000458534418561085108_ {
+  fill: #f40014;
+  stroke: black;
+}
+
+.section-title.mobileb {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .section-title.mobileb {
+    display: block;
+    width: 100% !important;
+    font-size: 5vh;
+    text-align: center;
+    position: fixed;
+  }
+
+  .harta-romaniei {
+    display: none;
+  } 
+}

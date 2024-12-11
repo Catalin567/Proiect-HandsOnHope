@@ -106,7 +106,7 @@ function Navigation() {
               <i className="bx bx-search"></i>
             </div>
           </div>
-          <a className="loginLink" href="login.html">
+          <a className="loginLink" href="Login">
             <i className="bx bxs-user"></i>
           </a>
           <div className="hamburger" onClick={toggleNavLinks}>
