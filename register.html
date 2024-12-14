@@ -12,22 +12,26 @@
         <!-- Main Frame / Form -->
         <div id="main-frame" id="main-frame">
             <h1 class="login-title">CONECTEAZĂ-TE</h1>
-            <div id="login-logos">
+                <div id="login-logos">
                 <img src="login-assets/facebook.png" class="login-icons">
                 <img src="login-assets/google.webp" class="login-icons">
             </div>
 
-            <form action="login-assets/">
+            <!-- Formularul pentru înregistrare -->
+            <form id="register-form" action="/register" method="POST">
                 <input type="text" id="username" name="username" placeholder="Nume utilizator"><br>
                 <input type="text" id="email" name="email" placeholder="Adresa de e-mail"><br>
                 <input type="password" id="password" name="password" placeholder="Parolă"><br><br>
                 <input type="submit" value="CREEAZĂ CONTUL" id="submit">
             </form>
+
+            <!-- Mesaje de succes și eroare -->
+            <div id="error-message" style="color: red; display: none;"></div>
+            <div id="success-message" style="color: green; display: none;"></div>
         </div>
 
         <!-- Right Banner -->
         <div class="right-banner" id="right-banner">
-
             <img src="login-assets/logo.png" class="right-banner-logo" onclick="window.history.go(-1); return false;">
             <p class="right-banner-text">
                 BINE AI VENIT!
@@ -37,6 +41,60 @@
             <a href="login.html"><button class="right-banner-button">INTRĂ ÎN CONT</button></a>
         </div>
         <div class="close-right-banner"  id="close-right-banner" onclick="closeBanner()"></div>
+
+        <script>
+            // Funcția pentru a închide bannerul drept
+            function closeBanner() {
+                document.getElementById("right-banner").style.display = "none";
+            }
+    
+            // Ascultător pentru submit-ul formularului
+            document.getElementById("register-form").addEventListener("submit", async function(event) {
+                event.preventDefault(); // Previne trimiterea formularului
+    
+                // Obținem valorile din formular
+                const username = document.getElementById("username").value;
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+    
+                // Verificăm dacă toate câmpurile sunt completate
+                if (!username || !email || !password) {
+                    document.getElementById("error-message").textContent = "Te rugăm să completezi toate câmpurile.";
+                    document.getElementById("error-message").style.display = "block";
+                    document.getElementById("success-message").style.display = "none";
+                    return;
+                }
+    
+                // Trimitem cererea POST către server
+                try {
+                    const response = await fetch("http://localhost:5000/register", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ username, email, password })
+                    });
+    
+                    const result = await response.json();
+    
+                    if (response.ok) {
+                        // Dacă cererea a avut succes
+                        document.getElementById("success-message").textContent = result.message || "Cont creat cu succes!";
+                        document.getElementById("success-message").style.display = "block";
+                        document.getElementById("error-message").style.display = "none";
+                    } else {
+                        // Dacă a apărut o eroare
+                        document.getElementById("error-message").textContent = result.message || "Eroare la crearea contului.";
+                        document.getElementById("error-message").style.display = "block";
+                        document.getElementById("success-message").style.display = "none";
+                    }
+                } catch (error) {
+                    // Dacă apare o eroare în timpul cererii
+                    document.getElementById("error-message").textContent = "A apărut o eroare. Verificați conexiunea la internet.";
+                    document.getElementById("error-message").style.display = "block";
+                    document.getElementById("success-message").style.display = "none";
+                }
+            });
+        </script>
+            <script src="login-assets/right-banner-animation.js"></script>
+
     </body>
-    <script src="login-assets/right-banner-animation.js"></script>
 </html>

@@ -400,6 +400,44 @@ app.post('/redirectioneaza-pj', async (req, res) => {
     res.status(500).json({ message: 'A apărut o eroare la înregistrarea formularului.' });
   }
 });
+app.get('/register', async (req, res) => {
+  try {
+    // Aici ordonăm rezultatele după 'id' sau alt câmp dorit
+    const result = await pool.query('SELECT * FROM users ORDER BY id ASC');  
+    // Returnăm datele ca JSON
+    res.status(200).json({
+      message: 'Datele formularului',
+      data: result.rows,  
+    });
+  } catch (error) {
+    console.error('Eroare la obținerea datelor:', error);
+    res.status(500).json({
+      error: 'A apărut o eroare la obținerea datelor.',
+    });
+  }
+});
+
+// Crearea unui nou utilizator (exemplu de înregistrare)
+app.post('/register', async (req, res) => {
+  const { username, email, password } = req.body;
+
+  try {
+      // Verificăm dacă e-mailul există deja
+      const existingUser = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
+      if (existingUser.rows.length > 0) {
+          return res.status(400).json({ message: "E-mailul este deja utilizat." });
+      }
+
+      // Salvăm utilizatorul în baza de date, fără criptarea parolei
+      await pool.query('INSERT INTO users (username, email, password) VALUES ($1, $2, $3)', [username, email, password]);
+
+      res.status(201).json({ message: 'Cont creat cu succes!' });
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Eroare la creare cont. Încearcă din nou.' });
+  }
+});
+
 
 app.listen(port, () => {
   console.log(`Serverul rulează pe portul ${port}`);
