@@ -4,8 +4,20 @@ import Footer from "../components/Footer";
 import "../styles/SolicitaAjutor.css";
 import helpHeaderImage from "../images/help-people.png";
 import ChatBot from "../components/ChatBot";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const SolicitaAjutor = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#up") {
+      const element = document.getElementById("up");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const [formData, setFormData] = useState({
     nume: "",
     prenume: "",
@@ -53,12 +65,14 @@ const SolicitaAjutor = () => {
       formErrors.telefon = "Telefonul este obligatoriu.";
       isValid = false;
     } else if (!phoneRegex.test(formData.telefon)) {
-      formErrors.telefon = "Telefonul trebuie să fie un număr valid de telefon.";
+      formErrors.telefon =
+        "Telefonul trebuie să fie un număr valid de telefon.";
       isValid = false;
     }
-    
+
     if (!formData.numarMembriFamilie) {
-      formErrors.numarMembriFamilie = "Numărul de membri ai familiei este obligatoriu.";
+      formErrors.numarMembriFamilie =
+        "Numărul de membri ai familiei este obligatoriu.";
       isValid = false;
     }
     if (!formData.tipCalamitate) {
@@ -84,20 +98,20 @@ const SolicitaAjutor = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (validateForm()) {
       try {
-        const response = await fetch('http://localhost:5000/solicita-ajutor', {
-          method: 'POST',
+        const response = await fetch("http://localhost:5000/solicita-ajutor", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(formData), // trimite datele din formular ca JSON
         });
-  
+
         const data = await response.json();
         if (response.ok) {
-          console.log('Formularul a fost trimis cu succes:', data);
+          console.log("Formularul a fost trimis cu succes:", data);
           setFormSubmitted(true);
           // Resetarea formularului după succes
           setFormData({
@@ -114,26 +128,24 @@ const SolicitaAjutor = () => {
             prioritateaCererii: "",
           });
         } else {
-          console.log('Eroare la trimiterea formularului:', data.error);
+          console.log("Eroare la trimiterea formularului:", data.error);
         }
       } catch (error) {
-        console.error('A apărut o eroare:', error);
+        console.error("A apărut o eroare:", error);
       }
     } else {
-      console.log('Formularul nu a fost validat.');
+      console.log("Formularul nu a fost validat.");
     }
   };
-  
-  
 
   return (
     <div>
       <Navigation />
 
       <div
+        id="up"
         className="help-header"
         style={{ backgroundImage: `url(${helpHeaderImage})` }}
-      
       >
         <h2>SOLICITĂ AJUTORUL</h2>
       </div>
@@ -181,200 +193,208 @@ const SolicitaAjutor = () => {
         </p>
         <h4 className="highlight-text">Nu ești singur.</h4>
         <section className="help-form-section">
-        <h3 className="help-form-title">Formular pentru ajutor</h3>
+          <h3 className="help-form-title">Formular pentru ajutor</h3>
 
-        <form onSubmit={handleSubmit} className="help-form">
-          <div className="form-row-ajutor">
-            <div className="form-group-ajutor">
-              <label htmlFor="nume">Nume</label>
-              <input
-                type="text"
-                id="nume"
-                name="nume"
-                value={formData.nume}
-                onChange={handleChange}
-                className={errors.nume ? 'input-error' : ''}
-                
-              />
-            {errors.nume && <div className="error">{errors.nume}</div>}
-
+          <form onSubmit={handleSubmit} className="help-form">
+            <div className="form-row-ajutor">
+              <div className="form-group-ajutor">
+                <label htmlFor="nume">Nume</label>
+                <input
+                  type="text"
+                  id="nume"
+                  name="nume"
+                  value={formData.nume}
+                  onChange={handleChange}
+                  className={errors.nume ? "input-error" : ""}
+                />
+                {errors.nume && <div className="error">{errors.nume}</div>}
+              </div>
+              <div className="form-group-ajutor">
+                <label htmlFor="prenume">Prenume</label>
+                <input
+                  type="text"
+                  id="prenume"
+                  name="prenume"
+                  value={formData.prenume}
+                  onChange={handleChange}
+                  className={errors.prenume ? "input-error" : ""}
+                />
+                {errors.prenume && (
+                  <div className="error">{errors.prenume}</div>
+                )}
+              </div>
+              <div className="form-group-ajutor">
+                <label htmlFor="localitate">Localitate</label>
+                <input
+                  type="text"
+                  id="localitate"
+                  name="localitate"
+                  value={formData.localitate}
+                  onChange={handleChange}
+                  className={errors.localitate ? "input-error" : ""}
+                />
+                {errors.localitate && (
+                  <div className="error">{errors.localitate}</div>
+                )}
+              </div>
+              <div className="form-group-ajutor">
+                <label htmlFor="adresa">Adresă</label>
+                <input
+                  type="text"
+                  id="adresa"
+                  name="adresa"
+                  value={formData.adresa}
+                  onChange={handleChange}
+                  className={errors.adresa ? "input-error" : ""}
+                />
+                {errors.adresa && <div className="error">{errors.adresa}</div>}
+              </div>
             </div>
-            <div className="form-group-ajutor">
-              <label htmlFor="prenume">Prenume</label>
-              <input
-                type="text"
-                id="prenume"
-                name="prenume"
-                value={formData.prenume}
-                onChange={handleChange}
-                className={errors.prenume ? 'input-error' : ''}
 
-              />
-              {errors.prenume && <div className="error">{errors.prenume}</div>}
-
+            <div className="form-row-ajutor">
+              <div className="form-group-ajutor">
+                <label htmlFor="telefon">Telefon</label>
+                <input
+                  type="tel"
+                  id="telefon"
+                  name="telefon"
+                  value={formData.telefon}
+                  onChange={handleChange}
+                  className={errors.telefon ? "input-error" : ""}
+                />
+                {errors.telefon && (
+                  <div className="error">{errors.telefon}</div>
+                )}
+              </div>
+              <div className="form-group-ajutor">
+                <label htmlFor="email">Email (optional)</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="form-group-ajutor">
+                <label htmlFor="numarMembriFamilie">
+                  Număr de membri ai familiei
+                </label>
+                <input
+                  type="number"
+                  id="numarMembriFamilie"
+                  name="numarMembriFamilie"
+                  value={formData.numarMembriFamilie}
+                  onChange={handleChange}
+                  min="0"
+                  className={errors.numarMembriFamilie ? "input-error" : ""}
+                />
+                {errors.numarMembriFamilie && (
+                  <div className="error">{errors.numarMembriFamilie}</div>
+                )}
+              </div>
             </div>
-            <div className="form-group-ajutor">
-              <label htmlFor="localitate">Localitate</label>
-              <input
-                type="text"
-                id="localitate"
-                name="localitate"
-                value={formData.localitate}
-                onChange={handleChange}
-                className={errors.localitate ? 'input-error' : ''}
 
-              />
-              {errors.localitate && <div className="error">{errors.localitate}</div>}
+            <div className="form-row-ajutor">
+              <div className="form-group-ajutor">
+                <label htmlFor="tipCalamitate">Tip calamitate</label>
+                <select
+                  id="tipCalamitate"
+                  name="tipCalamitate"
+                  value={formData.tipCalamitate}
+                  onChange={handleChange}
+                  className={errors.tipCalamitate ? "input-error" : ""}
+                >
+                  <option value="">Alege opțiunea</option>
+                  <option value="inundatie">Inundație</option>
+                  <option value="cutremur">Cutremur</option>
+                  <option value="alunecari_teren">Alunecări de teren</option>
+                  <option value="ajutor_social">Ajutor social</option>
+                  <option value="alta">Alta</option>
+                </select>
+                {errors.tipCalamitate && (
+                  <div className="error">{errors.tipCalamitate}</div>
+                )}
+              </div>
 
+              <div className="form-group-ajutor">
+                <label htmlFor="tipAjutor">Tip ajutor solicitat</label>
+                <select
+                  id="tipAjutor"
+                  name="tipAjutor"
+                  value={formData.tipAjutor}
+                  onChange={handleChange}
+                  className={errors.tipAjutor ? "input-error" : ""}
+                >
+                  <option value="">Alege opțiunea</option>
+                  <option value="ajutor_financiar">Ajutor financiar</option>
+                  <option value="ajutor_juridic">Ajutor juridic</option>
+                  <option value="alimente_si_apa">Alimente și apă</option>
+                  <option value="medicamente_si_produse">
+                    Medicamente și produse sanitare
+                  </option>
+                  <option value="locuinta_temporara">Locuință temporară</option>
+                  <option value="alta">Alta</option>
+                </select>
+                {errors.tipAjutor && (
+                  <div className="error">{errors.tipAjutor}</div>
+                )}
+              </div>
+
+              <div className="form-group-ajutor">
+                <label htmlFor="nevoiSpeciale">Nevoi speciale</label>
+                <select
+                  id="nevoiSpeciale"
+                  name="nevoiSpeciale"
+                  value={formData.nevoiSpeciale}
+                  onChange={handleChange}
+                  className={errors.nevoiSpeciale ? "input-error" : ""}
+                >
+                  <option value="">Alege opțiunea</option>
+                  <option value="persoane_varstnice">Persoane vârstnice</option>
+                  <option value="copii_sub_5_ani">Copii sub 5 ani</option>
+                  <option value="persoane_cu_dizabilitati">
+                    Persoane cu dizabilități
+                  </option>
+                  <option value="nevoi_medicale">Nevoi medicale</option>
+                  <option value="altele">Altele</option>
+                </select>
+                {errors.nevoiSpeciale && (
+                  <div className="error">{errors.nevoiSpeciale}</div>
+                )}
+              </div>
+
+              <div className="form-group-ajutor">
+                <label htmlFor="prioritateaCererii">Prioritatea cererii</label>
+                <select
+                  id="prioritateaCererii"
+                  name="prioritateaCererii"
+                  value={formData.prioritateaCererii}
+                  onChange={handleChange}
+                  className={errors.prioritateaCererii ? "input-error" : ""}
+                >
+                  <option value="">Alege opțiunea</option>
+                  <option value="urgent">Urgentă</option>
+                  <option value="ridicata">Ridicată</option>
+                  <option value="normala">Normală</option>
+                </select>
+                {errors.prioritateaCererii && (
+                  <div className="error">{errors.prioritateaCererii}</div>
+                )}
+              </div>
             </div>
-            <div className="form-group-ajutor">
-              <label htmlFor="adresa">Adresă</label>
-              <input
-                type="text"
-                id="adresa"
-                name="adresa"
-                value={formData.adresa}
-                onChange={handleChange}
-                className={errors.adresa ? 'input-error' : ''}
-
-              />
-              {errors.adresa && <div className="error">{errors.adresa}</div>}
-
-            </div>
-          </div>
-
-          <div className="form-row-ajutor">
-            <div className="form-group-ajutor">
-              <label htmlFor="telefon">Telefon</label>
-              <input
-                type="tel"
-                id="telefon"
-                name="telefon"
-                value={formData.telefon}
-                onChange={handleChange}
-                className={errors.telefon ? 'input-error' : ''}
-
-              />
-              {errors.telefon && <div className="error">{errors.telefon}</div>}
-
-            </div>
-            <div className="form-group-ajutor">
-              <label htmlFor="email">Email (optional)</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-
-              />
-
-            </div>
-            <div className="form-group-ajutor">
-              <label htmlFor="numarMembriFamilie">
-                Număr de membri ai familiei
-              </label>
-              <input
-                type="number"
-                id="numarMembriFamilie"
-                name="numarMembriFamilie"
-                value={formData.numarMembriFamilie}
-                onChange={handleChange}
-                min="0"
-                className={errors.numarMembriFamilie ? 'input-error' : ''}
-
-              />
-              {errors.numarMembriFamilie && <div className="error">{errors.numarMembriFamilie}</div>}
-
-            </div>
-          </div>
-
-          <div className="form-row-ajutor">
-          <div className="form-group-ajutor">
-  <label htmlFor="tipCalamitate">Tip calamitate</label>
-  <select
-    id="tipCalamitate"
-    name="tipCalamitate"
-    value={formData.tipCalamitate}
-    onChange={handleChange}
-    className={errors.tipCalamitate ? 'input-error' : ''}
-  >
-    <option value="">Alege opțiunea</option>
-    <option value="inundatie">Inundație</option>
-    <option value="cutremur">Cutremur</option>
-    <option value="alunecari_teren">Alunecări de teren</option>
-    <option value="ajutor_social">Ajutor social</option>
-    <option value="alta">Alta</option>
-  </select>
-  {errors.tipCalamitate && <div className="error">{errors.tipCalamitate}</div>}
-</div>
-
-<div className="form-group-ajutor">
-  <label htmlFor="tipAjutor">Tip ajutor solicitat</label>
-  <select
-    id="tipAjutor"
-    name="tipAjutor"
-    value={formData.tipAjutor}
-    onChange={handleChange}
-    className={errors.tipAjutor ? 'input-error' : ''}
-  >
-    <option value="">Alege opțiunea</option>
-    <option value="ajutor_financiar">Ajutor financiar</option>
-    <option value="ajutor_juridic">Ajutor juridic</option>
-    <option value="alimente_si_apa">Alimente și apă</option>
-    <option value="medicamente_si_produse">Medicamente și produse sanitare</option>
-    <option value="locuinta_temporara">Locuință temporară</option>
-    <option value="alta">Alta</option>
-
-    
-  </select>
-  {errors.tipAjutor && <div className="error">{errors.tipAjutor}</div>}
-</div>
-
-<div className="form-group-ajutor">
-  <label htmlFor="nevoiSpeciale">Nevoi speciale</label>
-  <select
-    id="nevoiSpeciale"
-    name="nevoiSpeciale"
-    value={formData.nevoiSpeciale}
-    onChange={handleChange}
-    className={errors.nevoiSpeciale ? 'input-error' : ''}
-  >
-    <option value="">Alege opțiunea</option>
-    <option value="persoane_varstnice">Persoane vârstnice</option>
-    <option value="copii_sub_5_ani">Copii sub 5 ani</option>
-    <option value="persoane_cu_dizabilitati">Persoane cu dizabilități</option>
-    <option value="nevoi_medicale">Nevoi medicale</option>
-    <option value="altele">Altele</option>
-  </select>
-  {errors.nevoiSpeciale && <div className="error">{errors.nevoiSpeciale}</div>}
-</div>
-
-<div className="form-group-ajutor">
-  <label htmlFor="prioritateaCererii">Prioritatea cererii</label>
-  <select
-    id="prioritateaCererii"
-    name="prioritateaCererii"
-    value={formData.prioritateaCererii}
-    onChange={handleChange}
-    className={errors.prioritateaCererii ? 'input-error' : ''}
-  >
-    <option value="">Alege opțiunea</option>
-    <option value="urgent">Urgentă</option>
-    <option value="ridicata">Ridicată</option>
-    <option value="normala">Normală</option>
-  </select>
-  {errors.prioritateaCererii && <div className="error">{errors.prioritateaCererii}</div>}
-</div>
-
-          </div>
-        </form>
+          </form>
         </section>
-        <button onClick={handleSubmit} type="submit" className="form-submit-button">
-            Trimite
-          </button>
-          {formSubmitted && <div className="success">Formularul a fost trimis cu succes!</div>}
-
+        <button
+          onClick={handleSubmit}
+          type="submit"
+          className="form-submit-button"
+        >
+          Trimite
+        </button>
+        {formSubmitted && (
+          <div className="success">Formularul a fost trimis cu succes!</div>
+        )}
       </section>
       <ChatBot />
       <Footer />

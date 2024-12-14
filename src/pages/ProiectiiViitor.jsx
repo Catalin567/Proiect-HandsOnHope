@@ -7,11 +7,27 @@ import p4 from "../images/pv-hoh3.png";
 import p5 from "../images/pv-hoh4.png";
 import "../styles/ProiectiiViitor.css";
 import ChatBot from "../components/ChatBot";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 function ProiectiiViitor() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#up") {
+      const element = document.getElementById("up");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <>
       <Navigation />
-      <div className="upper-side" style={{ backgroundImage: `url(${p1})` }}>
+      <div
+        id="up"
+        className="upper-side"
+        style={{ backgroundImage: `url(${p1})` }}
+      >
         <h2>PROIECȚII PENTRU VIITOR</h2>
       </div>
       <div className="pv">

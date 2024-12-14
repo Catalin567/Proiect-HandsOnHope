@@ -1,15 +1,11 @@
-/* Layout */
 .volunteering-layout {
-  padding-top: 110px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 110px 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  font-family: "Arial", sans-serif;
   line-height: 1.6;
-  max-width: 1600px;
   margin: 0 auto;
+  max-width: 1600px;
 }
 
 /* Text Section */

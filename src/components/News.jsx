@@ -18,6 +18,9 @@ function News() {
               La vârsta de 73 de ani, Vasile a trecut printr-un moment
               cumplit...
             </p>
+            <p className="see-more">
+              <Link to="/Blog#cazVasile">Vezi mai mult</Link>
+            </p>
           </div>
         </div>
         <div className="news-item">
@@ -29,21 +32,26 @@ function News() {
               Familia Radu, formată din Alex, Irina și cei doi copii, Ilinca și
               Matei, locuia într-un mic sat din România...
             </p>
+            <p className="see-more">
+              <Link to="/Blog#cazRadu">Vezi mai mult</Link>
+            </p>
           </div>
         </div>
         <div className="news-item">
           <img src={news3} alt="News 3" className="news-image" />
           <div className="news-content">
             <p className="news-category">Articol</p>
-            <h5>O poveste de succes după ajutorul HOH</h5>
+            <h5>Povestea Mariei: </h5>
             <p>
-              O familie a beneficiat de sprijinul HOH și și-a reconstruit viața
-              după inundații...
+              La varsta de 62 de ani, Maria a trecut printr-un moment dificil...
+            </p>
+            <p className="see-more">
+              <Link to="/Blog#cazMaria">Vezi mai mult</Link>
             </p>
           </div>
         </div>
       </div>
-      <Link to="/Blog" className="see-more">
+      <Link to="/Blog#up" className="see-more">
         Vezi mai multe
       </Link>
     </section>

@@ -8,12 +8,28 @@ import l1 from "../images/Altex.png";
 import l2 from "../images/Careffour.png";
 import ChatBot from "../components/ChatBot";
 import l3 from "../images/Kaufland.png";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function MisiuneViziune() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#up") {
+      const element = document.getElementById("up");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <div>
       <Navigation />
-      <div className="upper-side" style={{ backgroundImage: `url(${p1})` }}>
+      <div
+        id="up"
+        className="upper-side"
+        style={{ backgroundImage: `url(${p1})` }}
+      >
         <h2 className="misiune-viziune">MISIUNEA ȘI VIZIUNEA</h2>
       </div>
       <div className="mv-mesaj1 border-bottom">

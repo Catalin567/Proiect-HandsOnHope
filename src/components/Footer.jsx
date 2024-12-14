@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const [email, setEmail] = useState("");
@@ -84,9 +85,13 @@ function Footer() {
 
           <div className="col-12 col-lg-3 nav-item">
             <h2 className="nav-title">Implică-te</h2>
-            <a href="#">Fii voluntar</a>
+            <a href="#">
+              <Link to="/Voluntariat#up">Fii voluntar</Link>
+            </a>
             <br />
-            <a href="#">Donează</a>
+            <a href="#">
+              <Link to="/Doneaza#up">Donează</Link>
+            </a>
             <h2 className="nav-title">Cont IBAN</h2>
             <p className="p-0 m-0 me">
               RO12 BANK 0000 1111 2222 3333 (pentru donații în RON)

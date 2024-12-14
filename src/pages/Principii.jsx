@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import p1 from "../images/mp-hoh9.jpg";
@@ -12,8 +12,20 @@ import p7 from "../images/principiul6.png";
 import p8 from "../images/principiul7.png";
 import p9 from "../images/principiul8.png";
 import ChatBot from "../components/ChatBot";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function Principii() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#up") {
+      const element = document.getElementById("up");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const principles = [
     {
       img: p2,
@@ -75,7 +87,11 @@ function Principii() {
     <>
       <div>
         <Navigation />
-        <div className="upper-side" style={{ backgroundImage: `url(${p1})` }}>
+        <div
+          id="up"
+          className="upper-side"
+          style={{ backgroundImage: `url(${p1})` }}
+        >
           <h2>PRINCIPIILE ORGANIZAȚIEI NOASTRE</h2>
         </div>
         <div className="po-1">

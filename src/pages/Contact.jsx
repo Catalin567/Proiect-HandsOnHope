@@ -4,8 +4,19 @@ import Footer from "../components/Footer";
 import "../styles/Contact.css";
 import headerImage from "../images/people.jpg";
 import ChatBot from "../components/ChatBot";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 const Contact = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#up") {
+      const element = document.getElementById("up");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const [formData, setFormData] = useState({
     nume: "",
     prenume: "",
@@ -76,10 +87,8 @@ const Contact = () => {
     }
   };
 
-  
-
   return (
-    <div>
+    <div id="up">
       <Navigation />
       <div
         className="contact-header"
@@ -103,7 +112,8 @@ const Contact = () => {
           <ul>
             <li>
               <a href="#">
-                <i className="bx bx-envelope" /> Email general: info@handsonhope.org
+                <i className="bx bx-envelope" /> Email general:
+                info@handsonhope.org
               </a>
             </li>
             <li>
@@ -120,8 +130,8 @@ const Contact = () => {
             </li>
             <li>
               <a href="#">
-                <i className="bx bx-map" /> Adresă: Str. Solidarității Nr. 10, Iași,
-                România
+                <i className="bx bx-map" /> Adresă: Str. Solidarității Nr. 10,
+                Iași, România
               </a>
             </li>
             <li>

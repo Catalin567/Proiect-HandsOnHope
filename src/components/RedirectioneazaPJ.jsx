@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Redirectioneaza.css";
 import { useRef } from "react";
-import SignatureCanvas from "react-signature-canvas";
 
 function RedirectioneazaPJ() {
   const sigCanvas = useRef(null);
@@ -61,19 +60,23 @@ function RedirectioneazaPJ() {
   };
   return (
     <div className="container-to-animate">
-          <h1>Redirecționează 20% din impozitul pe profit și schimbă vieți!</h1>
-          <p>
-            Cu gesturi mici, putem face lucruri mari. Alege să sprijini
-            persoanele aflate în nevoie redirecționând o parte din impozitul pe
-            profit, fără costuri suplimentare pentru tine! Astfel, ne poți ajuta
-            să continuăm misiunea noastră de a oferi ajutor acolo unde este
-            nevoie cel mai mult.
-          </p>
+      <h1>Redirecționează 20% din impozitul pe profit și schimbă vieți!</h1>
+      <p>
+        Cu gesturi mici, putem face lucruri mari. Alege să sprijini persoanele
+        aflate în nevoie redirecționând o parte din impozitul pe profit, fără
+        costuri suplimentare pentru tine! Astfel, ne poți ajuta să continuăm
+        misiunea noastră de a oferi ajutor acolo unde este nevoie cel mai mult.
+      </p>
 
-          <form className="donation-form" onSubmit={handleSubmit}>
+      <form className="donation-form" onSubmit={handleSubmit}>
         <h2>Date Companie/Societate</h2>
         <div className="form-grid">
-          <input type="text" name="denumire" placeholder="Denumire *" required />
+          <input
+            type="text"
+            name="denumire"
+            placeholder="Denumire *"
+            required
+          />
           <input
             type="text"
             name="adresa_sediu_social"
@@ -92,9 +95,19 @@ function RedirectioneazaPJ() {
             placeholder="Număr Registrul Comerțului *"
             required
           />
-          <input type="text" name="cont_bancar" placeholder="Cont bancar *" required />
+          <input
+            type="text"
+            name="cont_bancar"
+            placeholder="Cont bancar *"
+            required
+          />
           <input type="text" name="banca" placeholder="Banca *" required />
-          <input type="text" name="reprezentant" placeholder="Reprezentant *" required />
+          <input
+            type="text"
+            name="reprezentant"
+            placeholder="Reprezentant *"
+            required
+          />
           <input type="text" name="functie" placeholder="Funcție *" required />
           <input type="text" name="telefon" placeholder="Telefon *" required />
           <input type="email" name="email" placeholder="Email *" required />
@@ -116,20 +129,35 @@ function RedirectioneazaPJ() {
           <input type="text" name="scara" placeholder="Scara" />
           <input type="text" name="etaj" placeholder="Etaj" />
           <input type="text" name="apartament" placeholder="Apartament" />
-          <input type="text" name="localitate" placeholder="Localitate *" required />
-          <input type="text" name="judet_sector" placeholder="Județ/Sector *" required />
-          <input type="text" name="cod_postal" placeholder="Cod poștal *" required />
+          <input
+            type="text"
+            name="localitate"
+            placeholder="Localitate *"
+            required
+          />
+          <input
+            type="text"
+            name="judet_sector"
+            placeholder="Județ/Sector *"
+            required
+          />
+          <input
+            type="text"
+            name="cod_postal"
+            placeholder="Cod poștal *"
+            required
+          />
         </div>
 
         <div className="checkboxes">
           <label>
-            <input type="checkbox" name="acord_politica" required /> Sunt de acord cu politica
-            de confidențialitate a HOM *
+            <input type="checkbox" name="acord_politica" required /> Sunt de
+            acord cu politica de confidențialitate a HOM *
           </label>
           <br />
           <label>
-            <input type="checkbox" name="acord_date" required /> Sunt de acord cu colectarea
-            datelor din acest formular *
+            <input type="checkbox" name="acord_date" required /> Sunt de acord
+            cu colectarea datelor din acest formular *
           </label>
         </div>
 
@@ -137,7 +165,7 @@ function RedirectioneazaPJ() {
           Trimite Formularul
         </button>
       </form>
-        </div>
+    </div>
   );
 }
 

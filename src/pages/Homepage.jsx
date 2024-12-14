@@ -7,13 +7,24 @@ import MonthlyPhotos from "../components/MonthlyPhotos";
 import Footer from "../components/Footer";
 import Testimonial from "../components/Testimonial";
 import ChatBot from "../components/ChatBot";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function Homepage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#up") {
+      const element = document.getElementById("up");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <>
       <Navigation />
       <UpperSide />
-      <br />
       <News />
       <br />
       <Testimonial />

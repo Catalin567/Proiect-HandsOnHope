@@ -3,8 +3,20 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import ChatBot from "../components/ChatBot";
 import "../styles/Voluntariat.css";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Voluntariat = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#up") {
+      const element = document.getElementById("up");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const [formData, setFormData] = useState({
     nume: "",
     prenume: "",
@@ -29,7 +41,7 @@ const Voluntariat = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/voluntariat", {
+      const response = await fetch("http://localhost/voluntariat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +74,7 @@ const Voluntariat = () => {
   return (
     <main>
       <Navigation />
-      <div className="volunteering-layout">
+      <div className="volunteering-layout" id="up">
         <div className="text-section">
           <p>
             <span className="highlight">Voluntariatul</span> este una dintre

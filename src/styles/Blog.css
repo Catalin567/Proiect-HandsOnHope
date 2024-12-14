@@ -120,9 +120,9 @@
 }
 .details-button {
   position: absolute;
-  bottom: 15px; /* Poziționează butonul la baza cardului */
-  left: 50%; /* Centrează butonul pe orizontală */
-  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
@@ -140,9 +140,9 @@
 
 .details-button2 {
   position: absolute;
-  bottom: 15px; /* Poziționează butonul la baza cardului */
-  left: 50%; /* Centrează butonul pe orizontală */
-  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
@@ -163,9 +163,9 @@
 }
 .details-button3 {
   position: absolute;
-  bottom: 15px; /* Poziționează butonul la baza cardului */
-  left: 50%; /* Centrează butonul pe orizontală */
-  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
@@ -183,9 +183,9 @@
 
 .details-button4 {
   position: absolute;
-  bottom: 15px; /* Poziționează butonul la baza cardului */
-  left: 50%; /* Centrează butonul pe orizontală */
-  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
@@ -202,9 +202,9 @@
 }
 .details-button5 {
   position: absolute;
-  bottom: 15px; /* Poziționează butonul la baza cardului */
-  left: 50%; /* Centrează butonul pe orizontală */
-  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
@@ -221,9 +221,9 @@
 }
 .details-button6 {
   position: absolute;
-  bottom: 15px; /* Poziționează butonul la baza cardului */
-  left: 50%; /* Centrează butonul pe orizontală */
-  transform: translateX(-50%); /* Ajustează pentru centrare perfectă */
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
@@ -239,63 +239,6 @@
   background-color: #003d82;
 }
 
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar ul li {
-  margin: 0 10px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #008000;
-  font-weight: bold;
-}
-
-.navbar ul li a:hover {
-  text-decoration: underline;
-}
-
-.footer {
-  background-color: #ffffff;
-  color: #333;
-  padding: 40px 20px;
-  font-size: 14px;
-  border-top: 1px solid #ddd;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.footer-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #008000;
-  margin-bottom: 15px;
-}
-
-.social-links {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.social-links a img {
-  width: 24px;
-  height: 24px;
-}
-
 @media (max-width: 1140px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
@@ -308,214 +251,82 @@
   }
 }
 
-.sections {
+.section-cazuri {
+  margin-top: 40px !important;
   display: flex;
   flex-direction: column;
-  padding: 90px; /* Distanță de la marginile ecranului */
-  gap: 20px; /* Spațiu între secțiuni */
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: center;
 }
 
-.section-odd {
+.section-columns {
+  border-bottom: 2px solid rgb(94, 92, 92);
+  padding: 60px 20px;
   display: flex;
-  align-items: center; /* Aliniază vertical textul și imaginea */
-  justify-content: space-between;
-  gap: 30px; /* Spațiu între text și imagine */
-  height: 372px; /* Înălțime fixă pentru întreaga secțiune */
   flex-direction: row;
-  padding-top: 50px;
-}
-
-.title-odd {
-  font-size: 40px; /* Dimensiune pentru titlu */
-  font-weight: bold;
-  margin: 0; /* Eliminare margini implicite */
-}
-
-.text-odd {
-  flex: 1;
-  font-size: 20px;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column; /* Text în coloană */
-  justify-content: center; /* Centrare verticală a textului */
-  margin: 0; /* Eliminare margini implicite */
-  padding-top: 20px;
+  gap: 40px;
+  align-items: center;
 }
 
 .image-odd {
-  width: 644px; /* Dimensiune fixă pentru imagine */
-  height: 372px; /* Înălțime fixă pentru imagine */
-  object-fit: cover; /* Ajustare proporțională a imaginii */
-  border-radius: 10px !important; /* Eliminare completă a colțurilor rotunjite */
+  width: 644px;
+  height: 372px;
+  object-fit: cover;
+  border-radius: 10px !important;
 }
+
 .columns-section {
-  padding: 0px; /* Distanță de la marginile ecranului */
+  padding: 0px;
 }
 
 .section-columns {
   display: flex;
-  gap: 40px; /* Spațiu între coloane */
+  gap: 40px;
 }
 
 .column {
-  flex: 1; /* Coloane egale */
-}
-
-.title {
-  font-size: 24px; /* Dimensiune titlu */
-  font-weight: bold;
-  color: green; /* Verde, conform designului */
-  margin-bottom: 10px; /* Spațiu între titlu și text */
-}
-
-.text {
-  font-size: 18px;
-  line-height: 1.6; /* Text ușor de citit */
-}
-
-.section-even {
-  padding-top: 70px;
-  display: flex;
-  align-items: center; /* Aliniază vertical textul și imaginea */
-  justify-content: space-between;
-  gap: 30px; /* Spațiu între text și imagine */
-  height: 372px; /* Înălțime fixă pentru întreaga secțiune */
-  flex-direction: row-reverse;
-}
-
-.image-even {
-  width: 644px; /* Dimensiune fixă pentru imagine */
-  height: 372px; /* Înălțime fixă pentru imagine */
-  object-fit: cover; /* Ajustare proporțională a imaginii */
-  border-radius: 10px !important; /* Eliminare completă a colțurilor rotunjite */
-}
-
-.title-even {
-  font-size: 40px; /* Dimensiune pentru titlu */
-  font-weight: bold;
-  margin: 0; /* Eliminare margini implicite */
-}
-.text-even {
-  flex: 1;
-  font-size: 20px;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column; /* Text în coloană */
-  justify-content: center; /* Centrare verticală a textului */
-  margin: 0; /* Eliminare margini implicite */
-  padding-top: 20px;
-}
-
-.columns-section2 {
-  padding-top: 80px; /* Distanță de la marginile ecranului */
-}
-
-.section-columns2 {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Spațiu între coloane */
-  text-align: center;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
 }
 
-#section-maria {
-  padding-top: 70px;
+.text-content h2,
+.result-content h2 {
+  margin: 0px !important;
 }
 
-.text-content-even {
-  text-align: center;
-}
-@media (max-width: 1250px) {
-  .section-odd,
-  .section-even {
-    flex-direction: column; /* Așează imaginea și textul unul sub altul */
-    align-items: center; /* Centrează vertical */
-    text-align: center; /* Centrează textul */
-    height: auto; /* Elimină înălțimea fixă */
-    gap: 20px; /* Micșorează spațiul între text și imagine */
-    padding: 20px; /* Ajustează padding pentru a asigura spațiu pe dispozitive mai mici */
+@media (max-width: 1200px) {
+  .section-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .image-odd,
-  .image-even {
-    width: 100%; /* Ocupă întreaga lățime a containerului */
-    height: auto; /* Păstrează proporțiile imaginii */
-  }
-
-  .text-odd,
-  .text-even {
-    padding: 0 20px; /* Adaugă padding pentru margini */
-  }
-
-  .columns-section .section-columns {
-    flex-direction: column; /* Coloane în coloană pentru spațiu limitat */
-    gap: 20px; /* Spațiu mai mic între coloane */
-  }
-
-  .title-odd,
-  .title-even {
-    font-size: 30px; /* Dimensiune mai mică pentru titlu */
+  .image-odd {
+    max-width: 100%;
+    height: 272px;
+    border-radius: 10px !important;
   }
 }
 
-/* Breakpoint pentru telefoane medii și mici - max-width 768px */
 @media (max-width: 768px) {
-  .sections {
-    padding: 40px; /* Reducerea padding-ului pentru dispozitive mai mici */
-  }
-
-  .title-odd,
-  .title-even {
-    font-size: 26px; /* Dimensiune titlu redusă pentru lizibilitate */
-  }
-
-  .text-odd,
-  .text-even {
-    font-size: 18px; /* Ajustare dimensiune text */
-    padding: 0 15px; /* Micșorează paddingul pentru marginile laterale */
-  }
-
-  .image-odd,
-  .image-even {
-    border-radius: 5px; /* Redu colțurile rotunjite pentru a se potrivi mai bine pe ecrane mici */
+  .section-cazuri {
+    gap: 20px;
+    margin-top: 20px;
   }
 
   .section-columns {
-    gap: 15px; /* Reducerea spațiului între coloane pentru dispozitive mai mici */
-  }
-}
-
-/* Breakpoint pentru telefoane foarte mici - max-width 480px */
-@media (max-width: 480px) {
-  .title-odd,
-  .title-even {
-    font-size: 22px; /* Titlu redus pentru telefoane mici */
+    padding: 40px 10px;
+    flex-direction: column;
   }
 
-  .text-odd,
-  .text-even {
-    font-size: 16px; /* Dimensiune text mai mică pentru lizibilitate mai bună */
-    padding: 0 10px; /* Ajustare padding pentru spațiu limitat */
-  }
-
-  .image-odd,
-  .image-even {
-    width: 100%; /* Asigură-te că imaginea ocupă întreaga lățime a containerului */
-    height: auto; /* Păstrează proporțiile imaginii */
-  }
-
-  .columns-section2 {
-    padding-top: 40px; /* Reducere padding pentru telefoane mici */
-  }
-
-  .title {
-    font-size: 20px; /* Ajustare dimensiune titlu pentru coloane */
-  }
-
-  .text {
-    font-size: 16px; /* Ajustare dimensiune text pentru coloane */
-  }
-
-  .section-columns2 {
-    gap: 15px; /* Reducerea spațiului între coloane pentru spațiu limitat */
+  .image-odd {
+    max-width: 100%; /* Lățimea imaginii rămâne 100% */
+    height: 220px; /* Înălțimea ajustată pentru ecrane și mai mici */
+    border-radius: 10px !important;
   }
 }

@@ -5,16 +5,29 @@ import Footer from "../components/Footer";
 import "../styles/CeFacem.css";
 import ChatBot from "../components/ChatBot";
 import p1 from "../images/cefacem.jpg";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function closeEventDiv() {
   document.getElementById("eveniment-judet").style.display = "none";
 }
 
 const CeFacem = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#up") {
+      const element = document.getElementById("up");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <div>
       <Navigation />
       <div
+        id="up"
         className="upper-side"
         style={{ backgroundImage: `url(${p1})` }}
       ></div>

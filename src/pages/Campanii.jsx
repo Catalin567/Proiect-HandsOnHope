@@ -3,14 +3,30 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Campanii.css";
 import ChatBot from "../components/ChatBot";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Campanii = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#up") {
+      const element = document.getElementById("up");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <div>
       <Navigation />
       <main>
-        <img src="pictures/heroimg.png" alt="img" className="img-campanii" />
+        <img
+          id="up"
+          src="pictures/heroimg.png"
+          alt="img"
+          className="img-campanii"
+        />
 
         <br />
         <p className="p1-campanii">

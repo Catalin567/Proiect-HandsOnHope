@@ -1,56 +1,67 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Doneaza.css";
 import ChatBot from "../components/ChatBot";
 
 const Doneaza = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#up") {
+      const element = document.getElementById("up");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   const [formData, setFormData] = useState({
-    nume: '',
-    prenume: '',
-    sumaLiberă: '',
-    tipDonație: '',
-    numeCard: '',
-    numarCard: '',
-    dataExpirare: '',
-    cvc: '',
-    email: ''
+    nume: "",
+    prenume: "",
+    sumaLiberă: "",
+    tipDonație: "",
+    numeCard: "",
+    numarCard: "",
+    dataExpirare: "",
+    cvc: "",
+    email: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevData => ({
+    setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
-      const response = await fetch('http://localhost:5000/doneaza', {
-        method: 'POST',
+      const response = await fetch("http://localhost:5000/doneaza", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',  // Setează tipul de conținut la JSON
+          "Content-Type": "application/json", // Setează tipul de conținut la JSON
         },
-        body: JSON.stringify(formData),  // Trimite datele ca JSON
+        body: JSON.stringify(formData), // Trimite datele ca JSON
       });
-  
+
       const data = await response.json();
-  
+
       if (response.ok) {
-        alert('Donația ta a fost procesată cu succes!');
+        alert("Donația ta a fost procesată cu succes!");
       } else {
-        alert(data.error || 'A apărut o eroare la procesarea donației!');  // Afișează eroarea din server, dacă există
+        alert(data.error || "A apărut o eroare la procesarea donației!"); // Afișează eroarea din server, dacă există
       }
     } catch (error) {
-      console.error('Eroare la trimiterea formularului:', error);
-      alert('A apărut o eroare!');
+      console.error("Eroare la trimiterea formularului:", error);
+      alert("A apărut o eroare!");
     }
   };
-  
-  
 
   const steps = [
     {
@@ -83,7 +94,7 @@ const Doneaza = () => {
     <div>
       <Navigation />
       <main>
-        <img src="pictures/donate.jpg" alt="" className="img-donate" />
+        <img src="pictures/donate.jpg" alt="" className="img-donate" id="up" />
         <div className="donation-container">
           <p>
             La <span className="highlight">Hands on Hope</span>, ne dedicăm
@@ -127,42 +138,72 @@ const Doneaza = () => {
               <h4>DONEAZĂ</h4>
               <hr />
               <div className="form-inputs">
-                <input 
-                  type="text" 
-                  placeholder="Nume" 
-                  name="nume" 
-                  value={formData.nume} 
-                  onChange={handleChange} 
+                <input
+                  type="text"
+                  placeholder="Nume"
+                  name="nume"
+                  value={formData.nume}
+                  onChange={handleChange}
                 />
-                <input 
-                  type="text" 
-                  placeholder="Prenume" 
-                  name="prenume" 
-                  value={formData.prenume} 
-                  onChange={handleChange} 
+                <input
+                  type="text"
+                  placeholder="Prenume"
+                  name="prenume"
+                  value={formData.prenume}
+                  onChange={handleChange}
                 />
                 <br />
                 <br />
               </div>
               <div className="donation-amounts">
-                <button onClick={() => setFormData({ ...formData, sumaLiberă: 50 })}>50 RON</button>
-                <button onClick={() => setFormData({ ...formData, sumaLiberă: 100 })}>100 RON</button>
-                <button onClick={() => setFormData({ ...formData, sumaLiberă: 200 })}>200 RON</button>
+                <button
+                  onClick={() => setFormData({ ...formData, sumaLiberă: 50 })}
+                >
+                  50 RON
+                </button>
+                <button
+                  onClick={() => setFormData({ ...formData, sumaLiberă: 100 })}
+                >
+                  100 RON
+                </button>
+                <button
+                  onClick={() => setFormData({ ...formData, sumaLiberă: 200 })}
+                >
+                  200 RON
+                </button>
                 <br /> <br />
               </div>
-              <input 
-                type="text" 
-                placeholder="Sumă liberă" 
-                name="sumaLiberă" 
-                value={formData.sumaLiberă} 
-                onChange={handleChange} 
+              <input
+                type="text"
+                placeholder="Sumă liberă"
+                name="sumaLiberă"
+                value={formData.sumaLiberă}
+                onChange={handleChange}
               />
               <br />
               <br />
               <div className="donation-actions">
-                <button onClick={() => setFormData({ ...formData, tipDonație: "unica" })}>Donează Acum</button>
-                <button onClick={() => setFormData({ ...formData, tipDonație: "lunar" })}>Donează Lunar</button>
-                <button onClick={() => setFormData({ ...formData, tipDonație: "anual" })}>Donează Anual</button>
+                <button
+                  onClick={() =>
+                    setFormData({ ...formData, tipDonație: "unica" })
+                  }
+                >
+                  Donează Acum
+                </button>
+                <button
+                  onClick={() =>
+                    setFormData({ ...formData, tipDonație: "lunar" })
+                  }
+                >
+                  Donează Lunar
+                </button>
+                <button
+                  onClick={() =>
+                    setFormData({ ...formData, tipDonație: "anual" })
+                  }
+                >
+                  Donează Anual
+                </button>
               </div>
             </div>
 
@@ -171,46 +212,48 @@ const Doneaza = () => {
               <h4>Plata cu cardul bancar</h4>
               <hr />
               <div className="form-inputs">
-                <input 
-                  type="text" 
-                  placeholder="Nume deținător" 
-                  name="numeCard" 
-                  value={formData.numeCard} 
-                  onChange={handleChange} 
+                <input
+                  type="text"
+                  placeholder="Nume deținător"
+                  name="numeCard"
+                  value={formData.numeCard}
+                  onChange={handleChange}
                 />
-                <input 
-                  type="text" 
-                  placeholder="Număr card bancar" 
-                  name="numarCard" 
-                  value={formData.numarCard} 
-                  onChange={handleChange} 
+                <input
+                  type="text"
+                  placeholder="Număr card bancar"
+                  name="numarCard"
+                  value={formData.numarCard}
+                  onChange={handleChange}
                 />
                 <div className="card-details">
-                  <input 
-                    type="text" 
-                    placeholder="Data expirare (ZZ/MM/YY)" 
-                    name="dataExpirare" 
-                    value={formData.dataExpirare} 
-                    onChange={handleChange} 
+                  <input
+                    type="text"
+                    placeholder="Data expirare (ZZ/MM/YY)"
+                    name="dataExpirare"
+                    value={formData.dataExpirare}
+                    onChange={handleChange}
                   />
-                  <input 
-                    type="text" 
-                    placeholder="CVC" 
-                    name="cvc" 
-                    value={formData.cvc} 
-                    onChange={handleChange} 
+                  <input
+                    type="text"
+                    placeholder="CVC"
+                    name="cvc"
+                    value={formData.cvc}
+                    onChange={handleChange}
                   />
                 </div>
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  name="email" 
-                  value={formData.email} 
-                  onChange={handleChange} 
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </div>
               <hr />
-              <button className="submit-button" onClick={handleSubmit}>DONEAZĂ</button>
+              <button className="submit-button" onClick={handleSubmit}>
+                DONEAZĂ
+              </button>
             </div>
           </div>
         </div>

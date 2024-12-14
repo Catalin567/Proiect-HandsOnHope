@@ -1,351 +1,350 @@
-.main-img {
-    width: 100%;
-    margin-top: -250px;
-}
-h2{
-    text-align: center;
-    font-weight: 700;
-    padding: 30px;
+h2 {
+  text-align: center;
+  font-weight: 700;
+  padding: 30px;
 }
 .main-img {
-    width: 100%;
-    margin-top: -250px;
+  width: 100%;
+  height: 70vh;
+}
+
+.donation-form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #000;
+  padding: 20px;
+}
+
+.donation-form-container h1 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+.donation-form-container p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.donation-form h2 {
+  font-size: 1.5rem;
+  color: #008000;
+  margin: 20px 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 coloane pentru câmpuri generale */
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 coloane pe linie */
+  gap: 20px; /* Spațiu între câmpuri */
+}
+
+.form-grid-3 input {
+  width: 100%; /* Fiecare input ocupă întreaga coloană */
+  padding: 10px;
+  border: 1px solid #008000; /* Borduri verzi */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Umbra câmpurilor */
+}
+
+.form-grid-3 input::placeholder {
+  color: #666; /* Culoarea textului placeholder */
+}
+
+.form-grid input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #008000; /* Bordură verde */
+  border-radius: 5px;
+}
+
+.full-width {
+  grid-column: span 2; /* Ocupă întregul rând */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #008000; /* Bordură verde */
+  border-radius: 5px;
+}
+
+.checkboxes {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: auto 1fr; /* Casetă mică + text */
+  gap: 10px;
+  align-items: center;
+}
+
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.checkboxes input[type="checkbox"] {
+  width: 15px; /* Dimensiune mică pentru checkbox */
+  height: 15px;
+  margin-right: 10px; /* Spațiu între checkbox și text */
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #008000;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #005f00;
+}
+
+.container-to-animate {
+  animation: container 1s 1;
+}
+
+@keyframes container {
+  0% {
+    opacity: 0;
   }
-  
-  .donation-form-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    color: #000;
-    padding: 20px;
+  100% {
+    opacity: 1;
   }
-  
-  .donation-form-container h1 {
-    font-size: 1.8rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  .donation-form-container p {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 30px;
-  }
-  
-  .donation-form h2 {
-    font-size: 1.5rem;
-    color: #008000;
-    margin: 20px 0;
-  }
-  
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
   .form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 coloane pentru câmpuri generale */
-    gap: 20px;
-    margin-bottom: 30px;
+    grid-template-columns: 1fr; /* Câmpurile pe un singur rând */
   }
-  
+
   .form-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 coloane pe linie */
-    gap: 20px; /* Spațiu între câmpuri */
-  }
-  
-  .form-grid-3 input {
-    width: 100%; /* Fiecare input ocupă întreaga coloană */
-    padding: 10px;
-    border: 1px solid #008000; /* Borduri verzi */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Umbra câmpurilor */
-  }
-  
-  .form-grid-3 input::placeholder {
-    color: #666; /* Culoarea textului placeholder */
-  }
-  
-  .form-grid input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #008000; /* Bordură verde */
-    border-radius: 5px;
-  }
-  
-  .full-width {
-    grid-column: span 2; /* Ocupă întregul rând */
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #008000; /* Bordură verde */
-    border-radius: 5px;
-  }
-  
-  .checkboxes {
-    margin: 20px 0;
-    display: grid;
-    grid-template-columns: auto 1fr; /* Casetă mică + text */
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .checkboxes label {
-    display: flex;
-    align-items: center;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  
-  .checkboxes input[type="checkbox"] {
-    width: 15px; /* Dimensiune mică pentru checkbox */
-    height: 15px;
-    margin-right: 10px; /* Spațiu între checkbox și text */
-  }
-  
-  .submit-button {
-    width: 100%;
-    padding: 15px;
-    background-color: #008000;
-    color: #fff;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #005f00;
+    grid-template-columns: 1fr; /* Câmpurile pe un singur rând */
   }
 
-  .container-to-animate {
-    animation: container 1s 1;
-  }
-  
-  @keyframes container {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-  }
-
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .form-grid {
-      grid-template-columns: 1fr; /* Câmpurile pe un singur rând */
-    }
-  
-    .form-grid-3 {
-      grid-template-columns: 1fr; /* Câmpurile pe un singur rând */
-    }
-  
-    .donation-form-container h1 {
-      font-size: 1.5rem;
-    }
-  
-    .donation-form h2 {
-      font-size: 1.2rem;
-    }
-  
-    .checkboxes {
-      grid-template-columns: auto 1fr; /* Menține alinierea checkbox + text */
-    }
-  }
-  .donation-form-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    color: #000;
-    padding: 20px;
-  }
-  
   .donation-form-container h1 {
-    font-size: 1.8rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  .donation-form-container p {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 30px;
-  }
-  
-  .donation-form h2 {
     font-size: 1.5rem;
-    color: #008000;
-    margin: 20px 0;
   }
-  
-  .form-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 coloane pe linie */
-    gap: 20px;
+
+  .donation-form h2 {
+    font-size: 1.2rem;
   }
-  
-  .form-grid-3 input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #008000; /* Borduri verzi */
-    border-radius: 5px;
-  }
-  
-  .form-grid-3 input::placeholder {
-    color: #666; /* Placeholder gri */
-  }
-  
-  .donation-period {
-    margin: 20px 0;
-    font-size: 1rem;
-  }
-  
-  .checkboxes-inline {
-    display: flex;
-    justify-content: start; /* Aliniere la stânga */
-    gap: 40px; /* Spațiu între opțiuni */
-    margin-top: 10px;
-  }
-  
-  .checkboxes-inline label {
-    display: flex;
-    flex-direction: column; /* Așază checkbox-ul deasupra textului */
-    align-items: center; /* Aliniere pe mijloc */
-    font-size: 0.9rem;
-    text-align: center; /* Text centrat sub checkbox */
-  }
-  
-  .checkboxes-inline input[type="checkbox"] {
-    width: 20px; /* Dimensiunea checkbox-ului */
-    height: 20px;
-    margin-bottom: 5px; /* Spațiu între checkbox și text */
-  }
-  .signature-container {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .signature-canvas {
-    border: 1px solid #008000;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .clear-button {
-    padding: 10px 20px;
-    background-color: #ff4d4d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
-  }
-  
-  .clear-button:hover {
-    background-color: #cc0000;
-  }
-  
-  
-  .signature-label {
-    font-size: 1rem;
-    margin-top: 20px;
-    display: block;
-  }
-  
-  .signature-box {
-    width: 100%;
-    height: 100px;
-    border: 1px solid #008000;
-    border-radius: 5px;
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 0.9rem;
-    color: #333;
-  }
-  
+
   .checkboxes {
-    margin: 20px 0;
+    grid-template-columns: auto 1fr; /* Menține alinierea checkbox + text */
   }
-  
-  .checkboxes label {
-    display: flex;
-    align-items: center;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  
-  .checkboxes input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
-    margin-right: 10px;
-  }
-  
-  .submit-button {
-    width: 100%;
-    padding: 15px;
-    background-color: #008000;
-    color: #fff;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #005f00;
-  }
-  
-  .butoane-select {
-    width: 40%;
-    margin: 0 auto;
-    background-color: #008000;
-    color: white;
-    border-radius: 15vh;
-    border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 2.5% 5%;
-    padding: 3% 0;
+}
+.donation-form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #000;
+  padding: 20px;
+}
+
+.donation-form-container h1 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+.donation-form-container p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.donation-form h2 {
+  font-size: 1.5rem;
+  color: #008000;
+  margin: 20px 0;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 coloane pe linie */
+  gap: 20px;
+}
+
+.form-grid-3 input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #008000; /* Borduri verzi */
+  border-radius: 5px;
+}
+
+.form-grid-3 input::placeholder {
+  color: #666; /* Placeholder gri */
+}
+
+.donation-period {
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+.checkboxes-inline {
+  display: flex;
+  justify-content: start; /* Aliniere la stânga */
+  gap: 40px; /* Spațiu între opțiuni */
+  margin-top: 10px;
+}
+
+.checkboxes-inline label {
+  display: flex;
+  flex-direction: column; /* Așază checkbox-ul deasupra textului */
+  align-items: center; /* Aliniere pe mijloc */
+  font-size: 0.9rem;
+  text-align: center; /* Text centrat sub checkbox */
+}
+
+.checkboxes-inline input[type="checkbox"] {
+  width: 20px; /* Dimensiunea checkbox-ului */
+  height: 20px;
+  margin-bottom: 5px; /* Spațiu între checkbox și text */
+}
+.signature-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.signature-canvas {
+  border: 1px solid #008000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.clear-button {
+  padding: 10px 20px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.clear-button:hover {
+  background-color: #cc0000;
+}
+
+.signature-label {
+  font-size: 1rem;
+  margin-top: 20px;
+  display: block;
+}
+
+.signature-box {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #008000;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.checkboxes {
+  margin: 20px 0;
+}
+
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.checkboxes input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #008000;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #005f00;
+}
+
+.butoane-select {
+  width: 40%;
+  margin: 0 auto;
+  background-color: #008000;
+  color: white;
+  border-radius: 15vh;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 2.5% 5%;
+  padding: 3% 0;
+}
+
+.butoane-select:hover {
+  background-color: #00ab00;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .form-grid-3 {
+    grid-template-columns: 1fr; /* Pe mobil, câmpurile sunt pe un singur rând */
   }
 
-  .butoane-select:hover {
-    background-color: #00ab00;
+  .donation-form-container h1 {
+    font-size: 1.5rem;
   }
 
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .form-grid-3 {
-      grid-template-columns: 1fr; /* Pe mobil, câmpurile sunt pe un singur rând */
-    }
-  
-    .donation-form-container h1 {
-      font-size: 1.5rem;
-    }
-  
-    .donation-form h2 {
-      font-size: 1.2rem;
-    }
+  .donation-form h2 {
+    font-size: 1.2rem;
   }
-  
-  @media (max-width: 768px) {
-    .form-grid {
-      grid-template-columns: 1fr; /* Câmpurile pe un singur rând */
-    }
-  
-    .form-grid-3 {
-      grid-template-columns: 1fr; /* Pe mobil, câmpurile sunt pe un singur rând */
-    }
-  
-    .donation-form-container h1 {
-      font-size: 1.5rem;
-    }
-  
-    .donation-form h2 {
-      font-size: 1.2rem;
-    }
-  
-    .checkboxes-inline {
-      flex-direction: column; /* Casetele pe un singur rând */
-      align-items: flex-start;
-    }
-  
-    .clear-button {
-      width: 100%; /* Buton pe întreaga lățime */
-    }
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* Câmpurile pe un singur rând */
   }
+
+  .form-grid-3 {
+    grid-template-columns: 1fr; /* Pe mobil, câmpurile sunt pe un singur rând */
+  }
+
+  .donation-form-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .donation-form h2 {
+    font-size: 1.2rem;
+  }
+
+  .checkboxes-inline {
+    flex-direction: column; /* Casetele pe un singur rând */
+    align-items: flex-start;
+  }
+
+  .clear-button {
+    width: 100%; /* Buton pe întreaga lățime */
+  }
+}

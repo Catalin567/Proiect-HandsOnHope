@@ -5,7 +5,7 @@
   align-items: center;
   padding: 30px;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1400px;
 }
 
 .monthly-photos h2 {
@@ -25,7 +25,7 @@
   align-items: center;
   overflow-x: auto;
   cursor: grab;
-  padding: 50px 20px;
+  padding: 100px 20px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(57, 146, 16, 0.1);
   -ms-overflow-style: none;

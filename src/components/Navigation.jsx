@@ -18,7 +18,7 @@ function Navigation() {
   return (
     <header className="header-container">
       <div className="header">
-        <Link to="/">
+        <Link to="/#up">
           <div className="logo">
             <img src={logo} alt="Logo" />
           </div>
@@ -40,22 +40,22 @@ function Navigation() {
             <ul className="dropdown-menu">
               <li>
                 <a className="dropdown-item">
-                  <Link to="/MisiuneViziune"> Misiunea și viziunea</Link>
+                  <Link to="/MisiuneViziune#up"> Misiunea și viziunea</Link>
                 </a>
               </li>
               <li>
                 <a className="dropdown-item">
-                  <Link to="/Principii">Principii după care ne ghidăm</Link>
+                  <Link to="/Principii#up">Principii după care ne ghidăm</Link>
                 </a>
               </li>
               <li>
                 <a className="dropdown-item">
-                  <Link to="/ProiectiiViitor">Proiecții pentru viitor</Link>
+                  <Link to="/ProiectiiViitor#up">Proiecții pentru viitor</Link>
                 </a>
               </li>
             </ul>
           </div>
-          <Link to="/CeFacem">Ce facem?</Link>
+          <Link to="/CeFacem#up">Ce facem?</Link>
           <div className="dropdown-center">
             <a
               className="dropdown-toggle"
@@ -68,29 +68,29 @@ function Navigation() {
             <ul className="dropdown-menu">
               <li>
                 <a className="dropdown-item" href="#">
-                  <Link to="/Voluntariat">Voluntariat</Link>
+                  <Link to="/Voluntariat#up">Voluntariat</Link>
                 </a>
               </li>
               <li>
                 <a className="dropdown-item">
-                  <Link to="/Campanii">Campanii</Link>
+                  <Link to="/Campanii#up">Campanii</Link>
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  <Link to="/Redirectioneaza">Redirecționează</Link>
+                  <Link to="/Redirectioneaza#up">Redirecționează</Link>
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  <Link to="/Doneaza">Donează</Link>
+                  <Link to="/Doneaza#up">Donează</Link>
                 </a>
               </li>
             </ul>
           </div>
-          <Link to="/solicita-ajutor">Solicită ajutor</Link>
-          <Link to="/Blog">Blog</Link>
-          <Link to="/Contact">Contact</Link>
+          <Link to="/solicita-ajutor#up">Solicită ajutor</Link>
+          <Link to="/Blog#up">Blog</Link>
+          <Link to="/Contact#up">Contact</Link>
         </nav>
         <div className="right-side">
           <div className="search">
