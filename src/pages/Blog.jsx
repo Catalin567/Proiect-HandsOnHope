@@ -120,6 +120,7 @@ const Blog = () => {
                   <p className="card-date">{card.date}</p>
                 </div>
                 <div className="flip-card-back">
+                  <h3 className="card-title">{card.title}</h3>
                   <p className="card-back-text">{card.backText}</p>
                   <button
                     className="details-button"

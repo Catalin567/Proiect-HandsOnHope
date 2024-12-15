@@ -74,13 +74,14 @@
 }
 
 .flip-card-back {
-  background-color: #008000;
+  background-color: #ffffff;
   color: white;
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
+  flex-direction: column;
   padding: 15px;
 }
 
@@ -88,6 +89,7 @@
   font-size: 20px;
   font-weight: bold;
   color: #333;
+  text-align: center;
 }
 
 .card-subtitle {
@@ -117,126 +119,28 @@
 .card-back-text {
   font-size: 14px;
   line-height: 1.6;
+  color: black;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .details-button {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 30px;
+  border: 2px solid rgba(0, 128, 0, 0.6);
+  border-radius: 25px;
   font-size: 14px;
-  font-weight: bold;
-  color: white;
-  background-color: #0056b3;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
 }
 
 .details-button:hover {
-  background-color: #003d82;
-}
-
-.details-button2 {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  background-color: #0056b3;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.details-button2:hover {
-  background-color: #003d82;
-}
-
-.details-button:hover {
-  background-color: #003d82;
-}
-.details-button3 {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  background-color: #0056b3;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.details-button3:hover {
-  background-color: #003d82;
-}
-
-.details-button4 {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  background-color: #0056b3;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.details-button4:hover {
-  background-color: #003d82;
-}
-.details-button5 {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  background-color: #0056b3;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.details-button5:hover {
-  background-color: #003d82;
-}
-.details-button6 {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  background-color: #0056b3;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.details-button6:hover {
-  background-color: #003d82;
+  color: rgba(0, 128, 0, 1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 128, 0, 0.5);
 }
 
 @media (max-width: 1140px) {
