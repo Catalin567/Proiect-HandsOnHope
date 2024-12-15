@@ -40,7 +40,7 @@ const Blog = () => {
         <div id="card-container" className="card-container">
           {[
             {
-              id: "title1",
+              id: "cazVasile",
               title: "Reconstrucția unei case după inundații",
               subtitle: "Cazul lui Vasile",
               image: "pictures/img1.jpeg",
@@ -51,7 +51,7 @@ const Blog = () => {
                 "Inundațiile masive care au lovit comunitatea i-au distrus complet casa în care locuia de o viață. Rămas singur și cu resurse financiare foarte limitate, reconstrucția casei era, pentru Vasile, un vis imposibil de realizat.",
             },
             {
-              id: "title2",
+              id: "cazMaria",
               title: "Sprijin pentru o mamă singură",
               subtitle: "Cazul Mariei",
               image: "pictures/mamasingura.jpg",
@@ -62,7 +62,7 @@ const Blog = () => {
                 "Familia Popescu, formată din patru membri (Ion, Maria și cei doi copii, Andrei și Ana), locuia într-un apartament modest dintr-un cartier popular al orașului. Totul a luat o întorsătură dramatică într-o noapte de iarnă, când un scurtcircuit a provocat un incendiu devastator.",
             },
             {
-              id: "title3",
+              id: "cazPopescu",
               title: "Reconstrucția unei vieți",
               subtitle: "Cazul familiei Popescu",
               image: "pictures/img3.jpeg",
@@ -73,9 +73,9 @@ const Blog = () => {
                 "Detalii complete despre cazul familiei Popescu și cum îi poți ajuta vor apărea aici.",
             },
             {
-              id: "title4",
+              id: "cazRadu",
               title: "O nouă casă, o nouă speranță",
-              subtitle: "Povestea familieri Radu",
+              subtitle: "Povestea familiei Radu",
               image: "pictures/img4.jpeg",
               description:
                 "Familia Radu, formată din Alex, Irina și cei doi copii, Ilinca și Matei, locuia într-un mic sat din România...",
@@ -84,7 +84,7 @@ const Blog = () => {
                 "Alunecarea de teren a distrus pereții casei, acoperișul, și a avariat structura de rezistență. În fața unei situații disperate și fără economii pentru o construcție nouă, Alex și Irina au realizat că au nevoie de ajutor pentru a-și reconstrui viața. ",
             },
             {
-              id: "title5",
+              id: "cazMihai",
               title: "Refacerea după o boală",
               subtitle: "Povestea lui Mihai",
               image: "pictures/bolnavMihai.jpg",
@@ -95,7 +95,7 @@ const Blog = () => {
                 "Mihai lucra ca mecanic auto, având un venit stabil care asigura traiul familiei. Însă a suferit un accident de muncă provocându-și o fractură complexă la picior.",
             },
             {
-              id: "title6",
+              id: "cazDonatii",
               title: "Descoperă cum poți ajuta:",
               subtitle: "Tipuri de donații acceptate",
               image: "pictures/img6.jpeg",
@@ -496,7 +496,7 @@ const Blog = () => {
             </div>
             <div className="column">
               <div className="text-content">
-                <h1 className="title-odd" id="cazVasile">
+                <h1 className="title-odd" id="cazDonatii">
                   Descoperă cum poți ajuta: tipuri de donații acceptate și cum
                   fiecare contează
                 </h1>
