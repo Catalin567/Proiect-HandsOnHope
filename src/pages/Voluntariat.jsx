@@ -74,6 +74,7 @@ const Voluntariat = () => {
   return (
     <main>
       <Navigation />
+      <div className="main-voluntariat">
       <div className="volunteering-layout" id="up">
         <div className="text-section">
           <p>
@@ -397,6 +398,7 @@ const Voluntariat = () => {
             </button>
           </div>
         </form>
+      </div>
       </div>
       <ChatBot />
       <Footer />
