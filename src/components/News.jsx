@@ -1,6 +1,6 @@
 import news1 from "../images/news1-hoh.png";
 import news2 from "../images/news2-hoh.png";
-import news3 from "../images/mp-hoh7.jpg";
+import news3 from "../images/mamasingura.jpg";
 import "../styles/News.css";
 import { Link } from "react-router-dom";
 
@@ -43,7 +43,8 @@ function News() {
             <p className="news-category">Articol</p>
             <h5>Povestea Mariei: </h5>
             <p>
-              La varsta de 62 de ani, Maria a trecut printr-un moment dificil...
+              Cu doi copii mici, de 3 și 5 ani, Maria își găsise stabilitatea
+              lucrând ca vânzătoare la un magazin din orașul ei...
             </p>
             <p className="see-more">
               <Link to="/Blog#cazMaria">Vezi mai mult</Link>

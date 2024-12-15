@@ -56,10 +56,10 @@ const Blog = () => {
               subtitle: "Cazul Mariei",
               image: "pictures/mamasingura.jpg",
               description:
-                "La vârsta de 62 de ani, Maria a trecut printr-un moment dificil...",
-              date: "10.05.2024",
+                "Maria este o tânără mamă singură care, la doar 29 de ani, a fost nevoită să înfrunte o situație critică...",
+              date: "27.05.2024",
               backText:
-                "Familia Popescu, formată din patru membri (Ion, Maria și cei doi copii, Andrei și Ana), locuia într-un apartament modest dintr-un cartier popular al orașului. Totul a luat o întorsătură dramatică într-o noapte de iarnă, când un scurtcircuit a provocat un incendiu devastator.",
+                "Cu doi copii mici, de 3 și 5 ani, Maria își găsise stabilitatea lucrând ca vânzătoare la un magazin din orașul ei. A început să acuze dureri persistente la spate, iar după mai multe investigații medicale, a fost diagnosticată cu o problemă de coloană care îi cerea o perioadă lungă de recuperare și o intervenție chirurgicală.",
             },
             {
               id: "cazPopescu",
@@ -67,10 +67,10 @@ const Blog = () => {
               subtitle: "Cazul familiei Popescu",
               image: "pictures/img3.jpeg",
               description:
-                "Familia Popescu are nevoie urgentă de ajutor pentru o nouă casă...",
+                "Familia Popescu a fost evacuată din locuința lor după ce au pierdut totul într-un incendiu.",
               date: "01.07.2024",
               backText:
-                "Detalii complete despre cazul familiei Popescu și cum îi poți ajuta vor apărea aici.",
+                "Familia Popescu, formată din patru membri (Ion, Maria și cei doi copii, Andrei și Ana), locuia într-un apartament modest dintr-un cartier popular al orașului.Totul a luat o întorsătură dramatică într-o noapte de iarnă, când un scurtcircuit a provocat un incendiu devastator.",
             },
             {
               id: "cazRadu",
