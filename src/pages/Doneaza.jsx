@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/Doneaza.css";
 import ChatBot from "../components/ChatBot";
+import poza1 from "../images/donate.jpg";
 
 const Doneaza = () => {
   const location = useLocation();
@@ -94,7 +95,11 @@ const Doneaza = () => {
     <div>
       <Navigation />
       <main>
-        <img src="pictures/donate.jpg" alt="" className="img-donate" id="up" />
+        <div
+          id="up"
+          className="upper-side"
+          style={{ backgroundImage: `url(${poza1})` }}
+        ></div>
         <div className="donation-container">
           <p>
             La <span className="highlight">Hands on Hope</span>, ne dedicăm

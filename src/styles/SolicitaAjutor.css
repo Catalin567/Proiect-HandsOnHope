@@ -9,10 +9,11 @@
   justify-content: center;
   text-align: center;
   color: white;
-  box-shadow: 0px 30px 50px -9px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 30px 50px -9px rgba(0, 0, 0, 0.45),
+    inset 0px 0px 60px 120px rgba(0, 0, 0, 0.7);
   filter: none;
 }
-.help-header h2{
+.help-header h2 {
   position: absolute;
   bottom: 10%;
   left: 5%;
@@ -53,6 +54,9 @@
   margin-bottom: 20px;
 }
 
+.highlight-text {
+  margin-top: 80px;
+}
 .form-submit-button {
   background-color: rgba(255, 255, 255, 0.8);
   color: #008000;
@@ -79,14 +83,13 @@
 .form-submit-button:active {
   transform: scale(0.98);
 }
-.help-form-section{
-  margin-top: 50px;
+.help-form-section {
+  margin-top: 20px;
 }
 .help-form-title {
-  text-align: left !important; 
-  color: #008000;  
-  margin-top: 20px;
-  margin-bottom: 10px; 
+  text-align: left !important;
+  color: #008000;
+  margin-bottom: 10px;
 }
 
 .help-form input,
@@ -159,7 +162,7 @@
   color: #008000;
   margin-top: 50px;
   margin-bottom: 10px;
-  font-size: 1.5rem;  
+  font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -185,8 +188,8 @@
 
   .help-form {
     padding: 30px;
-    width: 100%; 
-    margin: 0 20px; 
+    width: 100%;
+    margin: 0 20px;
     box-sizing: border-box;
   }
 
@@ -207,9 +210,9 @@
   }
 
   .help-form-title {
-    font-size: 1.2rem;  
-    margin-top: 30px;  
-    text-align: center; 
+    font-size: 1.2rem;
+    margin-top: 30px;
+    text-align: center;
   }
 }
 
@@ -238,8 +241,8 @@
   .help-form {
     padding: 40px;
     width: 100%;
-    margin: 0 20px; 
-    height: auto; 
+    margin: 0 20px;
+    height: auto;
     box-sizing: border-box;
   }
 
@@ -260,9 +263,9 @@
   }
 
   .help-form-title {
-    font-size: 1.4rem;  
-    margin-top: 40px;   
-    text-align: center; 
+    font-size: 1.4rem;
+    margin-top: 40px;
+    text-align: center;
   }
 }
 
@@ -305,29 +308,28 @@
   }
 
   .help-form-title {
-    font-size: 1.5rem;  
-    margin-top: 50px;    
-    text-align: left;    
+    font-size: 1.5rem;
+    margin-top: 50px;
+    text-align: left;
   }
-
 }
 .form-group-ajutor {
-  position: relative; 
+  position: relative;
 }
 .error {
-  font-size: 12px; 
-  color: #ff4d4d; 
-  position: absolute; 
-  bottom: -18px; 
+  font-size: 12px;
+  color: #ff4d4d;
+  position: absolute;
+  bottom: -18px;
   left: 0;
-  width: 100%; 
-  text-align: left; 
-  margin: 0; 
+  width: 100%;
+  text-align: left;
+  margin: 0;
 }
 
 .input-error {
-  border: 1px solid #ff4d4d; 
+  border: 1px solid #ff4d4d;
 }
-.success{
+.success {
   color: #006400;
 }

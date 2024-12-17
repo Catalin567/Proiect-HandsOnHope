@@ -208,23 +208,32 @@ const Contact = () => {
       </section>
 
       <section className="additional-links">
-        <a href="#">Întrebări Frecvente</a>
-        <p>
-          Pentru răspunsuri rapide, consultați secțiunea Întrebări Frecvente
-          (FAQ), unde puteți găsi informații despre donații, proceduri de
-          ajutorare și oportunități de voluntariat.
-        </p>
-        <a href="#">Alătură-te Echipei Noastre</a>
-        <p>
-          Dacă dorești să contribui la misiunea noastră și să ajuți comunitățile
-          afectate de dezastre, te invităm să te înscrii în echipa noastră de
-          voluntari.
-        </p>
-        <a href="#">Colaborări și Parteneriate</a>
-        <p>
-          Pentru organizațiile și companiile care doresc să colaboreze cu Hands
-          on Hope, suntem deschiși la parteneriate.
-        </p>
+        <div className="addlink">
+          {" "}
+          <a href="#">Întrebări Frecvente</a>
+          <p>
+            Pentru răspunsuri rapide, consultați secțiunea Întrebări Frecvente
+            (FAQ), unde puteți găsi informații despre donații, proceduri de
+            ajutorare și oportunități de voluntariat.
+          </p>
+        </div>
+        <div className="addlink">
+          {" "}
+          <a href="#">Alătură-te Echipei Noastre</a>
+          <p>
+            Dacă dorești să contribui la misiunea noastră și să ajuți
+            comunitățile afectate de dezastre, te invităm să te înscrii în
+            echipa noastră de voluntari.
+          </p>
+        </div>
+        <div className="addlink">
+          {" "}
+          <a href="#">Colaborări și Parteneriate</a>
+          <p>
+            Pentru organizațiile și companiile care doresc să colaboreze cu
+            Hands on Hope, suntem deschiși la parteneriate.
+          </p>
+        </div>
       </section>
 
       <section className="map">

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styles/SolicitaAjutor.css";
-import helpHeaderImage from "../images/help-people.png";
+import helpHeaderImage from "../images/solicitaAjutor.png";
 import ChatBot from "../components/ChatBot";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -191,7 +191,9 @@ const SolicitaAjutor = () => {
           completezi formularul de mai jos, noi o trimitem către primărie iar
           apoi vei primi un răspuns în cel mai scurt timp posibil.
         </p>
-        <h4 className="highlight-text">Nu ești singur.</h4>
+        <h4 className="highlight-text">
+          Nu ești singur? Completează formularul de mai jos !
+        </h4>
         <section className="help-form-section">
           <h3 className="help-form-title">Formular pentru ajutor</h3>
 

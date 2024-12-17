@@ -5,6 +5,7 @@ import "../styles/Campanii.css";
 import ChatBot from "../components/ChatBot";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import poza1 from "../images/poza-hoh.webp";
 
 const Campanii = () => {
   const location = useLocation();
@@ -21,13 +22,13 @@ const Campanii = () => {
     <div>
       <Navigation />
       <main>
-        <img
+        <div
           id="up"
-          src="pictures/heroimg.png"
-          alt="img"
-          className="img-campanii"
-        />
-
+          className="upper-side"
+          style={{ backgroundImage: `url(${poza1})` }}
+        >
+          <h2 className="misiune-viziune">CAMPANII</h2>
+        </div>
         <br />
         <p className="p1-campanii">
           <br /> Campaniile noastre sunt mai mult decât simple evenimente, sunt
