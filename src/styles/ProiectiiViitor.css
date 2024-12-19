@@ -75,6 +75,13 @@
   text-align: center;
   font-size: 18px;
 }
+@media (max-width: 1000px) {
+  .upper-side h2 {
+    font-size: 2rem !important;
+    left: 5%;
+    bottom: 5%;
+  }
+}
 
 @media (max-width: 768px) {
   .pv {

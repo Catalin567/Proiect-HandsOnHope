@@ -7,6 +7,7 @@ import RedirectioneazaPF from "../components/RedirectioneazaPF";
 import RedirectioneazaPJ from "../components/RedirectioneazaPJ";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import p1 from "../images/charityimg.webp";
 
 const Redirectioneaza = () => {
   const location = useLocation();
@@ -25,12 +26,13 @@ const Redirectioneaza = () => {
     <div>
       <Navigation />
       <main>
-        <img
+        <div
           id="up"
-          src="pictures/charityimg.webp"
-          alt=""
-          className="main-img"
-        />
+          className="upper-side"
+          style={{ backgroundImage: `url(${p1})` }}
+        >
+          <h2 className="misiune-viziune">Redirectionează</h2>
+        </div>
         <div className="donation-form-container" id="donation-form-container">
           {/* Afișăm butoanele doar dacă nu s-a selectat nicio componentă */}
           {!selectedComponent && (

@@ -133,7 +133,7 @@
   color: #ffffff;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .po-1 {
     flex-direction: column;
     gap: 20px;
@@ -141,6 +141,12 @@
 
   .po-1 > div {
     width: 100%;
+  }
+
+  .upper-side h2 {
+    font-size: 2rem !important;
+    left: 5%;
+    bottom: 5%;
   }
 }
 
