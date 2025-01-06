@@ -55,11 +55,7 @@ function Register() {
 
       {/* Right Banner */}
       <div className="right-banner" id="right-banner">
-        <img
-          src="login-assets/logo.png"
-          className="right-banner-logo"
-          alt="Logo"
-        />
+      <img src="Homepage" className="right-banner-logo" alt="Logo" />
         <p className="right-banner-text">
           BINE AI VENIT!
           <br />

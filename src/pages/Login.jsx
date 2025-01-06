@@ -38,7 +38,7 @@ function Login() {
       </div>
 
       <div className="right-banner" id="right-banner">
-        <img src="" className="right-banner-logo" alt="Logo" />
+        <img src="Homepage" className="right-banner-logo" alt="Logo" />
         <p className="right-banner-text">
           ESTI NOU AICI?
           <br />
@@ -46,9 +46,9 @@ function Login() {
           Alătură-te misiunii nostre și împreună putem construi un viitor mai
           bun!
         </p>
-        <Link to="/Register">
+        <a href="Register">
           <button className="right-banner-button">CREEAZĂ UN CONT</button>
-        </Link>
+        </a>
       </div>
 
       <div
