@@ -11,7 +11,6 @@ function Register() {
 
   return (
     <div>
-      <Navigation />
       <div id="main-frame">
         <h1 className="login-title">CREEAZĂ UN CONT</h1>
         <div id="login-logos">
@@ -79,7 +78,6 @@ function Register() {
         onClick={closeBanner}
       ></div>
             <ChatBot />
-      <Footer />
     </div>
   );
 }

@@ -10,7 +10,6 @@ function Login() {
 
   return (
     <div>
-      <Navigation />
       <div id="main-frame">
         <h1 className="login-title">CONECTEAZĂ-TE</h1>
         <div id="login-logos">
@@ -57,7 +56,6 @@ function Login() {
         id="close-right-banner"
         onClick={closeBanner}
       ></div>
-      <Footer />
     </div>
   );
 }
